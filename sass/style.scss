@@ -1,3 +1,7 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+@import "_media-queries.scss";
+
 body {
 	font-family: helvetica, verdana, sans-serif;
 	margin: 0;
@@ -18,71 +22,74 @@ a {
 
 header.site-header {
 	display: block;
-	height: 120px;
 	margin: 0 auto;
 	text-align: center;
+
+	.logo {
+		background: #ccc;
+		color: #fff;
+		display: inline-block;
+		font-size: 18px;
+		height: 50px;
+		line-height: 2.5em;
+		margin: 30px 0 0 0;
+		vertical-align: top;
+		width: 150px;
+		@include rounded(25px);
+	}
 }
 
-header.site-header .mobile-menu {
+.mobile-menu {
 	background: #ccc;
-	border-radius: 6px;
 	color: rgba(255,255,255,0.8);
 	display: block;
 	font-size: 24px;
 	height: 32px;
 	width: 32px;
-	display: none;
+
+	@include breakpoint(tablet) {
+		display: none;
+	}
+	@include rounded(6px);
 }
 
-header.site-header .logo {
-	background: #ccc;
-	border-radius: 25px;
-	color: #fff;
-	display: inline-block;
-	font-size: 18px;
-	height: 50px;
-	line-height: 2.5em;
-	margin: 30px 0 0 0;
-	vertical-align: top;
-	width: 150px;
-}
-
-header.site-header nav {
+nav.main-menu {
 	display: inline-block;
 	margin: 10px 0 0 0;
 	text-align: center;
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			display: inline-block;
+			margin: 0 0 0 10px;
+
+			a {
+				background: #eee;
+				color: #aaa;
+				display: inline-block;
+				padding: 15px 20px;
+
+				i {
+					background: #ccc;
+					display: inline-block;
+					height: 32px;
+					width: 32px;
+					@include rounded(16px);
+				}
+
+				span {
+					display: block;
+					margin: 5px 0 0 0;
+				}
+			}
+		}
+	}
 }
 
-header.site-header nav ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-}
-
-header.site-header nav li {
-	display: inline-block;
-	margin: 0 0 0 10px;
-}
-
-header.site-header nav a {
-	background: #eee;
-	color: #aaa;
-	display: inline-block;
-	padding: 15px 20px;
-}
-
-header.site-header nav a i {
-	background: #ccc;
-	border-radius: 16px;
-	display: inline-block;
-	height: 32px;
-	width: 32px;
-}
-
-header.site-header nav a span {
-	display: block;
-	margin: 5px 0 0 0;
-}
 
 
 
