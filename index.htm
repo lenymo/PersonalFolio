@@ -6,19 +6,38 @@
 		</title>
 
 		<link rel="stylesheet" href="css/style.css">
+
+		<script src="javascript/jquery-1.10.2.js"></script>
+
+		<script src="javascript/javascript.js"></script>
+
+		<!--
+		<script>
+			$(document).ready(function() {
+				$(".mobile-menu").click(function() {
+					//$("nav.main-nav").css("display:block;")
+					alert("button clicked");
+				});
+			});
+		</script>
+	-->
+
 	</head>
 
 	<body>
 		<header class="site-header">
+			
 			<a href="javascript:void(0);" class="mobile-menu">
 				=
 			</a>
+
 			<div class="logo">
 				logo
 			</div>
+
 			<nav class="main-menu">
 				<ul>
-					<li class="active">
+					<li class="current">
 						<a href="javascript:void(0);">
 							<i class="icon"></i>
 							<span>Item One</span>

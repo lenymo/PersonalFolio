@@ -12,6 +12,12 @@ a {
 	text-decoration: none;
 }
 
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
 *, :after, :before, ::before, ::after {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -30,9 +36,11 @@ header.site-header {
 		color: #fff;
 		display: inline-block;
 		font-size: 18px;
+		font-weight: bold;
 		height: 50px;
-		line-height: 2.5em;
+		line-height: 3em;
 		margin: 30px 0 0 0;
+		text-transform: uppercase;
 		vertical-align: top;
 		width: 150px;
 		@include rounded(25px);
@@ -41,7 +49,7 @@ header.site-header {
 
 .mobile-menu {
 	background: #ccc;
-	color: rgba(255,255,255,0.8);
+	color: rgba(255,255,255,0.9);
 	display: block;
 	font-size: 24px;
 	height: 32px;
@@ -53,25 +61,31 @@ header.site-header {
 	@include rounded(6px);
 }
 
-nav.main-menu {
-	display: inline-block;
-	margin: 10px 0 0 0;
-	text-align: center;
 
-	ul {
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
+nav.main-menu {
+	display: none;
+}
+
+
+@include breakpoint(tablet) {
+	nav.main-menu {
+		background: #f8f8f8;
+		display: block;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 125px;
+		height: 100%;
 
 		li {
-			display: inline-block;
-			margin: 0 0 0 10px;
+			display: block;
 
 			a {
 				background: #eee;
 				color: #aaa;
 				display: inline-block;
 				padding: 15px 20px;
+				width: 100%;
 
 				i {
 					background: #ccc;
@@ -86,6 +100,33 @@ nav.main-menu {
 					margin: 5px 0 0 0;
 				}
 			}
+		}
+
+		li.current {
+			a {
+				background: #fff;
+				color: #888;
+
+				i {
+					background: #bbb;
+				}
+			}
+		}
+	}
+}
+
+@include breakpoint(tablet-landscape) {
+	nav.main-menu {
+		background: none;
+		display: inline-block;
+		margin: 10px 0 0 0;
+		text-align: center;
+		position: static;
+		width: auto;
+
+		li {
+			display: inline-block;
+			margin: 0 0 0 10px;
 		}
 	}
 }
