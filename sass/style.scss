@@ -25,12 +25,43 @@ nav ul {
 }
 
 
-
 header.site-header {
 	display: block;
 	margin: 0 auto;
 	text-align: center;
+}
 
+
+.btn-mobile-menu {
+	background: #ccc;
+	color: rgba(255,255,255,0.9);
+	display: block;
+	font-size: 36px;
+	height: 48px;
+	left: 10px;
+	position: fixed;
+	top: 10px;
+	width: 48px;
+
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+
+	@include rounded(10px);
+
+	@include breakpoint(tablet) {
+		// Hide for tablet sized and above (768px).
+		display: none;
+	}
+}
+
+.main-menu-mobile .btn-mobile-menu {
+	left: 100%;
+	margin-left: -58px;
+}
+
+
+/* LOGO */
+header.site-header {
 	.logo {
 		background: #ccc;
 		color: #fff;
@@ -55,34 +86,57 @@ header.site-header {
 		}
 
 		@include breakpoint(tablet-landscape) {
-			margin: 30px 0 0 0;
+			margin: 15px 10px 0 0;
 			position: static;
+			width: 150px;
 		}
-	}
-}
-
-.mobile-menu {
-	background: #ccc;
-	color: rgba(255,255,255,0.9);
-	display: block;
-	font-size: 36px;
-	height: 48px;
-	left: 10px;
-	position: fixed;
-	top: 10px;
-	width: 48px;
-	@include rounded(10px);
-
-	@include breakpoint(tablet) {
-		display: none;
 	}
 }
 
 
 nav.main-menu {
 	display: none;
-}
+	text-align: left;
+	width: 90%;
 
+	li {
+		background: #f8f8f8;
+		display: block;
+
+		a {
+			background: #eee;
+			color: #aaa;
+			display: inline-block;
+			padding: 15px 20px;
+			width: 100%;
+
+			i {
+				background: #ccc;
+				display: inline-block;
+				height: 32px;
+				width: 32px;
+				@include rounded(16px);
+			}
+
+			span {
+				display: inline-block;
+				margin: 8px 0 0 8px;
+				vertical-align: top;
+			}
+		}
+	}
+
+	li.current {
+		a {
+			background: #fff;
+			color: #666;
+
+			i {
+				background: #888;
+			}
+		}
+	}
+}
 
 @include breakpoint(tablet) {
 	nav.main-menu {
@@ -91,43 +145,18 @@ nav.main-menu {
 		left: 0;
 		padding: 75px 0 0 0;
 		position: absolute;
+		text-align: center;
 		top: 0;
 		width: 125px;
 		height: 100%;
+		
 
-		li {
-			display: block;
+		a {
+			width: 100%;
 
-			a {
-				background: #eee;
-				color: #aaa;
-				display: inline-block;
-				padding: 15px 20px;
-				width: 100%;
-
-				i {
-					background: #ccc;
-					display: inline-block;
-					height: 32px;
-					width: 32px;
-					@include rounded(16px);
-				}
-
-				span {
-					display: block;
-					margin: 5px 0 0 0;
-				}
-			}
-		}
-
-		li.current {
-			a {
-				background: #fff;
-				color: #666;
-
-				i {
-					background: #888;
-				}
+			span {
+				display: block;
+				margin: 0;
 			}
 		}
 	}
@@ -138,17 +167,26 @@ nav.main-menu {
 		background: none;
 		display: inline-block;
 		margin: 10px 0 0 0;
-		text-align: center;
 		padding: 0;
 		position: static;
 		width: auto;
 
 		li {
+			background: none;
 			display: inline-block;
-			margin: 0 0 0 10px;
+			margin: 0;
 
 			a {
 				background: none;
+
+				i {
+					float: left;
+				}
+
+				span {
+					float: left;
+					margin: 8px 0 0 8px;
+				}
 			}
 		}
 	}
