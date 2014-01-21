@@ -3,3 +3,5 @@
 
 #ignore installed node packages
 node_modules/
+
+.sass-cache/

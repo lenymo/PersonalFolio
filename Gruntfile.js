@@ -2,23 +2,28 @@ module.exports = function(grunt) {
 	grunt.initConfig ({
 		pkg: grunt.file.readJSON('package.json'),
 
-		watch: {
-			files: ['css/*.css'],
-			tasks: 'cssmin'
+		sass: {
+			dist: {
+				options: {
+					style: 'expanded'
+				},
+				files: {
+					'css/style.css' : 'sass/style.scss'	//'destination' : 'source'
+				}
+			}
 		},
-		
-		cssmin: {
-			minify: {
-				expand: true,
-				cwd: 'css/',
-				src: ['*.css', '!*.min.css'],
-				dest: 'css/',
-				ext: '.min.css'
+
+		watch: {
+			css: {
+				files: ['sass/*.scss'],
+				tasks: ['sass']
 			}
 		}
+		
 	});
-	grunt.registerTask('default', 'cssmin');
 
+	grunt.registerTask('default', 'watch');
+
+	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
 }
