@@ -37,13 +37,27 @@ header.site-header {
 		display: inline-block;
 		font-size: 18px;
 		font-weight: bold;
-		height: 50px;
-		line-height: 3em;
-		margin: 30px 0 0 0;
+		height: 48px;
+		line-height: 2.8em;
+		margin: 10px 0 0 0;
 		text-transform: uppercase;
 		vertical-align: top;
 		width: 150px;
-		@include rounded(25px);
+		@include rounded(24px);
+
+		@include breakpoint(tablet) {
+			left: 12px;
+			margin: 0;
+			position: absolute;
+			top: 12px;
+			width: 100px;
+			z-index: 2;
+		}
+
+		@include breakpoint(tablet-landscape) {
+			margin: 30px 0 0 0;
+			position: static;
+		}
 	}
 }
 
@@ -51,14 +65,17 @@ header.site-header {
 	background: #ccc;
 	color: rgba(255,255,255,0.9);
 	display: block;
-	font-size: 24px;
-	height: 32px;
-	width: 32px;
+	font-size: 36px;
+	height: 48px;
+	left: 10px;
+	position: fixed;
+	top: 10px;
+	width: 48px;
+	@include rounded(10px);
 
 	@include breakpoint(tablet) {
 		display: none;
 	}
-	@include rounded(6px);
 }
 
 
@@ -72,6 +89,7 @@ nav.main-menu {
 		background: #f8f8f8;
 		display: block;
 		left: 0;
+		padding: 75px 0 0 0;
 		position: absolute;
 		top: 0;
 		width: 125px;
@@ -105,10 +123,10 @@ nav.main-menu {
 		li.current {
 			a {
 				background: #fff;
-				color: #888;
+				color: #666;
 
 				i {
-					background: #bbb;
+					background: #888;
 				}
 			}
 		}
@@ -121,12 +139,17 @@ nav.main-menu {
 		display: inline-block;
 		margin: 10px 0 0 0;
 		text-align: center;
+		padding: 0;
 		position: static;
 		width: auto;
 
 		li {
 			display: inline-block;
 			margin: 0 0 0 10px;
+
+			a {
+				background: none;
+			}
 		}
 	}
 }
