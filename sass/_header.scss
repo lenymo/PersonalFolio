@@ -1,0 +1,166 @@
+.site-header {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+}
+
+
+/* LOGO */
+.site-header .logo {
+	background: #ccc;
+	color: #fff;
+	display: inline-block;
+	font-size: 18px;
+	font-weight: bold;
+	height: 48px;
+	line-height: 2.8em;
+	margin: 10px 0 0 0;
+	text-transform: uppercase;
+	vertical-align: top;
+	width: 150px;
+	@include rounded(24px);
+	@include transition(all, 0.2s, ease);
+
+	@include breakpoint(tablet) {
+		left: 12px;
+		margin: 0;
+		position: absolute;
+		top: 12px;
+		width: 100px;
+		z-index: 2;
+	}
+
+	@include breakpoint(tablet-landscape) {
+		margin: 15px 10px 0 0;
+		position: static;
+		width: 150px;
+	}
+}
+
+
+
+.main-menu {
+	background: #f8f8f8;
+	display: block;
+	height: 100%;
+	left: -100%;
+	position: absolute;
+	text-align: left;
+	top: 0;
+	width: $mobile-menu-width;
+
+	// This prevents the menu from animating when the screen width changes from phone-landscape to tablet.
+	@include between-breakpoints(0, $tablet-width - 10) {
+		@include transition(left, 0.2s, ease-in-out);
+	}
+}
+
+.main-menu li {
+	background: #f8f8f8;
+	display: block;
+
+	a {
+		background: #eee;
+		color: #aaa;
+		display: inline-block;
+		padding: 15px 20px;
+		width: 100%;
+
+		i {
+			background: #ccc;
+			display: inline-block;
+			height: 32px;
+			width: 32px;
+			@include rounded(16px);
+		}
+
+		span {
+			display: inline-block;
+			margin: 8px 0 0 8px;
+			vertical-align: top;
+		}
+	}
+
+	&.current {
+		a {
+			background: #fff;
+			color: #666;
+
+			i {
+				background: #888;
+			}
+		}
+	}
+}
+
+@include breakpoint(tablet) {
+	.main-menu {
+		display: block;
+		left: 0;
+		padding: 75px 0 0 0;
+		position: absolute;
+		text-align: center;
+		top: 0;
+		width: 125px;
+		
+		li {
+
+			a {
+				width: 100%;
+
+				span {
+					display: block;
+					margin: 0;
+				}
+			}
+		}
+	}
+}
+
+@include breakpoint(tablet-landscape) {
+	.main-menu {
+		background: none;
+		display: inline-block;
+		margin: 10px 0 0 0;
+		padding: 0;
+		position: static;
+		width: auto;
+
+		li {
+			background: none;
+			display: inline-block;
+			margin: 0;
+
+			a {
+				background: none;
+
+				i {
+					float: left;
+				}
+
+				span {
+					float: left;
+					margin: 8px 0 0 8px;
+				}
+			}
+		}
+	}
+}
+
+
+@include breakpoint(tablet) {
+	.container-main-content {
+		padding-left: 125px;
+	}
+}
+
+@include breakpoint(tablet-landscape) {
+	.container-main-content {
+		padding-left: 0;
+	}
+}
+
+
+
+
+

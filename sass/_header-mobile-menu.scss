@@ -1,0 +1,53 @@
+.btn-mobile-menu {
+	background: #ccc;
+	display: block;
+	height: 48px;
+	left: $mobile-menu-spacing;
+	position: fixed;
+	text-indent: -10000px;
+	top: $mobile-menu-spacing;
+	width: 48px;
+	z-index: 2;
+
+	@include rounded(10px);
+	@include transition(all, 0.2s, ease-in-out);
+
+	@include breakpoint(tablet) {
+		// Hide for tablet sized and above (768px).
+		display: none;
+	}
+}
+
+
+// The .show-mobile-menu class is added to <body> when the .btn-mobile-menu is clicked.
+.show-mobile-menu .btn-mobile-menu {
+	left: $mobile-menu-width;
+	margin-left: $mobile-menu-spacing;
+}
+
+.show-mobile-menu nav.main-menu {
+	display: block;
+	left: 0;
+}
+
+.show-mobile-menu .logo {
+	@include opacity(0);
+}
+
+
+// This is the opaque cover which when clicked hides the menu.
+.mobile-container-cover {
+	background: rgba(0,0,0,0.5);
+	display: block;
+	position: absolute;
+	right: -25%;
+	top: 0;
+
+	@include transition(all, 0.2s, ease-in-out);
+}
+
+.show-mobile-menu .mobile-container-cover {
+	height: 100%;
+	right: 0;
+	width: 100% - $mobile-menu-width;
+}
