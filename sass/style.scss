@@ -39,14 +39,14 @@ header.site-header {
 	display: block;
 	font-size: 36px;
 	height: 48px;
-	left: 10px;
+	left: $mobile-menu-spacing;
 	position: fixed;
-	top: 10px;
+	top: $mobile-menu-spacing;
 	width: 48px;
 	z-index: 2;
 
 	@include rounded(10px);
-	@include transition(all, 0.2s, ease);
+	@include transition(all, 0.2s, ease-in-out);
 
 	@include breakpoint(tablet) {
 		// Hide for tablet sized and above (768px).
@@ -55,8 +55,8 @@ header.site-header {
 }
 
 .show-mobile-menu .btn-mobile-menu {
-	left: 75%;
-	margin-left: 10px;
+	left: $mobile-menu-width;
+	margin-left: $mobile-menu-spacing;
 }
 
 .show-mobile-menu nav.main-menu {
@@ -67,6 +67,7 @@ header.site-header {
 .show-mobile-menu .logo {
 	@include opacity(0);
 }
+
 
 
 /* LOGO */
@@ -104,6 +105,7 @@ header.site-header {
 }
 
 
+
 nav.main-menu {
 	background: #f8f8f8;
 	display: block;
@@ -112,8 +114,10 @@ nav.main-menu {
 	position: absolute;
 	text-align: left;
 	top: 0;
-	width: 75%;
-	@include transition(left, 0.2s, ease);
+	width: $mobile-menu-width;
+	@include between-breakpoints(0, $tablet-width - 10) {
+		@include transition(left, 0.2s, ease-in-out);
+	}
 
 	li {
 		background: #f8f8f8;
@@ -164,13 +168,15 @@ nav.main-menu {
 		top: 0;
 		width: 125px;
 		
+		li {
 
-		a {
-			width: 100%;
+			a {
+				width: 100%;
 
-			span {
-				display: block;
-				margin: 0;
+				span {
+					display: block;
+					margin: 0;
+				}
 			}
 		}
 	}
@@ -219,21 +225,20 @@ nav.main-menu {
 	}
 }
 
-.container-cover {
+.mobile-container-cover {
 	background: rgba(0,0,0,0.5);
 	display: block;
 	position: absolute;
 	right: -25%;
 	top: 0;
 
-	@include transition(all, 0.2s, ease);
+	@include transition(all, 0.2s, ease-in-out);
 }
 
-.show-mobile-menu .container-cover {
-	height: 2000px;
+.show-mobile-menu .mobile-container-cover {
+	height: 100%;
 	right: 0;
-	width: 25%;
-	@include transition(all, 0.2s, ease);
+	width: 100% - $mobile-menu-width;
 }
 
 
