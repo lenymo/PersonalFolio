@@ -3,6 +3,7 @@
 @import "_media-queries.scss";
 
 body {
+	color: #444;
 	font-family: helvetica, verdana, sans-serif;
 	margin: 0;
 	padding: 0;
@@ -42,11 +43,10 @@ header.site-header {
 	position: fixed;
 	top: 10px;
 	width: 48px;
-
-	-webkit-transition: all 0.2s ease-in-out;
-	transition: all 0.2s ease-in-out;
+	z-index: 2;
 
 	@include rounded(10px);
+	@include transition(all, 0.2s, ease);
 
 	@include breakpoint(tablet) {
 		// Hide for tablet sized and above (768px).
@@ -54,9 +54,18 @@ header.site-header {
 	}
 }
 
-.main-menu-mobile .btn-mobile-menu {
-	left: 100%;
-	margin-left: -58px;
+.show-mobile-menu .btn-mobile-menu {
+	left: 75%;
+	margin-left: 10px;
+}
+
+.show-mobile-menu nav.main-menu {
+	display: block;
+	left: 0;
+}
+
+.show-mobile-menu .logo {
+	@include opacity(0);
 }
 
 
@@ -75,6 +84,7 @@ header.site-header {
 		vertical-align: top;
 		width: 150px;
 		@include rounded(24px);
+		@include transition(all, 0.2s, ease);
 
 		@include breakpoint(tablet) {
 			left: 12px;
@@ -95,9 +105,15 @@ header.site-header {
 
 
 nav.main-menu {
-	display: none;
+	background: #f8f8f8;
+	display: block;
+	height: 100%;
+	left: -100%;
+	position: absolute;
 	text-align: left;
-	width: 90%;
+	top: 0;
+	width: 75%;
+	@include transition(left, 0.2s, ease);
 
 	li {
 		background: #f8f8f8;
@@ -140,7 +156,6 @@ nav.main-menu {
 
 @include breakpoint(tablet) {
 	nav.main-menu {
-		background: #f8f8f8;
 		display: block;
 		left: 0;
 		padding: 75px 0 0 0;
@@ -148,7 +163,6 @@ nav.main-menu {
 		text-align: center;
 		top: 0;
 		width: 125px;
-		height: 100%;
 		
 
 		a {
@@ -193,7 +207,34 @@ nav.main-menu {
 }
 
 
+@include breakpoint(tablet) {
+	.container-main-content {
+		padding-left: 125px;
+	}
+}
 
+@include breakpoint(tablet-landscape) {
+	.container-main-content {
+		padding-left: 0;
+	}
+}
+
+.container-cover {
+	background: rgba(0,0,0,0.5);
+	display: block;
+	position: absolute;
+	right: -25%;
+	top: 0;
+
+	@include transition(all, 0.2s, ease);
+}
+
+.show-mobile-menu .container-cover {
+	height: 2000px;
+	right: 0;
+	width: 25%;
+	@include transition(all, 0.2s, ease);
+}
 
 
 
