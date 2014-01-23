@@ -1,33 +1,19 @@
 // Modules and variables
-@import "_base.scss";
-@import "_variables.scss";
-@import "_mixins.scss";
-@import "_media-queries.scss";
+@import "mixins";
+@import "media-queries";
+@import "colors";
+@import "variables"; // Contains variables and top level CSS.
 
 // Partials
-@import "_reset.scss";
-@import "_typography.scss";
+@import "reset";
+@import "base";
+@import "layout";
+@import "typography";
 
 // Sections
-@import "_header.scss";
-@import "_header-mobile-menu.scss";
-
-body {
-	color: #444;
-}
-
-a {
-	text-decoration: none;
-}
-
-nav ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-}
-
-
-
+@import "header";
+@import "mobile-menu";
+@import "home";
 
 
 

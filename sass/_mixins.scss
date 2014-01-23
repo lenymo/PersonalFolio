@@ -1,3 +1,15 @@
+@mixin box-shadow($top, $left, $blur, $color) {
+  -webkit-box-shadow: $top $left $blur $color;
+  -moz-box-shadow: $top $left $blur $color;
+  box-shadow: $top $left $blur $color;
+}
+
+@mixin box-sizing() {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
 @mixin rounded($radius) {
 	-webkit-border-radius: $radius;
 	-moz-border-radius: $radius;
@@ -17,8 +29,13 @@
   filter: alpha(opacity=$opacity-ie); //IE8
 }
 
-@mixin box-sizing() {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+@mixin linear-gradient($from, $to) {
+	background: $to; /* Old browsers */
+	background: -moz-linear-gradient(top,  $to 0%, $from 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$to), color-stop(100%,$from)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  $to 0%, $from 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  $to 0%, $from 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  $to 0%, $from 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  $to 0%, $from 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$to', endColorstr='$from',GradientType=0 ); /* IE6-9 */
 }

@@ -1,3 +1,23 @@
-// Mobile
+// Container width
+$default-container-width: 100%;
+$tablet-landscape-container-width: 1024px;
+
+
+// Container padding
+$phone-container-padding: 20px;
+$tablet-container-padding: 30px;
+$tablet-landscape-container-padding: 50px;
+$desktop-container-padding: 50px;
+
+
+// Mobile specific
 $mobile-menu-width: 75%;
 $mobile-menu-spacing: 10px;
+
+
+// Tablet specific
+$tablet-menu-width: 125px;
+
+
+// Tablet landscape specific
+$tablet-landscape-menu-height: 85px;

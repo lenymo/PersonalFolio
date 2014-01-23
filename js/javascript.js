@@ -15,4 +15,13 @@ $(document).ready(function(){
 	$('.mobile-container-cover').click(function() {
 		toggleMobileMenu ();
 	})
+
+	// This helps adjust the sizing of the top header when the user scrolls down.
+	$(window).scroll(function() {
+		if($(window).scrollTop() > 50) {
+			$('.site-header').addClass('user-has-scrolled');
+		} else if ($('.site-header').hasClass('user-has-scrolled')) {
+			$('.site-header').removeClass('user-has-scrolled');
+		}
+	});
 });

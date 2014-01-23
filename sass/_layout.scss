@@ -1,0 +1,28 @@
+// Container styles
+.container-main-content {
+	margin: 0 auto;
+	padding: $phone-container-padding;
+	width: $default-container-width;
+}
+
+@include breakpoint(tablet) {
+	.container-main-content {
+		padding: $tablet-container-padding;
+		padding-left: $tablet-menu-width + $tablet-container-padding;
+	}
+}
+
+@include breakpoint(tablet-landscape) {
+	.container-main-content {
+		padding: $tablet-landscape-container-padding;
+		padding-top: $tablet-landscape-container-padding + $tablet-landscape-menu-height;
+		width: $tablet-landscape-container-width;
+	}
+}
+
+@include breakpoint(desktop) {
+	.container-main-content {
+		width: $desktop-width;
+		padding: $desktop-container-padding;
+	}
+}

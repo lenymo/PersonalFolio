@@ -85,10 +85,7 @@ input, select {
     vertical-align: middle;
 }
 
-// Box sizing fix.
-*, :after, :before, ::before, ::after {
-	@include box-sizing;
-}
+
 
 
 

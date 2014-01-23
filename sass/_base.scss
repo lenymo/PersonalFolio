@@ -1,0 +1,26 @@
+body {
+	color: $body-color;
+}
+
+a {
+	text-decoration: none;
+}
+
+hr {
+	border-top: 1px solid $hr-color;
+	margin: 30px auto;
+	text-align: center;
+	width: 30%;
+}
+
+
+// Box sizing fix.
+*, :after, :before, ::before, ::after {
+	@include box-sizing;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
