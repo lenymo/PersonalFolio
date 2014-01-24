@@ -1,5 +1,4 @@
 .btn-mobile-menu {
-	background: #ccc;
 	display: block;
 	height: 48px;
 	left: $mobile-menu-spacing;
@@ -8,9 +7,13 @@
 	top: $mobile-menu-spacing;
 	width: 48px;
 	z-index: 2;
-
 	@include rounded(10px);
 	@include transition(all, 0.2s, ease-in-out);
+
+	.icon {
+		display: block;
+		margin: 8px auto;
+	}
 
 	@include breakpoint(tablet) {
 		// Hide for tablet sized and above (768px).

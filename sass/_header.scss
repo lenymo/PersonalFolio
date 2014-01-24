@@ -76,6 +76,7 @@
 		width: 100%;
 
 		.icon {
+			display: inline-block;
 			@include opacity(0.5);
 		}
 
