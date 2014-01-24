@@ -20,6 +20,7 @@
 	width: 150px;
 	@include rounded(24px);
 
+	// Apply transitions only at certain breakpoints.
 	@include between-breakpoints(0, $phone-landscape-width) {
 		@include transition(all, 0.2s, ease);
 	}
@@ -40,6 +41,8 @@
 	}
 
 	@include breakpoint(desktop) {
+		float: left;
+		margin-left: $desktop-container-padding;
 		width: 150px;
 	}
 }
@@ -72,6 +75,10 @@
 		padding: 15px 20px;
 		width: 100%;
 
+		.icon {
+			@include opacity(0.5);
+		}
+
 		span {
 			display: inline-block;
 			margin: 3px 0 0 8px;
@@ -83,6 +90,10 @@
 		a {
 			background: #fff;
 			color: #666;
+
+			.icon {
+				@include opacity(1);
+			}
 		}
 	}
 }
@@ -119,6 +130,8 @@
 	}
 }
 
+
+/* Tablet landscape */
 @include breakpoint(tablet-landscape) {
 	.site-header {
 		height: $tablet-landscape-menu-height;
@@ -139,7 +152,6 @@
 		padding: 0;
 		position: static;
 		width: auto;
-
 		@include transition(all, 0.2s, ease-in-out);
 
 		li {
@@ -150,6 +162,10 @@
 			a {
 				background: none;
 
+				.icon {
+					float: left;
+				}
+
 				span {
 					float: left;
 					margin: 2px 0 0 8px;
@@ -158,9 +174,9 @@
 		}
 	}
 
+	// This handles the sticky header changing appearance once the user scrolls down.
 	.site-header.user-has-scrolled {
 		height: 66px;
-
 		@include box-shadow(0, 2px, 10px, rgba(0, 0, 0, 0.04));
 
 		.logo {
@@ -180,6 +196,28 @@
 		}
 	}
 }
+
+
+/* Desktop */
+@include breakpoint(desktop) {
+	.main-menu {
+		float: right;
+		margin-right: $desktop-container-padding;
+	}
+
+	.main-menu li a {
+		padding: 15px 10px;
+	}
+
+	.main-menu li a .icon {
+		display: none;
+	}
+	.main-menu li.current a span {
+		font-weight: bold;
+	}
+}
+
+
 
 
 
