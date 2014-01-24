@@ -64,11 +64,9 @@
 }
 
 .main-menu li {
-	background: #f8f8f8;
 	display: block;
 
 	a {
-		background: #eee;
 		color: #aaa;
 		display: inline-block;
 		padding: 15px 20px;
@@ -110,19 +108,12 @@
 		top: 0;
 		width: $tablet-menu-width;
 		
-		li {
+		li a {
+			width: 100%;
 
-			a {
-				width: 100%;
-
-				span {
-					display: block;
-					margin: 0;
-				}
-			}
-
-			&.current a {
-				background: none;
+			span {
+				display: block;
+				margin: 0;
 			}
 		}
 	}
@@ -183,11 +174,8 @@
 		.main-menu {
 			margin-top: 5px;
 
-			li {
-
-				a {
-					padding: 10px 20px;
-				}
+			li a {
+				padding: 10px 20px;
 			}
 		}
 	}

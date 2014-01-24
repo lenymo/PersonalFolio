@@ -23,6 +23,6 @@
 @include breakpoint(desktop) {
 	.container-main-content {
 		width: $desktop-width;
-		padding: $desktop-container-padding;
+		padding: $desktop-container-padding + $desktop-menu-height;
 	}
 }
