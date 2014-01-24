@@ -5,7 +5,7 @@
 }
 
 
-/* LOGO */
+/* Logo */
 .site-header .logo {
 	background: #ccc;
 	color: #fff;
@@ -46,7 +46,7 @@
 
 
 
-/* MAIN MENU */
+/* Main menu */
 .main-menu {
 	background: #f8f8f8;
 	display: block;
@@ -74,17 +74,9 @@
 		padding: 15px 20px;
 		width: 100%;
 
-		i {
-			background: #ccc;
-			display: inline-block;
-			height: 32px;
-			width: 32px;
-			@include rounded(16px);
-		}
-
 		span {
 			display: inline-block;
-			margin: 8px 0 0 8px;
+			margin: 3px 0 0 8px;
 			vertical-align: top;
 		}
 	}
@@ -93,16 +85,12 @@
 		a {
 			background: #fff;
 			color: #666;
-
-			i {
-				background: #888;
-			}
 		}
 	}
 }
 
 
-/* TABLET  */
+/* Tablet  */
 @include breakpoint(tablet) {
 	.site-header {
 		background: rgba(255,255,255,0.97);
@@ -110,7 +98,7 @@
 		position: fixed;
 
 		//@include opacity(0.97);
-		//@include linear-gradient(#f8f8f8, #fff);
+		//@include gradient(#f8f8f8, #fff);
 	}
 
 	.main-menu {
@@ -148,7 +136,7 @@
 
 		@include transition(all, 0.2s, ease-in-out);
 	}
-	
+
 	.site-header .logo {
 		@include transition(all, 0.2s, ease-in-out);
 	}
@@ -171,13 +159,9 @@
 			a {
 				background: none;
 
-				i {
-					float: left;
-				}
-
 				span {
 					float: left;
-					margin: 3px 0 0 8px;
+					margin: 2px 0 0 8px;
 				}
 			}
 		}

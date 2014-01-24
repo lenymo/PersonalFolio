@@ -1,0 +1,39 @@
+.icon {
+	height: 32px;
+	width: 32px;
+}
+
+.icon.icon-home {
+	@include retinise('icon-home', 'png', 32px, 32px);
+}
+.icon.icon-work {
+	@include retinise('icon-work', 'png', 32px, 32px);
+}
+.icon.icon-skills {
+	@include retinise('icon-skills', 'png', 32px, 32px);
+}
+.icon.icon-about {
+	@include retinise('icon-about', 'png', 32px, 32px);
+}
+.icon.icon-contact {
+	@include retinise('icon-contact', 'png', 32px, 32px);
+}
+
+/* Main menu icons */
+.main-menu li a .icon {
+	display: inline-block;
+	height: 32px;
+	width: 32px;
+
+	@include opacity(0.5);
+}
+
+.main-menu li.current a .icon {
+	@include opacity(1);
+}
+
+@include breakpoint(tablet-landscape) {
+	.main-menu li a .icon {
+		float: left;
+	}
+}

@@ -19,6 +19,14 @@ hr {
 	@include box-sizing;
 }
 
+// Clearfix - this should be extended.
+.clearfix:after {
+	content: "";
+  display: table;
+  clear: both;
+}
+
+
 nav ul {
 	list-style-type: none;
 	margin: 0;

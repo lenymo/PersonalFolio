@@ -10,6 +10,40 @@
 	box-sizing: border-box;
 }
 
+@mixin gradient($from, $to) {
+	background: $to; /* Old browsers */
+	background: -moz-linear-gradient(top,  $to 0%, $from 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$to), color-stop(100%,$from)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  $to 0%, $from 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  $to 0%, $from 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  $to 0%, $from 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  $to 0%, $from 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$to', endColorstr='$from',GradientType=0 ); /* IE6-9 */
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin retinise ($file, $type, $width, $height) {
+	background-image: url('../img/' + $file + '.' + $type);
+
+	@media 	(-webkit-min-device-pixel-ratio: 1.5),
+					(min--moz-device-pixel-ratio: 1.5),
+					(-o-min-device-pixel-ratio: 3/2),
+					(min-device-pixel-ratio: 1.5),
+					(min-resolution: 1.5dppx) {
+		& {
+			background-image: url('../img/' + $file + '-2x.' + $type);
+			-webkit-background-size: $width $height;
+			-moz-background-size: $width $height;
+			background-size: $width $height;
+		}
+	}
+}
+
 @mixin rounded($radius) {
 	-webkit-border-radius: $radius;
 	-moz-border-radius: $radius;
@@ -21,21 +55,4 @@
 	-moz-transition: $property $duration $timing;
 	-o-transition: $property $duration $timing;
 	transition: $property $duration $timing;
-}
-
-@mixin opacity($opacity) {
-  opacity: $opacity;
-  $opacity-ie: $opacity * 100;
-  filter: alpha(opacity=$opacity-ie); //IE8
-}
-
-@mixin linear-gradient($from, $to) {
-	background: $to; /* Old browsers */
-	background: -moz-linear-gradient(top,  $to 0%, $from 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$to), color-stop(100%,$from)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  $to 0%, $from 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  $to 0%, $from 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  $to 0%, $from 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  $to 0%, $from 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$to', endColorstr='$from',GradientType=0 ); /* IE6-9 */
 }
