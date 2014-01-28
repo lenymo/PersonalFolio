@@ -56,9 +56,10 @@
 .main-menu {
 	background: #f8f8f8;
 	display: block;
+	font-size: $nav-font-size;
 	height: 100%;
 	left: -100%;
-	position: absolute;
+	position: fixed;
 	text-align: left;
 	top: 0;
 	width: $mobile-menu-width;

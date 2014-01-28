@@ -8,7 +8,7 @@
 	width: 48px;
 	z-index: 2;
 	@include rounded(10px);
-	@include transition(all, 0.2s, ease-in-out);
+	//@include transition(all, 0.2s, ease-in-out);
 
 	.icon {
 		display: block;
@@ -42,7 +42,7 @@
 .mobile-container-cover {
 	background: rgba(0,0,0,0.5);
 	display: block;
-	position: absolute;
+	position: fixed;
 	right: -25%;
 	top: 0;
 
