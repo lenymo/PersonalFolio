@@ -15,7 +15,7 @@
 @include breakpoint(tablet-landscape) {
 	.container-main-content {
 		padding: $tablet-landscape-container-padding;
-		padding-top: $tablet-landscape-container-padding + $tablet-landscape-menu-height;
+		padding-top: ($tablet-landscape-container-padding * 2) + $tablet-landscape-menu-height;
 		width: $tablet-landscape-container-width;
 	}
 }
@@ -23,6 +23,6 @@
 @include breakpoint(desktop) {
 	.container-main-content {
 		width: $desktop-width;
-		padding: $desktop-container-padding + $desktop-menu-height;
+		padding: ($desktop-container-padding * 2) + $desktop-menu-height;
 	}
 }

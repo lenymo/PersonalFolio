@@ -37,8 +37,7 @@
 	@include breakpoint(tablet-landscape) {
 		float: left;
 		height: 70px;
-		margin: 15px 0 0 0;
-		margin-left: $tablet-landscape-container-padding;
+		margin: $tablet-landscape-container-padding 0 0 $tablet-landscape-container-padding;
 		position: static;
 		width: 220px;
 
@@ -46,7 +45,7 @@
 	}
 
 	@include breakpoint(desktop) {
-		margin-left: $desktop-container-padding;
+		margin-left: $desktop-container-padding 0 0 $desktop-container-padding;
 	}
 }
 
@@ -139,19 +138,18 @@
 /* Tablet landscape */
 @include breakpoint(tablet-landscape) {
 	.site-header {
-		height: $tablet-landscape-menu-height;
-		position: fixed;
+		height: auto;
+		position: absolute;
 		width: 100%;
 
-		@include transition(all, 0.2s, ease-in-out);
+		@include transition(all, 0.1s, linear);
 	}
 
 	.main-menu {
 		background: none;
 		display: inline-block;
 		float: right;
-		margin: 10px 0 0 0;
-		margin-right: $tablet-landscape-container-padding;
+		margin: $tablet-landscape-container-padding $tablet-landscape-container-padding 0 0;
 		padding: 0;
 		position: static;
 		width: auto;
@@ -178,14 +176,19 @@
 		}
 	}
 
-	.main-menu li.current a span {
-		font-weight: bold;		
+	.main-menu li.current a {
+		background: none;
+		
+		span {
+			font-weight: bold;		
+		}
 	}
 
 
 	// Sticky header. This handles the sticky header changing appearance once the user scrolls down.
 	.site-header.user-has-scrolled {
 		height: 66px;
+		position: fixed;
 		@include box-shadow(0, 2px, 10px, rgba(0, 0, 0, 0.04));
 
 		.logo {
@@ -200,18 +203,18 @@
 			margin-top: 5px;
 
 			li a {
-				padding: 10px 20px;
+				padding: 10px 10px;
 			}
 		}
 	}
-}
+} /* end of tablet-landscapr breakpoint */
 
 
 /* Desktop */
 @include breakpoint(desktop) {
 	.main-menu {
 		float: right;
-		margin-right: $desktop-container-padding;
+		margin: $desktop-container-padding $desktop-container-padding 0 0;
 	}
 }
 

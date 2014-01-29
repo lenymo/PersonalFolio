@@ -5,6 +5,7 @@ $(document).ready(function(){
 		} 
 		else {
 			$('body').addClass('show-mobile-menu');
+
 		}
 	}
 
@@ -18,7 +19,7 @@ $(document).ready(function(){
 
 	// This helps adjust the sizing of the top header when the user scrolls down.
 	$(window).scroll(function() {
-		if($(window).scrollTop() > 50) {
+		if($(window).scrollTop() > 150) {
 			$('.site-header').addClass('user-has-scrolled');
 		} else if ($('.site-header').hasClass('user-has-scrolled')) {
 			$('.site-header').removeClass('user-has-scrolled');
