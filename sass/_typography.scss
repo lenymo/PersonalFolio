@@ -1,12 +1,20 @@
 $body-font-size: 26px;
 
-$h1-size: 80px;
+$h1-size: 72px;
 $h2-size: 48px;
 $h3-size: 36px;
 $h4-size: 26px;
 $h5-size: 18px;
 
 $nav-font-size: 22px;
+
+
+//Responsive font sizes
+$body-font-size-phone: 18px;
+$body-font-size-tablet: 24px;
+$font-size-phone: 0.5;
+$font-size-tablet: 0.75;
+
 
 body {
 	color: $color-body;
@@ -20,37 +28,71 @@ h1, h2, h3 {
 	color: $color-headings;
 }
 
-h1 {
-	font-size: $h1-size;
-	//line-height: 1.2em;
-}
-
-h2 {
-	font-size: $h2-size;
-}
-
-h3 {
-	font-size: $h3-size;
-}
-
-h4 {
-	font-size: $h4-size;
-}
-
-h5 {
-	font-size: $h5-size;
-}
-
-h6 {
-
-}
-
 p {
 	padding: 0 0 1em 0;
 }
 
-p.lead {
+.lead {
 	color: $color-p-lead;
-	font-size: $h2-size;
 	line-height: 1.3em;
+}
+
+@include breakpoint(phone) {
+	body {
+		font-size: $body-font-size-phone;
+	}
+	h1 {
+		font-size: ($h1-size * $font-size-phone);
+	}
+	h2 {
+		font-size: ($h2-size * $font-size-phone);
+	}
+	.lead {
+		font-size: ($h2-size * $font-size-phone);
+	}
+}
+
+@include breakpoint(tablet) {
+	body {
+		font-size: $body-font-size-tablet;
+	}
+	h1 {
+		font-size: ($h1-size * $font-size-tablet);
+	}
+	h2 {
+		font-size: ($h2-size * $font-size-tablet);
+	}
+	.lead {
+		font-size: ($h2-size * $font-size-tablet);
+	}
+}
+
+@include breakpoint(tablet-landscape) {
+	h1 {
+		font-size: $h1-size;
+	}
+
+	h2 {
+		font-size: $h2-size;
+	}
+
+	h3 {
+		font-size: $h3-size;
+	}
+
+	h4 {
+		font-size: $h4-size;
+	}
+
+	h5 {
+		font-size: $h5-size;
+	}
+
+	h6 {
+
+	}
+
+	.lead {
+		font-size: $h2-size;
+	}
 }

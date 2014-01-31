@@ -1,27 +1,35 @@
+//
+//---------------------------------
+//	CONTAINER VARIABLES
+//---------------------------------
+//
 // Container width
 $default-container-width: 100%;
 $tablet-landscape-container-width: 1024px;
-
+$desktop-container-width: 1200px;
 
 // Container padding
-$phone-container-padding: 20px;
+$phone-container-padding: 10%;
 $tablet-container-padding: 30px;
 $tablet-landscape-container-padding: 50px;
 $desktop-container-padding: 50px;
 
 
-
-/* MENU VARIABLES */
+//
+//---------------------------------
+//	MENU VARIABLES
+//---------------------------------
+//
 // Mobile specific
-$mobile-menu-spacing: 10px;
-$mobile-menu-width: 75%;
-
+$phone-header-width: 100%;
+$phone-menu-spacing: 10px;
+$phone-menu-width: 75%;
 
 // Tablet specific
 $tablet-menu-width: 125px;
 
-
 // Tablet landscape specific
+$tablet-landscape-header-width: 100%;
 $tablet-landscape-menu-height: 85px;
 
 // Desktop specific

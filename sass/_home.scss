@@ -1,3 +1,79 @@
-.container-home {
-	text-align: center;
+#homepage {
+	background: #000 url(../img/bg-homepage.jpg) no-repeat center -150px;
+	height: 100%;
+	@include background-size(100%, auto);
 }
+
+#homepage .container-main-content {
+	height: 100%;
+	position: relative;
+	text-align: center;
+	width: 100%;
+}
+
+#homepage h1 {
+	bottom: 25%;
+	color: rgba(255,255,255,0.8);
+	font-weight: 100;
+	left: 0;
+	position: absolute;
+	width: 100%;
+}
+
+#homepage .lead {
+	bottom: 15%;
+	color: rgba(255,255,255,0.4);
+	left: 0;
+	position: absolute;
+	width: 100%;
+}
+
+@include between-breakpoints(0, $tablet-width) {
+	#homepage {
+		background-position: center top;
+	}
+
+	#homepage h1 {
+		font-size: $h2-size * $font-size-phone;
+	}
+	#homepage .lead {
+		font-size: $body-font-size-phone;
+	}
+}
+
+
+@include between-breakpoints($tablet-width, $tablet-landscape-width) {
+	#homepage {
+		background-position: 100px -100px;
+	}
+	#homepage h1 {
+		font-size: $h2-size * $font-size-tablet;
+	}
+	#homepage .lead {
+		font-size: $body-font-size-tablet;
+	}
+}
+
+@include breakpoint(tablet-landscape) {
+	#homepage h1 {
+		font-size: $h2-size;
+	}
+	#homepage .lead {
+		font-size: $body-font-size;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

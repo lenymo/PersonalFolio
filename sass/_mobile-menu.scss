@@ -1,10 +1,10 @@
 .btn-mobile-menu {
 	display: block;
 	height: 48px;
-	left: $mobile-menu-spacing;
+	left: $phone-menu-spacing;
 	position: fixed;
 	text-indent: -10000px;
-	top: $mobile-menu-spacing;
+	top: $phone-menu-spacing;
 	width: 48px;
 	z-index: 2;
 	@include rounded(10px);
@@ -24,8 +24,8 @@
 
 // The .show-mobile-menu class is added to <body> when the .btn-mobile-menu is clicked.
 .show-mobile-menu .btn-mobile-menu {
-	left: $mobile-menu-width;
-	margin-left: $mobile-menu-spacing;
+	left: $phone-menu-width;
+	margin-left: $phone-menu-spacing;
 }
 
 .show-mobile-menu nav.main-menu {
@@ -52,5 +52,15 @@
 .show-mobile-menu .mobile-container-cover {
 	height: 100%;
 	right: 0;
-	width: 100% - $mobile-menu-width;
+	width: 100% - $phone-menu-width;
+	z-index: 2;
 }
+
+
+
+
+
+
+
+
+

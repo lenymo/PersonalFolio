@@ -1,7 +1,10 @@
 .site-header {
 	display: block;
 	margin: 0 auto;
+	position: absolute;
 	text-align: center;
+	width: $phone-header-width;
+	z-index: 3;
 }
 
 
@@ -9,10 +12,9 @@
 .site-header .logo {
 	display: inline-block;
 	height: 49px;
-	margin-top: $phone-container-padding;
+	margin-top: ($phone-menu-spacing * 2);
 	text-indent: -20000px;
 	width: 154px;
-
 	@include retinise('logo-mobile', 'png', 154px, 49px);
 
 	// Apply transitions only at certain breakpoints.
@@ -30,7 +32,6 @@
 		top: 0;
 		width: 125px;
 		z-index: 2;
-
 		@include retinise('logo-tablet', 'png', 125px, 125px);
 	}
 
@@ -40,7 +41,6 @@
 		margin: $tablet-landscape-container-padding 0 0 $tablet-landscape-container-padding;
 		position: static;
 		width: 220px;
-
 		@include retinise('logo-desktop', 'png', 220px, 70px);
 	}
 
@@ -53,7 +53,6 @@
 
 /* Main menu */
 .main-menu {
-	background: #f8f8f8;
 	display: block;
 	font-size: $nav-font-size;
 	height: 100%;
@@ -61,7 +60,7 @@
 	position: fixed;
 	text-align: left;
 	top: 0;
-	width: $mobile-menu-width;
+	width: $phone-menu-width;
 
 	// This prevents the menu from animating when the screen width changes from phone-landscape to tablet.
 	@include between-breakpoints(0, $tablet-width - 20) {
@@ -109,6 +108,7 @@
 		background: rgba(255,255,255,0.97);
 		height: 100%;
 		position: fixed;
+		width: $tablet-menu-width;
 
 		//@include opacity(0.97);
 		//@include gradient(#f8f8f8, #fff);
@@ -138,9 +138,10 @@
 /* Tablet landscape */
 @include breakpoint(tablet-landscape) {
 	.site-header {
+		background: none;
 		height: auto;
 		position: absolute;
-		width: 100%;
+		width: $tablet-landscape-header-width;
 
 		@include transition(all, 0.1s, linear);
 	}
@@ -187,6 +188,7 @@
 
 	// Sticky header. This handles the sticky header changing appearance once the user scrolls down.
 	.site-header.user-has-scrolled {
+		background: rgba(255,255,255,0.96);
 		height: 66px;
 		position: fixed;
 		@include box-shadow(0, 2px, 10px, rgba(0, 0, 0, 0.04));
@@ -207,7 +209,11 @@
 			}
 		}
 	}
-} /* end of tablet-landscapr breakpoint */
+
+	// Handles header CSS for when page content is dark / light.
+	
+
+} /* end of tablet-landscape breakpoint */
 
 
 /* Desktop */

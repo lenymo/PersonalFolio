@@ -1,4 +1,31 @@
-// Container styles
+//
+//---------------------------------
+//	SECTIONS
+//---------------------------------
+//
+section {
+	position: relative;
+	width: 100%;
+}
+@include between-breakpoints($tablet-width, $tablet-landscape-width) {
+	section {
+		padding-left: $tablet-menu-width;
+	}
+	section .container-main-content {
+		padding: $tablet-container-padding;
+	}
+}
+@include breakpoint(tablet-landscape) {
+	section {
+		padding: 0;
+	}
+}
+
+//
+//---------------------------------
+//	CONTAINERS
+//---------------------------------
+//
 .container-main-content {
 	margin: 0 auto;
 	padding: $phone-container-padding;
@@ -15,14 +42,26 @@
 @include breakpoint(tablet-landscape) {
 	.container-main-content {
 		padding: $tablet-landscape-container-padding;
-		padding-top: ($tablet-landscape-container-padding * 2) + $tablet-landscape-menu-height;
 		width: $tablet-landscape-container-width;
+	}
+	body section:nth-of-type(1) .container-main-content {
+		padding-top: ($tablet-landscape-container-padding * 2) + $tablet-landscape-menu-height;
 	}
 }
 
 @include breakpoint(desktop) {
 	.container-main-content {
-		width: $desktop-width;
+		padding: $desktop-container-padding * 2;
+		width: $desktop-container-width;
+	}
+	body section:nth-of-type(1) .container-main-content {
 		padding: ($desktop-container-padding * 2) + $desktop-menu-height;
 	}
 }
+
+
+
+
+
+
+
