@@ -1,4 +1,6 @@
 $(document).ready(function(){
+	
+	// Handles the showing and hiding of the mobile menu.
 	function toggleMobileMenu () {
 		if ($('body').hasClass('show-mobile-menu')) {
 			$('body').removeClass('show-mobile-menu');
@@ -9,93 +11,81 @@ $(document).ready(function(){
 		}
 	}
 
+	// Toggles the menu when the hamburger icon is clicked.
 	$('.btn-mobile-menu').click(function() {
 		toggleMobileMenu ();
 	});
 
+	// Toggles the menu when the "cover" is clicked.
 	$('.mobile-container-cover').click(function() {
 		toggleMobileMenu ();
 	})
 
+
+
+
+
+	// Checks if the background of the <section> currently at the top of the viewport is light or dark.
+	function sectionBackgroundCheck() {
+		var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    // Stores the class names as variables.
+    var bodyBackgroundDark = 'body-bg-dark';
+    var bodyBackgroundLight = 'body-bg-light';
+
+    // Loops through each <section>, determines if it is visible at the top of the viewport, and adds a class to <body> based on lightness / darkness.
+    $('section').each(function(index, elem) {
+    	var elemTop = $(elem).offset().top;
+    	var elemBottom = elemTop + $(elem).height();
+
+    	if (elemTop < docViewTop && elemBottom > docViewTop) {
+    			// If the current <section> has class="bg-dark", change it and replace it with class="bg-light".
+    			if ($(elem).hasClass('bg-dark')) {
+    				if ($('body').hasClass(bodyBackgroundLight)) {
+    					$('body').removeClass(bodyBackgroundLight);
+    					$('body').addClass(bodyBackgroundDark);
+    				}
+    			// Else, if the current <section> has class="bg-light", change it and replace it with class="bg-dark".
+    			} else if ($(elem).hasClass('bg-light')) {
+    				if ($('body').hasClass(bodyBackgroundDark)) {
+    					$('body').removeClass(bodyBackgroundDark);
+    					$('body').addClass(bodyBackgroundLight);
+    				}
+    			}
+    	}
+    });
+	}
+
+
 	// This helps adjust the sizing of the top header when the user scrolls down.
 	$(window).scroll(function() {
-		if($(window).scrollTop() > 400) {
+		// Determines the height of the first <section>.
+		var firstSectionHeight = $('section').first().height();
+
+		if($(window).scrollTop() > firstSectionHeight) {
 			$('.site-header').addClass('user-has-scrolled');
 		} else if ($('.site-header').hasClass('user-has-scrolled')) {
 			$('.site-header').removeClass('user-has-scrolled');
 		}
 
-
-		function sectionBackgroundCheck() {
-			var docViewTop = $(window).scrollTop();
-	    var docViewBottom = docViewTop + $(window).height();
-
-	    // Count the number of <section> elements in the
-	    var nSections = $('section').length;
-
-	    
-	    console.log('Scroll position = ' + docViewTop);
-
-	    // My own jquery to handle when a <section> is on the page.
-	    $('section').each(function(index, elem) {
-	    	var elemTop = $(elem).offset().top;
-	    	var elemBottom = elemTop + $(elem).height();
-
-	    	if (elemTop < docViewTop && elemBottom > docViewTop) {
-	    			if ($(elem).hasClass('bg-dark')) {
-	    				//console.log('Section number ' + index + ' is at the top and it is dark');
-	    			} else if ($(elem).hasClass('bg-light')) {
-	    				//console.log('Section number ' + index + ' is at the top and it is light');
-	    			}
-	    	}
-
-	    	//console.log('Number of sections: ' + nSections);
-	    	console.log(index, elemTop, elemBottom);
-	    });
-
-	    console.log("...");
-	    
-
-		}
-
+		// When a user scrolls, check the darkness / lightness of the <section> that's currently at the top the viewport.
 		sectionBackgroundCheck();
-
-
-		// Testing a function from stack overflow.
-		/*
-		function isScrolledIntoView(elem) {
-	    var docViewTop = $(window).scrollTop();
-	    var docViewBottom = docViewTop + $(window).height();
-
-	    var elemTop = $(elem).offset().top;
-	    var elemBottom = elemTop + $(elem).height();
-
-	    $(elem).each(function() {
-	    	console.log(this, ' elemTop = ' + elemTop + '... elemBottom = ' + elemBottom);
-	    });
-
-	    console.log('docViewTop = ' + docViewTop + '... docViewBottom = ' + docViewBottom);
-
-	    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-
-
-	    // Wholly visible.
-	    //return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom)
-	    //&& (elemBottom <= docViewBottom) &&  (elemTop >= docViewTop) );
-		}
-
-		$('section').each(function () {
-        console.log(isScrolledIntoView(this), this);
-        console.log("...")
-    });
-    */
-
-
-
 	});
 
 
+	// When a user resizes the window, check the darkness / lightness of the <section> that's currently at the top the viewport.
+	$(window).resize(function() {
+		sectionBackgroundCheck();
+	})
+
+
 });
+
+
+
+
+
 
 
 

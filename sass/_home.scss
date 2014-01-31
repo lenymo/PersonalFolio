@@ -7,7 +7,6 @@
 #homepage .container-main-content {
 	height: 100%;
 	position: relative;
-	text-align: center;
 	width: 100%;
 }
 
@@ -38,6 +37,15 @@
 	}
 	#homepage .lead {
 		font-size: $body-font-size-phone;
+	}
+}
+
+@include between-breakpoints($phone-landscape-width, $tablet-width) {
+	#homepage h1 {
+		font-size: $h2-size * $font-size-tablet;
+	}
+	#homepage .lead {
+		font-size: $body-font-size-tablet;
 	}
 }
 

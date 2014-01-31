@@ -1,0 +1,49 @@
+//
+//---------------------------------
+//	LOGO
+//---------------------------------
+//
+.site-header .logo {
+	display: inline-block;
+	height: 49px;
+	margin-top: ($phone-menu-spacing * 2);
+	text-indent: -20000px;
+	width: 154px;
+	@include retinise('logo-mobile', 'png', 154px, 49px);
+
+	// Apply transitions only at certain breakpoints.
+	@include between-breakpoints(0, $phone-landscape-width) {
+		@include transition(all, 0.2s, ease);
+	}
+
+	@include breakpoint(phone-landscape) {
+		height: 70px;
+		width: 220px;
+		@include retinise('logo-desktop', 'png', 220px, 70px);
+	}
+
+	@include breakpoint(tablet) {
+		background: none;
+		height: 125px;
+		left: 0;
+		margin: 0;
+		position: absolute;
+		top: 0;
+		width: 125px;
+		z-index: 2;
+		@include retinise('logo-tablet', 'png', 125px, 125px);
+	}
+
+	@include breakpoint(tablet-landscape) {
+		float: left;
+		height: 70px;
+		margin: $tablet-landscape-container-padding 0 0 $tablet-landscape-container-padding;
+		position: static;
+		width: 220px;
+		@include retinise('logo-desktop', 'png', 220px, 70px);
+	}
+
+	@include breakpoint(desktop) {
+		margin-left: $desktop-container-padding 0 0 $desktop-container-padding;
+	}
+}

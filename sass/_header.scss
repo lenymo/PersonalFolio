@@ -1,3 +1,8 @@
+//
+//---------------------------------
+//	MAIN MENU
+//---------------------------------
+//
 .site-header {
 	display: block;
 	margin: 0 auto;
@@ -7,51 +12,6 @@
 	z-index: 3;
 }
 
-
-/* Logo */
-.site-header .logo {
-	display: inline-block;
-	height: 49px;
-	margin-top: ($phone-menu-spacing * 2);
-	text-indent: -20000px;
-	width: 154px;
-	@include retinise('logo-mobile', 'png', 154px, 49px);
-
-	// Apply transitions only at certain breakpoints.
-	@include between-breakpoints(0, $phone-landscape-width) {
-		@include transition(all, 0.2s, ease);
-	}
-
-	@include breakpoint(tablet) {
-		background: none;
-		height: 125px;
-		left: 0;
-		margin: 0;
-		position: absolute;
-		
-		top: 0;
-		width: 125px;
-		z-index: 2;
-		@include retinise('logo-tablet', 'png', 125px, 125px);
-	}
-
-	@include breakpoint(tablet-landscape) {
-		float: left;
-		height: 70px;
-		margin: $tablet-landscape-container-padding 0 0 $tablet-landscape-container-padding;
-		position: static;
-		width: 220px;
-		@include retinise('logo-desktop', 'png', 220px, 70px);
-	}
-
-	@include breakpoint(desktop) {
-		margin-left: $desktop-container-padding 0 0 $desktop-container-padding;
-	}
-}
-
-
-
-/* Main menu */
 .main-menu {
 	display: block;
 	font-size: $nav-font-size;
@@ -70,48 +30,47 @@
 
 .main-menu li {
 	display: block;
+}
 
-	a {
-		color: #aaa;
+.main-menu li	a {
+	color: #aaa;
+	display: inline-block;
+	padding: 15px 20px;
+	width: 100%;
+
+	.icon {
 		display: inline-block;
-		padding: 15px 20px;
-		width: 100%;
-
-		.icon {
-			display: inline-block;
-			@include opacity(0.5);
-		}
-
-		span {
-			display: inline-block;
-			margin: 3px 0 0 8px;
-			vertical-align: top;
-		}
+		@include opacity(0.5);
 	}
 
-	&.current {
-		a {
-			background: #fff;
-			color: #666;
+	span {
+		display: inline-block;
+		margin: 3px 0 0 8px;
+		vertical-align: top;
+	}
+}
 
-			.icon {
-				@include opacity(1);
-			}
-		}
+.main-menu li.current a {
+	background: #fff;
+	color: #666;
+
+	.icon {
+		@include opacity(1);
 	}
 }
 
 
-/* Tablet  */
+//
+//---------------------------------
+//	TABLET
+//---------------------------------
+//
 @include breakpoint(tablet) {
 	.site-header {
 		background: rgba(255,255,255,0.97);
 		height: 100%;
 		position: fixed;
 		width: $tablet-menu-width;
-
-		//@include opacity(0.97);
-		//@include gradient(#f8f8f8, #fff);
 	}
 
 	.main-menu {
@@ -135,14 +94,17 @@
 }
 
 
-/* Tablet landscape */
+//
+//---------------------------------
+//	TABLET LANDSCAPE
+//---------------------------------
+//
 @include breakpoint(tablet-landscape) {
 	.site-header {
 		background: none;
 		height: auto;
 		position: absolute;
 		width: $tablet-landscape-header-width;
-
 		@include transition(all, 0.1s, linear);
 	}
 
@@ -184,8 +146,28 @@
 			font-weight: bold;		
 		}
 	}
+}
 
 
+//
+//---------------------------------
+//	DESKTOP
+//---------------------------------
+//
+@include breakpoint(desktop) {
+	.main-menu {
+		margin: $desktop-container-padding $desktop-container-padding 0 0;
+	}
+}
+
+
+
+//
+//---------------------------------
+//	STICKY HEADER
+//---------------------------------
+//
+@include breakpoint(tablet-landscape) {
 	// Sticky header. This handles the sticky header changing appearance once the user scrolls down.
 	.site-header.user-has-scrolled {
 		background: rgba(255,255,255,0.96);
@@ -197,7 +179,6 @@
 			height: 49px;
 			margin-top: 12px;
 			width: 154px;
-
 			@include retinise('logo-mobile', 'png', 154px, 49px);
 		}
 
@@ -211,18 +192,20 @@
 	}
 
 	// Handles header CSS for when page content is dark / light.
-	
+	.body-bg-dark .user-has-scrolled {
+		background: rgba(0, 0, 0, 0.7);
+	}
+
+	.body-bg-dark {
+		.main-menu li a {
+			color: rgba(255,255,255, 0.5);
+		}
+		.main-menu li.current a {
+			color: rgba(255,255,255, 0.9);
+		}
+	}
 
 } /* end of tablet-landscape breakpoint */
-
-
-/* Desktop */
-@include breakpoint(desktop) {
-	.main-menu {
-		float: right;
-		margin: $desktop-container-padding $desktop-container-padding 0 0;
-	}
-}
 
 
 

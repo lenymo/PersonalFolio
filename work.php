@@ -52,7 +52,7 @@
 		<a href="javascript:void(0);" class="mobile-container-cover">
 		</a>
 
-		<section class="bg-light">
+		<section class="bg-light" id="nowapp-intro">
 			<div class="container container-main-content">
 
 				<img src="img/me.png" width="150" height="150" />

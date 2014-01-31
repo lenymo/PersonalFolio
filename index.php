@@ -28,9 +28,8 @@
 
 
 
-	<body>
+	<body class="body-bg-dark">
 		<header class="site-header">
-			
 			<a href="javascript:void(0);" class="btn-mobile-menu">
 				<i class="icon icon-menu"></i>
 			</a>
@@ -45,15 +44,14 @@
 				$currentNav = "home";
 				printNav($currentNav);
 			?>
-
-
 		</header>
 
+		<!-- This <a> covers content when the mobile menu is un-hidden. -->
 		<a href="javascript:void(0);" class="mobile-container-cover">
 		</a>
 
 
-		<section id="homepage" class="bg-dark">
+		<section class="bg-dark" id="homepage">
 			<div class="container container-main-content">
 
 				<h1>

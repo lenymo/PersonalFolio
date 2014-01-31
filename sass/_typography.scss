@@ -37,18 +37,19 @@ p {
 	line-height: 1.3em;
 }
 
+
 @include breakpoint(phone) {
 	body {
 		font-size: $body-font-size-phone;
 	}
 	h1 {
-		font-size: ($h1-size * $font-size-phone);
+		font-size: $h1-size * $font-size-phone;
 	}
 	h2 {
-		font-size: ($h2-size * $font-size-phone);
+		font-size: $h2-size * $font-size-phone;
 	}
 	.lead {
-		font-size: ($h2-size * $font-size-phone);
+		font-size: $h2-size * $font-size-phone;
 	}
 }
 
@@ -57,13 +58,13 @@ p {
 		font-size: $body-font-size-tablet;
 	}
 	h1 {
-		font-size: ($h1-size * $font-size-tablet);
+		font-size: $h1-size * $font-size-tablet;
 	}
 	h2 {
-		font-size: ($h2-size * $font-size-tablet);
+		font-size: $h2-size * $font-size-tablet;
 	}
 	.lead {
-		font-size: ($h2-size * $font-size-tablet);
+		font-size: $h2-size * $font-size-tablet;
 	}
 }
 
