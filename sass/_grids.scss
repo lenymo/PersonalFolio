@@ -1,8 +1,7 @@
 $pad: 20px;
 
 .grid {
-  background: white;
-  margin: 0 0 $pad 0;
+  margin: $pad 0 $pad 0;
   
   &:after {
     @extend .clearfix;
@@ -13,37 +12,161 @@ $pad: 20px;
   float: left;
   padding-right: $pad;
 
-  // Removes padding from the last columb
+  // Removes padding from the last column
   .grid &:last-of-type {
     padding-right: 0;
   }
-}
-.col-2-3 {
-  width: 66.66%;
-}
-.col-1-3 {
-  width: 33.33%;
-}
-.col-1-2 {
-  width: 50%;
-}
-.col-1-4 {
-  width: 25%;
-}
-.col-1-6 {
-  width: 16.66%
-}
-.col-1-8 {
-  width: 12.5%;
-}
-.col-1-12 {
-  width: 8.33%;
+
+  img {
+    width: 100%;
+  }
 }
 
-/* Opt-in outside padding */
+//
+//---------------------------------
+//  COLUMN WIDTHS
+//---------------------------------
+//
+$col-5-6: 83.33%;   // 10-12
+$col-2-3: 66.66%;   // 8-12
+$col-1-2: 50%;      // 6-12
+$col-1-3: 33.33%;   // 4-12
+$col-1-4: 25%;      // 3-12
+$col-1-6: 16.66%;   // 2-12
+$col-1-12: 8.33%;   // 1-12
+
+.col-5-6 {
+  width: $col-5-6;
+}
+.col-2-3 {
+  width: $col-2-3;
+}
+.col-1-2 {
+  width: $col-1-2;
+}
+.col-1-3 {
+  width: $col-1-3;
+}
+.col-1-4 {
+  width: $col-1-4;
+}
+.col-1-6 {
+  width: $col-1-6;
+}
+.col-1-12 {
+  width: $col-1-12;
+}
+
+
+//
+//---------------------------------
+//  OFFSETS
+//---------------------------------
+//
+.col-offset-5-6 {
+  margin-left: $col-5-6;
+}
+// This reverses and offsets when the pull-right class is applied.
+.col-offset-5-6.pull-right {
+  margin-left: 0;
+  margin-right: $col-5-6;
+}
+
+.col-offset-2-3 {
+  margin-left: $col-2-3;
+}
+.col-offset-2-3.pull-right {
+  margin-left: 0;
+  margin-right: $col-2-3;
+}
+
+.col-offset-1-2 {
+  margin-left: $col-1-2;
+}
+.col-offset-1-2.pull-right {
+  margin-left: 0;
+  margin-right: $col-1-2;
+}
+
+.col-offset-1-3 {
+  margin-left: $col-1-3;
+}
+.col-offset-1-3.pull-right {
+  margin-left: 0;
+  margin-right: $col-1-3;
+}
+
+.col-offset-1-4 {
+  margin-left: $col-1-4;
+}
+.col-offset-1-4.pull-right {
+  margin-left: 0;
+  margin-right: $col-1-4;
+}
+
+.col-offset-1-6 {
+  margin-left: $col-1-6;
+}
+.col-offset-1-6.pull-right {
+  margin-left: 0;
+  margin-right: $col-1-6;
+}
+
+.col-offset-1-12 {
+  margin-left: $col-1-12;
+}
+.col-offset-1-12.pull-right {
+  margin-left: 0;
+  margin-right: $col-1-12;
+}
+
+
+//
+//---------------------------------
+//  GRID HELPERS
+//---------------------------------
+//
 .grid-pad {
   padding: $pad 0 $pad $pad;
   [class*='col-']:last-of-type {
     padding-right: $pad;
   }
 }
+.grid.no-padding > [class*='col'] {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+//
+//---------------------------------
+//  RESPONSIVE GRID
+//---------------------------------
+//
+@include between-breakpoints(0, $phone-landscape-width) {
+  [class*='col-'] {
+    width: 100%;
+    padding: 0;
+  }
+  .grid-pad {
+    [class*='col-']:last-of-type {
+      padding-right: 0;
+    }
+  }
+  [class*='col-offset'] {
+    margin-left: 0;
+  }
+  [class*='col-offset'].pull-right {
+    margin-right: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+

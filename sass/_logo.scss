@@ -5,11 +5,15 @@
 //
 .site-header .logo {
 	display: inline-block;
-	height: 49px;
+	height: 50px;
 	margin-top: ($phone-menu-spacing * 2);
 	text-indent: -20000px;
-	width: 154px;
-	@include retinise('logo-mobile', 'png', 154px, 49px);
+	width: 170px;
+	@include retinise('logo-mobile', 'png', 170px, 50px);
+
+	.body-bg-dark & {
+		@include retinise('logo-mobile-ondark', 'png', 170px, 50px);		
+	}
 
 	// Apply transitions only at certain breakpoints.
 	@include between-breakpoints(0, $phone-landscape-width) {
@@ -20,6 +24,10 @@
 		height: 70px;
 		width: 220px;
 		@include retinise('logo-desktop', 'png', 220px, 70px);
+
+		.body-bg-dark & {
+			@include retinise('logo-desktop-ondark', 'png', 220px, 70px);			
+		}
 	}
 
 	@include breakpoint(tablet) {
@@ -32,18 +40,45 @@
 		width: 125px;
 		z-index: 2;
 		@include retinise('logo-tablet', 'png', 125px, 125px);
+
+		.body-bg-dark & {
+			@include retinise('logo-tablet', 'png', 125px, 125px);
+		}
 	}
 
 	@include breakpoint(tablet-landscape) {
 		float: left;
-		height: 70px;
+		height: 105px;
 		margin: $tablet-landscape-container-padding 0 0 $tablet-landscape-container-padding;
 		position: static;
-		width: 220px;
-		@include retinise('logo-desktop', 'png', 220px, 70px);
+		width: 360px;
+		@include retinise('logo-desktop', 'png', 360px, 105px);
+
+		.body-bg-dark & {
+			@include retinise('logo-desktop-ondark', 'png', 360px, 105px);			
+		}
 	}
 
 	@include breakpoint(desktop) {
 		margin-left: $desktop-container-padding 0 0 $desktop-container-padding;
 	}
 }
+
+@include breakpoint(tablet-landscape) {
+	.site-header.user-has-scrolled .logo {
+		height: 50px;
+		margin-top: 12px;
+		width: 170px;
+		@include retinise('logo-mobile', 'png', 170px, 50px);
+	}
+
+	.body-bg-dark .site-header.user-has-scrolled .logo {
+		@include retinise('logo-mobile-ondark', 'png', 170px, 50px);
+	}
+}
+
+
+
+
+
+

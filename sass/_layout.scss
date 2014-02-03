@@ -5,58 +5,86 @@
 //
 section {
 	position: relative;
+	text-align: center;
 	width: 100%;
 }
-@include between-breakpoints($tablet-width, $tablet-landscape-width) {
+
+@include breakpoint(phone) {
 	section {
+		//padding-bottom: $phone-container-padding;
+	}
+}
+@include breakpoint(phone-landscape) {
+	section {
+		//padding-bottom: $phone-landscape-container-padding;
+	}
+}
+@include breakpoint(tablet) {
+	section {
+		padding: 0;
 		padding-left: $tablet-menu-width;
 	}
-	section .container-main-content {
+	section .container {
 		padding: $tablet-container-padding;
 	}
 }
 @include breakpoint(tablet-landscape) {
 	section {
 		padding: 0;
+		//padding-bottom: $tablet-landscape-container-padding;
 	}
 }
+@include breakpoint(desktop) {
+	section {
+		//padding-bottom: $desktop-container-padding;
+	}
+}
+
 
 //
 //---------------------------------
 //	CONTAINERS
 //---------------------------------
 //
-.container-main-content {
+.container {
 	margin: 0 auto;
 	padding: $phone-container-padding;
 	text-align: center;
 	width: $default-container-width;
 }
 
+// Pad the top of the first <section>'s container.
+section:nth-of-type(1) .container {
+	padding-top: $phone-container-padding * 3;
+}
+
 @include breakpoint(tablet) {
-	.container-main-content {
-		padding: $tablet-container-padding;
+	.container {
+		padding: $tablet-container-padding 0;
 		padding-left: $tablet-menu-width + $tablet-container-padding;
+	}
+	section:nth-of-type(1) .container {
+		padding-top: $tablet-container-padding * 4;
 	}
 }
 
 @include breakpoint(tablet-landscape) {
-	.container-main-content {
-		padding: $tablet-landscape-container-padding;
+	.container {
+		padding: $tablet-landscape-container-padding 0;
 		width: $tablet-landscape-container-width;
 	}
-	body section:nth-of-type(1) .container-main-content {
-		padding-top: ($tablet-landscape-container-padding * 2) + $tablet-landscape-menu-height;
+	section:nth-of-type(1) .container {
+		padding-top: ($tablet-landscape-container-padding * 3) + $tablet-landscape-menu-height;
 	}
 }
 
 @include breakpoint(desktop) {
-	.container-main-content {
-		padding: $desktop-container-padding * 2;
+	.container {
+		padding: ($desktop-container-padding * 2) 0;
 		width: $desktop-container-width;
 	}
-	body section:nth-of-type(1) .container-main-content {
-		padding: ($desktop-container-padding * 2) + $desktop-menu-height;
+	section:nth-of-type(1) .container {
+		padding-top: ($desktop-container-padding * 3) + $desktop-menu-height;
 	}
 }
 

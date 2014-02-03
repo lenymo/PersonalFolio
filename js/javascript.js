@@ -4,10 +4,11 @@ $(document).ready(function(){
 	function toggleMobileMenu () {
 		if ($('body').hasClass('show-mobile-menu')) {
 			$('body').removeClass('show-mobile-menu');
+			$('.btn-mobile-menu span').html("Menu");
 		} 
 		else {
 			$('body').addClass('show-mobile-menu');
-
+			$('.btn-mobile-menu span').html("Close Menu");
 		}
 	}
 

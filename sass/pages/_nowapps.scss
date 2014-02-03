@@ -1,0 +1,43 @@
+#nowapp-intro {
+	background: $color-espn;
+}
+
+#nowapp-brand .grid {
+	.afl, .ale, .nrl, .sru {
+		height: 20em;
+	}
+
+	.afl {
+		background: $color-nowapp-afl;
+	}
+	.ale {
+		background: $color-nowapp-ale;
+	}
+	.nrl {
+		background: $color-nowapp-nrl;
+	}
+	.sru {
+		background: $color-nowapp-sru;
+	}
+}
+
+#nowapp-brand .grid {
+	.afl, .ale, .nrl, .sru {
+		h3 {
+			padding-top: 100px;
+		}	
+	}
+}
+
+#nowapp-brand h3 small {
+	display: block; 
+}
+
+#nowapp-brand .nowapp-app-icons [class*='col-'] {
+	margin-top: -5em;
+}
+
+#nowapp-brand img {
+	width: 80%;
+	@include rounded(20px);
+}

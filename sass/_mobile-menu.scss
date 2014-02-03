@@ -1,33 +1,43 @@
+// Hamburger menu.
 .btn-mobile-menu {
 	display: block;
 	height: 48px;
 	left: $phone-menu-spacing;
 	position: fixed;
-	text-indent: -10000px;
+	text-align: left;
 	top: $phone-menu-spacing;
 	width: 48px;
 	z-index: 2;
-	@include rounded(10px);
 	//@include transition(all, 0.2s, ease-in-out);
 
 	.icon {
-		display: block;
-		margin: 8px auto;
+		display: inline-block;
+		margin: 8px;
+	}
+
+	span {
+		color: rgba(255,255,255,0.25);
+		display: none;
+		font-size: $nav-font-size * 0.75;
+		padding: 14px 0 0 0;
 	}
 
 	@include breakpoint(tablet) {
-		// Hide for tablet sized and above (768px).
+		// Hide for tablet size and above.
 		display: none;
 	}
 }
 
 
-// The .show-mobile-menu class is added to <body> when the .btn-mobile-menu is clicked.
-.show-mobile-menu .btn-mobile-menu {
-	left: $phone-menu-width;
-	margin-left: $phone-menu-spacing;
-}
+// The .show-mobile-menu class is added to <body> when .btn-mobile-menu is clicked.
+.show-mobile-menu .btn-mobile-menu { 
+	width: 200px;
 
+	span {
+		display: inline-block;
+		vertical-align: top;
+	}
+}
 .show-mobile-menu nav.main-menu {
 	display: block;
 	left: 0;
@@ -38,6 +48,21 @@
 }
 
 
+
+.wrap {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	//@include transition(all, 0.2s, ease-in-out);
+}
+.show-mobile-menu .wrap {
+	left: $phone-menu-width;
+}
+
+
+
 // This is the opaque cover which when clicked hides the menu.
 .mobile-container-cover {
 	background: rgba(0,0,0,0.5);
@@ -46,7 +71,7 @@
 	right: -25%;
 	top: 0;
 
-	@include transition(all, 0.2s, ease-in-out);
+	//@include transition(all, 0.2s, ease-in-out);
 }
 
 .show-mobile-menu .mobile-container-cover {

@@ -28,11 +28,11 @@
 
 
 
-	<body>
+	<body class="body-bg-dark">
 		<header class="site-header">
-			
 			<a href="javascript:void(0);" class="btn-mobile-menu">
 				<i class="icon icon-menu"></i>
+				<span>Menu</span>
 			</a>
 
 			<div class="logo">
@@ -45,61 +45,251 @@
 				$currentNav = "work";
 				printNav($currentNav);
 			?>
-
 		</header>
 
 
 		<a href="javascript:void(0);" class="mobile-container-cover">
 		</a>
 
-		<section class="bg-light" id="nowapp-intro">
-			<div class="container container-main-content">
 
-				<img src="img/me.png" width="150" height="150" />
-
-				<h1>
-					Glenn McComb
-				</h1>
-				<p class="lead">
-					Designer & front-end dev
-				</p>
-
-				<hr>
+		<div class="wrap">
 
 
-				<h1>
-					ESPN Now Apps
-				</h1>
-				<p class="lead">
-					Live scores in your pocket
-				</p>
-				<h2>
-					Back story
-				</h2>
-				<p>
-					If you are here to see my work, skip to the Sketching section.
-				</p>
-				<p>
-					ESPN Australia have a suite of four live score apps for AFL, NRL, Super Rugby and A-League for both iPhone and Android. For years they were written in HTML / CSS / JS and housed in a native app shell. The result was a functional but poor user experience, and while the approach allowed us to get an early foothold in the mobile market, we soon lost ground to competitors who built superior native apps. So we decided to build native apps. 
-				</p>
-				<p>
-					Our internal team lacked the necessary skills so I worked on a brief and we met with various dev houses in Melbourne, eventually settling on WeMakeApps who have been an absolute pleasure to work with. The brief was to natively re-build our existing apps with very similar content. The content of our was high quality but the interface let it down. Therefore, this project presented an opportunity to explore gestures and UI functions not possible using traditional web technology.
-				</p>
+			<!--
+			==============================
+				NOW APP INTRO
+			==============================
+			-->
+			<section class="bg-dark" id="nowapp-intro">
+				<div class="container">
 
-				<hr>
+					<h1>
+						ESPN Live Score Apps
+					</h1>
+					<p class="lead">
+						A case study
+					</p>
 
-				<h2>
-					Sketching
-				</h2>
+					<div class="grid grid-pad">
+						<div class="col-1-4 col-offset-1-12">
+							<img src="http://placehold.it/300x420">
+						</div>
 
-				<p>
-					My first port of call was to re-imagine the UI on my sketch pad. I use the Behance Creative Outfitters Dot Grid Book because it provides a low-noise visual grid which is perfect for UI sketches. 
-				</p>
-				<p>
-					On the scores page I opted to stack teams and scores rather than having them centre-aligned on the same row. This was done to enhance readability and to stay consistent with ESPN’s global presentation style.
-				</p>
-			</div><!-- /.container /.container-main-content -->
-		</section>
+						<div class="col-1-3">
+							<img src="http://placehold.it/400x420">
+						</div>
+
+						<div class="col-1-4">
+							<img src="http://placehold.it/300x420">
+						</div>
+					</div>
+				</div>
+			</section><!-- #nowapp-intro -->
+
+
+
+			<!--
+			==============================
+				BACK STORY
+			==============================
+			-->
+			<section class="bg-light" id="nowapp-backstory">
+				<div class="container">
+					<div class="grid">
+
+						<div class="col-1-2 col-offset-1-12 text-left pull-right">
+							<h2>
+								The back story
+							</h2>
+
+							<p>
+								ESPN Australia have a suite of four live score apps on iPhone and Android. They were previously written in HTML, CSS & JavaScript and housed in a native app shell.
+							</p>
+							<p>
+								The content in the existing apps was good but the interface and UX let it down. In 2013, we decided to build native apps and were able to explore UI functionality not possible using web technology.
+							</p>
+						</div>
+
+						<div class="col-1-4 col-offset-1-12">
+							<img src="http://placehold.it/300x420">
+						</div>
+					</div>
+				</div><!-- /.container -->
+			</section> <!-- nowapp-backstory -->
+
+
+
+			<!--
+			==============================
+				THE "NOW" BRAND
+			==============================
+			-->
+			<section class="bg-light" id="nowapp-brand">
+				<div class="container">
+					<div class="grid">
+						<div class="col-1-2 centred">
+							<h2>
+								The "Now" Brand
+							</h2>
+
+							<p>
+								Each of the four apps are branded with a unique colour which flows through the apps UI and creative assets.
+							</p>
+
+							<p>
+								A player silhouette helps communicate the sport and distinguish one app from the other, while at the same time visually tying them together. 
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="grid no-padding">
+					<div class="col-1-4 ale">
+						<h3>
+							<small>A-League</small>
+							Football Now
+						</h3>
+					</div>
+
+					<div class="col-1-4 nrl">
+						<h3>
+							<small>NRL</small>
+							League Now
+						</h3>
+					</div>
+					<div class="col-1-4 afl">
+						<h3>
+							<small>AFL</small>
+							Footy Now
+						</h3>
+					</div>
+					<div class="col-1-4 nrl">
+						
+						<h3>
+							<small>Super Rugby</small>
+							Rugby Now
+						</h3>
+					</div>
+				</div>
+
+				<div class="grid no-padding nowapp-app-icons">
+					<div class="col-1-4">
+						<img src="http://placehold.it/150x150">
+					</div>
+					<div class="col-1-4">
+						<img src="http://placehold.it/150x150">
+					</div>
+					<div class="col-1-4">
+						<img src="http://placehold.it/150x150">
+					</div>
+					<div class="col-1-4">
+						<img src="http://placehold.it/150x150">
+					</div>
+				</div>
+			</section> <!-- #nowapp-brand -->
+
+
+
+			<!--
+			==============================
+				SKETCHING
+			==============================
+			-->
+			<section class="bg-light" id="nowapp-sketching">
+				<div class="container">
+					<div class="grid">
+						<div class="col-1-2 col-offset-1-12 text-left pull-right">
+							<h2>
+								Sketching the UI
+							</h2>
+
+							<p>
+								Sketching is a crucial part of my work flow. I use the Behance Dot Grid Book. Sketching helps me quickly iterate UI / UX concept without the distractions of PS.
+							</p>
+							<p>
+								In the Scores sketch, I tried stacking teams and scores above one another rather than centre-aligning them on the same row. This proved to increase ease of reading. 
+							</p>
+							<p>
+								I added round number indicators which were later removed only to be added back in. I removed venue for each match but later re-integrated it because it was deemed vital information.
+							</p>
+						</div>
+
+						<div class="col-1-4 col-offset-1-12">
+							<img src="http://placehold.it/300x420">
+						</div>
+					</div>
+				</div>
+
+				<div class="container">
+					<div class="grid">
+						<div class="col-1-2 centred">
+							<h2>
+								Cards
+							</h2>
+							
+							<p>
+								Here I begin to explore the ways in which the card metaphor applies to various sections. In the Stats sketch I try hinting at a swipe gesture by showing the edges of the left and right cards. 
+							</p>
+
+							<p>
+								This is a valuable visual affordance but we don't end up integrating it on the fixture page due to width constraints which produced the usability issues discussed here.
+							</p>
+						</div>
+					</div>
+
+					<div class="grid no-padding">
+						<div class="col-2-3 centred">
+							<div class="grid grid-pad">
+								<div class="col-1-2">
+									<img src="http://placehold.it/300x300">
+								</div>
+								<div class="col-1-2">
+									<img src="http://placehold.it/300x300">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!-- /.container -->
+
+
+				<div class="container">
+					<div class="grid">
+						<div class="col-1-2 centred">
+							<h2>
+								Score Worm
+							</h2>
+							
+							<p>
+								The score worm is the key UI element that describes the flow of play in AFL, NRL and A-League. It visually communicates which team is winning and by how much throughout an entire match. 
+							</p>
+
+							<p>
+								It's a great way to get a sense of the flow of momentum in a match and has become a must-have feature. 
+							</p>
+
+							<p>
+								I was keen to push the concept as far as possible while maintaining simplicity. In the final design, the quarter indicators are covered by the worm itself but the information is implied by the adjacent information.
+							</p>
+						</div>
+					</div>
+
+					<div class="grid no-padding">
+						<div class="col-2-3 centred">
+							<div class="grid grid-pad">
+								<div class="col-1-2">
+									<img src="http://placehold.it/300x300">
+								</div>
+								<div class="col-1-2">
+									<img src="http://placehold.it/300x300">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!-- /.container -->
+			</section> <!-- nowapp-sketching -->
+		</div> <!-- .wrap -->
+
+
 	</body>
 </html>
 

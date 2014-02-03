@@ -2,17 +2,23 @@ $body-font-size: 26px;
 
 $h1-size: 72px;
 $h2-size: 48px;
-$h3-size: 36px;
+$h3-size: 32px;
 $h4-size: 26px;
 $h5-size: 18px;
 
 $nav-font-size: 22px;
 
 
-//Responsive font sizes
+//
+//---------------------------------
+//	RESPONSIVE FONT SIZES
+//---------------------------------
+//
 $body-font-size-phone: 18px;
+$body-font-size-phone-landscape: 21px;
 $body-font-size-tablet: 24px;
 $font-size-phone: 0.5;
+$font-size-phone-landscape: 0.6;
 $font-size-tablet: 0.75;
 
 
@@ -24,17 +30,30 @@ body {
 	line-height: 1.4;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
 	color: $color-headings;
+}
+
+h3 {
+	line-height: 1.2;
 }
 
 p {
 	padding: 0 0 1em 0;
 }
 
+p:last-of-type {
+	padding: 0;
+}
+
 .lead {
 	color: $color-p-lead;
 	line-height: 1.3em;
+}
+
+small {
+	font-size: 75%;
+	font-weight: 100;
 }
 
 
@@ -48,8 +67,23 @@ p {
 	h2 {
 		font-size: $h2-size * $font-size-phone;
 	}
+	h3 {
+		font-size: $h3-size * $font-size-phone;
+	}
 	.lead {
 		font-size: $h2-size * $font-size-phone;
+	}
+}
+
+@include breakpoint(phone-landscape) {
+	body {
+		font-size: $body-font-size-phone-landscape;
+	}
+	h2 {
+		font-size: $h2-size * $font-size-phone-landscape;
+	}
+	h3 {
+		font-size: $h3-size * $font-size-phone-landscape;
 	}
 }
 
@@ -62,6 +96,9 @@ p {
 	}
 	h2 {
 		font-size: $h2-size * $font-size-tablet;
+	}
+	h3 {
+		font-size: $h3-size * $font-size-tablet;
 	}
 	.lead {
 		font-size: $h2-size * $font-size-tablet;

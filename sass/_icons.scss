@@ -6,6 +6,12 @@
 .icon.icon-menu {
 	@include retinise('icon-menu', 'png', 32px, 32px);
 }
+.body-bg-dark .icon.icon-menu {
+	@include retinise('icon-menu-ondark', 'png', 32px, 32px);
+}
+.show-mobile-menu .icon.icon-menu {
+	@include retinise('icon-close', 'png', 32px, 32px);
+}
 .icon.icon-home {
 	@include retinise('icon-home', 'png', 32px, 32px);
 }

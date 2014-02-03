@@ -18,6 +18,17 @@ hr {
 }
 
 
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+//
+//---------------------------------
+//	LAYOUT HELPERS
+//---------------------------------
+//
 // Box sizing fix.
 *, :after, :before, ::before, ::after {
 	@include box-sizing;
@@ -29,10 +40,27 @@ hr {
   display: table;
   clear: both;
 }
-
-
-nav ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
+.pull-left {
+	float: left;
 }
+.pull-right {
+	float: right;
+}
+.centred {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+.text-left {
+	text-align: left;
+}
+.text-right {
+	text-align: right;
+}
+
+
+
+
+
+
+

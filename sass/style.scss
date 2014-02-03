@@ -6,8 +6,8 @@
 
 // Partials
 @import "reset";
-@import "base";
 @import "grids";
+@import "base";
 @import "layout";
 @import "icons";
 @import "typography";
@@ -16,7 +16,10 @@
 @import "logo";
 @import "header";
 @import "mobile-menu";
-@import "home";
+
+// Specialty Pages
+@import "pages/home";
+@import "pages/nowapps";
 
 
 
