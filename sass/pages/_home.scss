@@ -52,7 +52,7 @@
 
 @include between-breakpoints($tablet-width, $tablet-landscape-width) {
 	#homepage {
-		background-position: 100px -100px;
+		background-position: 70px -100px;
 	}
 	#homepage h1 {
 		font-size: $h2-size * $font-size-tablet;

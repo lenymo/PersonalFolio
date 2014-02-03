@@ -15,18 +15,13 @@
 		@include retinise('logo-mobile-ondark', 'png', 170px, 50px);		
 	}
 
-	// Apply transitions only at certain breakpoints.
-	@include between-breakpoints(0, $phone-landscape-width) {
-		@include transition(all, 0.2s, ease);
-	}
-
 	@include breakpoint(phone-landscape) {
 		height: 70px;
-		width: 220px;
-		@include retinise('logo-desktop', 'png', 220px, 70px);
+		width: 234px;
+		@include retinise('logo-desktop', 'png', 234px, 70px);
 
 		.body-bg-dark & {
-			@include retinise('logo-desktop-ondark', 'png', 220px, 70px);			
+			@include retinise('logo-desktop-ondark', 'png', 234px, 70px);			
 		}
 	}
 
@@ -48,14 +43,14 @@
 
 	@include breakpoint(tablet-landscape) {
 		float: left;
-		height: 105px;
-		margin: $tablet-landscape-container-padding 0 0 $tablet-landscape-container-padding;
+		height: 70px;
+		margin: ($tablet-landscape-container-padding + 10) 0 0 $tablet-landscape-container-padding;
 		position: static;
-		width: 360px;
-		@include retinise('logo-desktop', 'png', 360px, 105px);
+		width: 234px;
+		@include retinise('logo-desktop', 'png', 234px, 70px);
 
 		.body-bg-dark & {
-			@include retinise('logo-desktop-ondark', 'png', 360px, 105px);			
+			@include retinise('logo-desktop-ondark', 'png', 234px, 70px);			
 		}
 	}
 

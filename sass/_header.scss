@@ -23,15 +23,10 @@
 	text-align: left;
 	top: 0;
 	width: $phone-menu-width;
-
-	// This prevents the menu from animating when the screen width changes from phone-landscape to tablet.
-	@include between-breakpoints(0, $tablet-width - 20) {
-		//@include transition(left, 0.2s, ease-in-out);
-	}
 }
 
 .main-menu ul {
-	border-top: 2px solid rgba(255,255,255,0.1);
+	//border-top: 1px solid rgba(255,255,255,0.1);
 	margin-top: 70px;
 }
 
@@ -118,7 +113,6 @@
 		height: auto;
 		position: absolute;
 		width: $tablet-landscape-header-width;
-		@include transition(all, 0.1s, linear);
 	}
 
 	.main-menu {
