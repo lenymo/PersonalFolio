@@ -16,29 +16,36 @@
 	}
 
 	span {
-		color: rgba(255,255,255,0.75);
+		color: rgba(255,255,255,0);
 		display: none;
 		font-size: $nav-font-size * 0.75;
+		font-weight: bold;
 		padding: 14px 0 0 0;
+		@include transition(all, 0.2s, ease);
 	}
 
+	// Hide menu for tablet size and above.
 	@include breakpoint(tablet) {
-		// Hide for tablet size and above.
 		display: none;
 	}
 }
 
 
 // The .show-mobile-menu class is added to <body> when .btn-mobile-menu is clicked.
+.show-mobile-menu .site-header {
+	width: auto;
+}
 .show-mobile-menu .btn-mobile-menu { 
 	width: 200px;
+	@include opacity(0.75);
 
 	span {
+		color: rgba(255,255,255,0.75);
 		display: inline-block;
 		vertical-align: top;
 	}
 }
-.show-mobile-menu nav.main-menu {
+.show-mobile-menu .main-menu {
 	display: block;
 	left: 0;
 }
@@ -49,36 +56,34 @@
 
 
 
+
 .wrap {
 	height: 100%;
 	left: 0;
 	position: absolute;
 	top: 0;
 	width: 100%;
-	//@include transition(all, 0.2s, ease-in-out);
-}
-.show-mobile-menu .wrap {
-	left: $phone-menu-width;
 }
 
 
 
 // This is the opaque cover which when clicked hides the menu.
 .mobile-container-cover {
-	background: rgba(0,0,0,0.75);
+	background: rgba(0,0,0,0);
 	display: block;
 	position: fixed;
 	right: -25%;
 	top: 0;
-
-	//@include transition(all, 0.2s, ease-in-out);
+	@include transition(background, 0.1s, ease-in-out);
 }
 
 .show-mobile-menu .mobile-container-cover {
+	background: rgba(0,0,0,0.75);
 	height: 100%;
 	right: 0;
-	width: 100% - $phone-menu-width;
+	width: 100%;
 	z-index: 2;
+	@include transition(background, 0.1s, ease-in-out);
 }
 
 

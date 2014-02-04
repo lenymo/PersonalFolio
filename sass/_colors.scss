@@ -14,6 +14,19 @@ $color-p-lead: #888;
 //	ESPN NOW APPS
 //---------------------------------
 //
+$nav-inactive-opacity: 0.4;
+$color-nav-bg: #212f3d;
+$color-nav-text: rgba(255,255,255,$nav-inactive-opacity);
+$color-nav-current-bg: #284c71;
+$color-nav-current-text: #fff;
+
+
+
+//
+//---------------------------------
+//	ESPN NOW APPS
+//---------------------------------
+//
 $color-espn: #d6342e;
 $color-nowapp-afl: #07529b;
 $color-nowapp-ale: #c7361c;
