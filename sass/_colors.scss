@@ -1,25 +1,26 @@
 $color-body: #666;
 $color-headings: #444;
+$color-h5: #888;
 $color-hr: #eee;
 
 $color-p-lead: #888;
 
-.bg-dark {
-	background: #222;
-}
-
 
 //
 //---------------------------------
-//	ESPN NOW APPS
+//	NAV
 //---------------------------------
 //
+// Phone and Tablet.
 $nav-inactive-opacity: 0.4;
 $color-nav-bg: #212f3d;
 $color-nav-text: rgba(255,255,255,$nav-inactive-opacity);
 $color-nav-current-bg: #284c71;
 $color-nav-current-text: #fff;
 
+// Desktop.
+$color-nav-text-desktop: #888;
+$color-nav-current-text-desktop: #444;
 
 
 //
@@ -32,3 +33,41 @@ $color-nowapp-afl: #07529b;
 $color-nowapp-ale: #c7361c;
 $color-nowapp-nrl: #017d31;
 $color-nowapp-sru: #1e80ae;
+
+
+//
+//---------------------------------
+//	ON-DARK
+//---------------------------------
+//
+$color-ondark-heading: rgba(255,255,255,0.9);
+$color-ondark-body: rgba(255,255,255,0.5);
+$color-ondark-hr: #444;
+.bg-dark {
+	background: #222;		// Delete this.
+
+	h1, h2, h3 {
+		color: $color-ondark-heading;
+	}
+
+	p, h1 small, h2 small, h3 small {
+		color: $color-ondark-body;
+	}
+
+	hr {
+		border-top: 1px solid $color-ondark-hr;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

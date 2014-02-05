@@ -63,7 +63,8 @@
 //	PHONE
 //---------------------------------
 //
-@include between-breakpoints(0, $tablet-width) {
+// Adds a transition for just phone sizes.
+@include between-breakpoints(0, ($tablet-width / 20)) {
 	.main-menu {
 		@include transition(left, 0.1s, ease-in-out);
 	}
@@ -128,7 +129,7 @@
 		background: none;
 		display: inline-block;
 		float: right;
-		font-size: $nav-font-size;
+		font-size: $nav-font-size-desktop;
 		margin: $tablet-landscape-container-padding $tablet-landscape-container-padding 0 0;
 		padding: 0;
 		position: static;
@@ -144,6 +145,7 @@
 
 	.main-menu li	a {
 		background: none;
+		color: $color-nav-text-desktop;
 		padding: 15px 10px;
 
 		.icon {
@@ -158,6 +160,7 @@
 
 	.main-menu li.current a {
 		background: none;
+		color: $color-nav-current-text-desktop;
 		
 		span {
 			font-weight: bold;		
@@ -208,9 +211,11 @@
 
 	.body-bg-dark {
 		.main-menu li a {
+			color: #ccc;
 			color: rgba(255,255,255, 0.5);
 		}
 		.main-menu li.current a {
+			color: #fff;
 			color: rgba(255,255,255, 0.9);
 		}
 	}

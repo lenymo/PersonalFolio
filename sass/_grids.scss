@@ -1,7 +1,7 @@
 $pad: 20px;
 
 .grid {
-  margin: $pad 0 $pad 0;
+  margin: $pad 0 0 0;
   
   &:after {
     @extend .clearfix;
@@ -18,7 +18,7 @@ $pad: 20px;
   }
 
   img {
-    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -143,12 +143,27 @@ $col-1-12: 8.33%;   // 1-12
 //  RESPONSIVE GRID
 //---------------------------------
 //
-@include between-breakpoints(0, $phone-landscape-width) {
+@include between-breakpoints(0, $tablet-width) {
+  .grid {
+    margin-top: 10px;
+  }
+  .grid p  {
+    text-align: left;
+  }
+  .grid .text-left, .grid .text-right {
+    h2, h3, h4, h5 {
+      text-align: center;
+    }
+  }
+
   [class*='col-'] {
     width: 100%;
     padding: 0;
   }
   .grid-pad {
+    padding-left: 0;
+    padding-top: 0;
+
     [class*='col-']:last-of-type {
       padding-right: 0;
     }

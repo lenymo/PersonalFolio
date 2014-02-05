@@ -1,26 +1,43 @@
+//
+//---------------------------------
+//	GENERAL
+//---------------------------------
+//
 $body-font-size: 26px;
 
-$h1-size: 72px;
+$h1-size: 60px;
 $h2-size: 48px;
 $h3-size: 32px;
 $h4-size: 26px;
-$h5-size: 18px;
+$h5-size: 21px;
+$h6-size: 15px;
 
+// The variable for increasing font-size in the "hero" area.
+$hero-size: 1.25;
+
+
+//
+//---------------------------------
+//	NAV
+//---------------------------------
+//
 $nav-font-size: 22px;
 $nav-font-size-tablet: 18px;
+$nav-font-size-desktop: 18px;
 
 
 //
 //---------------------------------
-//	RESPONSIVE FONT SIZES
+//	RESPONSIVE
 //---------------------------------
 //
-$body-font-size-phone: 18px;
+$body-font-size-phone: 21px;
 $body-font-size-phone-landscape: 21px;
 $body-font-size-tablet: 24px;
-$font-size-phone: 0.5;
-$font-size-phone-landscape: 0.6;
-$font-size-tablet: 0.75;
+
+$font-size-phone: 0.6;
+$font-size-phone-landscape: 0.7;
+$font-size-tablet: 0.8;
 
 
 body {
@@ -31,8 +48,9 @@ body {
 	line-height: 1.4;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
 	color: $color-headings;
+	padding: 0 0 0.5em 0;
 }
 
 h3 {
@@ -41,10 +59,6 @@ h3 {
 
 p {
 	padding: 0 0 1em 0;
-}
-
-p:last-of-type {
-	padding: 0;
 }
 
 .lead {
@@ -71,8 +85,20 @@ small {
 	h3 {
 		font-size: $h3-size * $font-size-phone;
 	}
+	h4 {
+
+	}
+	h5 {
+		color: $color-h5;
+		font-size: $h5-size;
+		text-transform: uppercase;
+	}
 	.lead {
 		font-size: $h2-size * $font-size-phone;
+	}
+	.hero h1 {
+		font-size: $h1-size * $font-size-phone;
+		padding: 0;
 	}
 }
 
@@ -85,6 +111,9 @@ small {
 	}
 	h3 {
 		font-size: $h3-size * $font-size-phone-landscape;
+	}
+	.hero h1 {
+		font-size: $h1-size * $font-size-phone-landscape;
 	}
 }
 
@@ -104,34 +133,45 @@ small {
 	.lead {
 		font-size: $h2-size * $font-size-tablet;
 	}
+	.hero h1 {
+		font-size: $h1-size * $hero-size * $font-size-tablet;
+	}
 }
 
 @include breakpoint(tablet-landscape) {
 	h1 {
 		font-size: $h1-size;
 	}
-
 	h2 {
 		font-size: $h2-size;
 	}
-
 	h3 {
 		font-size: $h3-size;
 	}
-
 	h4 {
 		font-size: $h4-size;
 	}
-
 	h5 {
 		font-size: $h5-size;
 	}
-
 	h6 {
-
+		font-size: $h6-size;
 	}
-
 	.lead {
 		font-size: $h2-size;
 	}
+	.hero h1 {
+		font-size: $h1-size * $hero-size;
+	}
+	.hero .lead {
+		font-size: $h2-size * $hero-size;
+		padding: 0;
+	}
 }
+
+
+
+
+
+
+

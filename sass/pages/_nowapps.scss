@@ -1,12 +1,29 @@
 #nowapp-intro {
 	background: $color-espn;
+	padding-bottom: 0;
+	
+	.container {
+		padding-bottom: 0;
+
+		.grid {
+			overflow: hidden;
+			padding-bottom: 0;
+			margin-bottom: 0;
+		}
+
+		img {
+			display: block;
+			margin-bottom: -20px;
+		}
+	}
 }
 
-#nowapp-brand .grid {
-	.afl, .ale, .nrl, .sru {
-		height: 20em;
-	}
 
+#nowapp-brand .container {
+	padding-bottom: 0;
+}
+
+#nowapp-brand .now-app-silhouettes {
 	.afl {
 		background: $color-nowapp-afl;
 	}
@@ -21,23 +38,66 @@
 	}
 }
 
-#nowapp-brand .grid {
+#nowapp-brand img {
+	max-width: 80%;
+}
+
+#nowapp-brand .now-app-silhouettes {
 	.afl, .ale, .nrl, .sru {
+		padding: 75px 0;
+
 		h3 {
-			padding-top: 100px;
-		}	
+			font-size: 33px;
+
+			small {
+				display: block; 
+			}
+		}
 	}
 }
 
-#nowapp-brand h3 small {
-	display: block; 
+@include between-breakpoints(0, $tablet-width) {
+	#nowapp-brand .now-app-silhouettes img {
+		max-width: 60%;
+	}
+	#nowapp-brand .nowapp-app-icons {
+		padding: 12% 12% 0 12%;
+		
+		[class*='col-'] {
+			width: 50%;
+		}
+	}
 }
 
-#nowapp-brand .nowapp-app-icons [class*='col-'] {
-	margin-top: -5em;
+@include between-breakpoints($phone-landscape-width, $tablet-width) {
+	#nowapp-brand .now-app-silhouettes {
+		.afl, .ale, .nrl, .sru {
+			width: 50%;
+		}
+	}
 }
 
-#nowapp-brand img {
-	width: 80%;
-	@include rounded(20px);
+@include breakpoint(tablet) {
+	#nowapp-brand .grid {
+		.afl, .ale, .nrl, .sru {
+			padding: 100px 0;
+
+			h3 {
+				font-size: 24px;
+			}
+		}
+	}
+
+	#nowapp-brand .nowapp-app-icons [class*='col-'] {
+		margin-top: -4em;
+	}
 }
+
+
+
+
+
+
+
+
+

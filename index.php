@@ -75,10 +75,10 @@
 			<section class="bg-light">
 				<div class="container">
 					<h1 id="testOutput">
-						Test Output
+						Heading One
 					</h1>
 					<p class="lead">
-						Recent work
+						Paragraph lead
 					</p>
 
 					<p>
@@ -86,14 +86,15 @@
 					</p>
 					<!--
 					<p>
-						In the Scores sketch, I tried stacking teams and scores above one another rather than centre-aligning them on the same row. This proved to increase ease of reading.
-					</p>
-					<p>
 						I added round number indicators which were later removed only to be added back in. I removed venue for each match but later re-integrated it because it was deemed vital information.
 					</p>
 				-->
 
 					<hr />
+
+					<p>
+						In the Scores sketch, I tried stacking teams and scores above one another rather than centre-aligning them on the same row. This proved to increase ease of reading.
+					</p>
 
 					<!--
 					<h2>
@@ -110,10 +111,10 @@
 			<section class="bg-dark">
 				<div class="container">
 					<h1 id="testOutput">
-						Test Output
+						Heading One
 					</h1>
 					<p class="lead">
-						Recent work
+						Paragraph lead
 					</p>
 
 					<p>
@@ -129,10 +130,10 @@
 					<hr />
 
 					<h2>
-						Other stuff
+						Heading Two
 					</h2>
 					<p class="lead">
-						Smaller title?
+						Paragraph lead
 					</p>
 				</div>
 			</section>

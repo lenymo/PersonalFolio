@@ -63,24 +63,26 @@
 			<section class="bg-dark" id="nowapp-intro">
 				<div class="container">
 
-					<h1>
-						ESPN Live Score Apps
-					</h1>
-					<p class="lead">
-						A case study
-					</p>
+					<div class="hero">
+						<h1>
+							ESPN Live Score Apps
+						</h1>
+						<p class="lead">
+							A case study
+						</p>
+					</div>
 
 					<div class="grid grid-pad">
-						<div class="col-1-4 col-offset-1-12">
-							<img src="http://placehold.it/300x420">
+						<div class="col-1-4 col-offset-1-12 hidden-phone">
+							<img src="img/work-nowapp-intro-iphone-left.png">
 						</div>
 
 						<div class="col-1-3">
-							<img src="http://placehold.it/400x420">
+							<img src="img/work-nowapp-intro-iphone-middle.png">
 						</div>
 
-						<div class="col-1-4">
-							<img src="http://placehold.it/300x420">
+						<div class="col-1-4 hidden-phone">
+							<img src="img/work-nowapp-intro-iphone-right.png">
 						</div>
 					</div>
 				</div>
@@ -93,14 +95,14 @@
 				BACK STORY
 			==============================
 			-->
-			<section class="bg-light" id="nowapp-backstory">
+			<section class="bg-light bg-left-fade" id="nowapp-backstory">
 				<div class="container">
 					<div class="grid">
 
 						<div class="col-1-2 col-offset-1-12 text-left pull-right">
-							<h2>
-								The back story
-							</h2>
+							<h1>
+								Back story
+							</h1>
 
 							<p>
 								ESPN Australia have a suite of four live score apps on iPhone and Android. They were previously written in HTML, CSS & JavaScript and housed in a native app shell.
@@ -110,8 +112,8 @@
 							</p>
 						</div>
 
-						<div class="col-1-4 col-offset-1-12">
-							<img src="http://placehold.it/300x420">
+						<div class="col-1-4 col-offset-1-12 text-right">
+							<img src="img/work-nowapp-backstory-webapp.png">
 						</div>
 					</div>
 				</div><!-- /.container -->
@@ -128,9 +130,9 @@
 				<div class="container">
 					<div class="grid">
 						<div class="col-1-2 centred">
-							<h2>
+							<h1>
 								The "Now" Brand
-							</h2>
+							</h1>
 
 							<p>
 								Each of the four apps are branded with a unique colour which flows through the apps UI and creative assets.
@@ -143,12 +145,14 @@
 					</div>
 				</div>
 
-				<div class="grid no-padding">
+				<div class="grid no-padding bg-dark now-app-silhouettes">
 					<div class="col-1-4 ale">
 						<h3>
 							<small>A-League</small>
 							Football Now
 						</h3>
+
+						<img src="img/work-nowapp-branding-player-ale.png">
 					</div>
 
 					<div class="col-1-4 nrl">
@@ -156,34 +160,38 @@
 							<small>NRL</small>
 							League Now
 						</h3>
+						<img src="img/work-nowapp-branding-player-nrl.png">
 					</div>
+
 					<div class="col-1-4 afl">
 						<h3>
 							<small>AFL</small>
 							Footy Now
 						</h3>
+						<img src="img/work-nowapp-branding-player-afl.png">
 					</div>
-					<div class="col-1-4 nrl">
-						
+
+					<div class="col-1-4 sru">
 						<h3>
 							<small>Super Rugby</small>
 							Rugby Now
 						</h3>
+						<img src="img/work-nowapp-branding-player-sru.png">
 					</div>
 				</div>
 
 				<div class="grid no-padding nowapp-app-icons">
 					<div class="col-1-4">
-						<img src="http://placehold.it/150x150">
+						<img src="img/work-nowapp-branding-icon-ale.png">
 					</div>
 					<div class="col-1-4">
-						<img src="http://placehold.it/150x150">
+						<img src="img/work-nowapp-branding-icon-nrl.png">
 					</div>
 					<div class="col-1-4">
-						<img src="http://placehold.it/150x150">
+						<img src="img/work-nowapp-branding-icon-afl.png">
 					</div>
 					<div class="col-1-4">
-						<img src="http://placehold.it/150x150">
+						<img src="img/work-nowapp-branding-icon-sru.png">
 					</div>
 				</div>
 			</section> <!-- #nowapp-brand -->
@@ -198,10 +206,10 @@
 			<section class="bg-light" id="nowapp-sketching">
 				<div class="container">
 					<div class="grid">
-						<div class="col-1-2 col-offset-1-12 text-left pull-right">
-							<h2>
-								Sketching the UI
-							</h2>
+						<div class="col-1-2 col-offset-1-12 text-left">
+							<h1>
+								Sketching
+							</h1>
 
 							<p>
 								Sketching is a crucial part of my work flow. I use the Behance Dot Grid Book. Sketching helps me quickly iterate UI / UX concept without the distractions of PS.
@@ -215,7 +223,10 @@
 						</div>
 
 						<div class="col-1-4 col-offset-1-12">
-							<img src="http://placehold.it/300x420">
+							<h5>
+								Scores
+							</h5>
+							<img src="img/work-nowapp-sketching-scores.png">
 						</div>
 					</div>
 				</div>
@@ -238,15 +249,17 @@
 					</div>
 
 					<div class="grid no-padding">
-						<div class="col-2-3 centred">
-							<div class="grid grid-pad">
-								<div class="col-1-2">
-									<img src="http://placehold.it/300x300">
-								</div>
-								<div class="col-1-2">
-									<img src="http://placehold.it/300x300">
-								</div>
-							</div>
+						<div class="col-1-3 col-offset-1-6">
+							<h5>
+								News
+							</h5>
+							<img src="img/work-nowapp-sketching-news.png">
+						</div>
+						<div class="col-1-3">
+							<h5>
+								Stats
+							</h5>
+							<img src="img/work-nowapp-sketching-stats.png">
 						</div>
 					</div>
 				</div><!-- /.container -->

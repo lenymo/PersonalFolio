@@ -58,6 +58,25 @@ nav ul {
 	text-align: right;
 }
 
+// This helper class is added to elements which need to be hidden on phone-sizes.
+@include between-breakpoints(0, $tablet-width) {
+  .hidden-phone {
+    display: none;
+  }
+}
+
+
+//
+//---------------------------------
+//	SPECIALTY
+//---------------------------------
+//
+.bg-left-fade {
+	background: url(../img/bg-left-fade.png) no-repeat bottom left;
+	@include background-size(1200px, 444px);
+}
+
+
 
 
 

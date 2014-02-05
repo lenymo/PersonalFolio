@@ -6,7 +6,7 @@
 .site-header .logo {
 	display: inline-block;
 	height: 50px;
-	margin-top: ($phone-menu-spacing * 2);
+	margin-top: ($phone-menu-spacing * 4);
 	text-indent: -20000px;
 	width: 170px;
 	@include retinise('logo-mobile', 'png', 170px, 50px);
@@ -25,6 +25,7 @@
 		}
 	}
 
+	// Tablet.
 	@include breakpoint(tablet) {
 		background: none;
 		height: 125px;
@@ -41,6 +42,7 @@
 		}
 	}
 
+	// Tablet-landscape.
 	@include breakpoint(tablet-landscape) {
 		float: left;
 		height: 70px;
@@ -59,6 +61,7 @@
 	}
 }
 
+// Handles the sticky nav bar.
 @include breakpoint(tablet-landscape) {
 	.site-header.user-has-scrolled .logo {
 		height: 50px;

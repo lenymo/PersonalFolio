@@ -11,33 +11,37 @@ section {
 
 @include breakpoint(phone) {
 	section {
-		//padding-bottom: $phone-container-padding;
+		padding: $phone-container-padding 0;
 	}
 }
 @include breakpoint(phone-landscape) {
 	section {
-		//padding-bottom: $phone-landscape-container-padding;
+		padding: $phone-landscape-container-padding 0;
 	}
 }
 @include breakpoint(tablet) {
 	section {
-		padding: 0;
+		padding: ($tablet-container-padding * 2) 0;
 		padding-left: $tablet-menu-width;
 	}
+	/*
 	section .container {
 		padding: $tablet-container-padding;
 	}
+	*/
 }
 @include breakpoint(tablet-landscape) {
 	section {
-		padding: 0;
-		//padding-bottom: $tablet-landscape-container-padding;
+		padding: ($tablet-landscape-container-padding * 2) 0;
 	}
 }
 @include breakpoint(desktop) {
 	section {
-		//padding-bottom: $desktop-container-padding;
+		padding: ($desktop-container-padding * 2) 0;
 	}
+}
+section:nth-of-type(1) {
+	padding-top: 0;
 }
 
 
@@ -48,20 +52,19 @@ section {
 //
 .container {
 	margin: 0 auto;
-	padding: $phone-container-padding;
+	padding: ($phone-container-padding / 4) $phone-container-padding;
 	text-align: center;
 	width: $default-container-width;
 }
 
 // Pad the top of the first <section>'s container.
 section:nth-of-type(1) .container {
-	padding-top: $phone-container-padding * 3;
+	padding-top: $phone-container-padding * 2;
 }
 
 @include breakpoint(tablet) {
 	.container {
-		padding: $tablet-container-padding 0;
-		padding-left: $tablet-menu-width + $tablet-container-padding;
+		padding: ($tablet-container-padding / 2) 0;
 	}
 	section:nth-of-type(1) .container {
 		padding-top: $tablet-container-padding * 4;
@@ -70,7 +73,7 @@ section:nth-of-type(1) .container {
 
 @include breakpoint(tablet-landscape) {
 	.container {
-		padding: $tablet-landscape-container-padding 0;
+		padding: ($tablet-landscape-container-padding / 4) 0;
 		width: $tablet-landscape-container-width;
 	}
 	section:nth-of-type(1) .container {
@@ -80,8 +83,8 @@ section:nth-of-type(1) .container {
 
 @include breakpoint(desktop) {
 	.container {
-		padding: ($desktop-container-padding * 2) 0;
-		width: $desktop-container-width;
+		padding: ($desktop-container-padding / 4) 0;
+		max-width: $desktop-container-width;
 	}
 	section:nth-of-type(1) .container {
 		padding-top: ($desktop-container-padding * 3) + $desktop-menu-height;
