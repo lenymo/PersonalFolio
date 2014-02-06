@@ -64,8 +64,11 @@
 				<div class="container">
 
 					<div class="hero">
+						<div class="logo-espn">
+							ESPN
+						</div>
 						<h1>
-							ESPN Live Score Apps
+							Live Score Apps
 						</h1>
 						<p class="lead">
 							A case study
@@ -197,6 +200,55 @@
 			</section> <!-- #nowapp-brand -->
 
 
+			<!--
+
+			-->
+			<section class="bg-light" id="nowapp-cards">
+				<div class="container">
+					<div class="grid">
+						<div class="col-1-2 centred">
+							<h1>
+								Cards in design
+							</h1>
+
+							<p>
+								There is a growing movement in the design community towards the 'cards' metaphor which Paul Adams describes in this influential article. The weight of numbers continues to build as Google, Twitter, Pinterest, Spotify and Facebook integrate cards into their core UI.
+							</p>
+						</div>
+					</div>
+
+					<div class="grid grid-pad">
+						<div class="col-1-3">
+							<h5>
+								Tweets
+							</h5>
+							<img src="img/work-nowapp-cards-twitter.png">
+						</div>
+
+						<div class="col-1-3">
+							<h5>
+								Matches
+							</h5>
+							<img src="img/work-nowapp-cards-scores.png">
+						</div>
+
+						<div class="col-1-3">
+							<h5>
+								Articles
+							</h5>
+							<img src="img/work-nowapp-cards-news.png">
+						</div>
+					</div>
+					<div class="grid">
+						<div class="col-1-2 centred">
+							<p>
+								The power of cards lies in their ability to visually associate related chunks of content, while at the same time differentiating them from other similar groupings of content. 
+							</p>
+						</div>
+					</div>
+				</div>
+			</section><!-- #nowapp-cards -->
+
 
 			<!--
 			==============================
@@ -273,15 +325,17 @@
 							</h2>
 							
 							<p>
-								The score worm is the key UI element that describes the flow of play in AFL, NRL and A-League. It visually communicates which team is winning and by how much throughout an entire match. 
+								The score worm is the key UI element that describes the flow of play in AFL, NRL and Super Rugby. It visually communicates which team is winning and by how much throughout a match. 
 							</p>
 
+							<!--
 							<p>
 								It's a great way to get a sense of the flow of momentum in a match and has become a must-have feature. 
 							</p>
+							-->
 
 							<p>
-								I was keen to push the concept as far as possible while maintaining simplicity. In the final design, the quarter indicators are covered by the worm itself but the information is implied by the adjacent information.
+								I was keen to push the concept as far as possible while maintaining simplicity. In the final design, the quarter indicators are covered by the worm itself but they are implied by the neighbouring labels.
 							</p>
 						</div>
 					</div>
@@ -290,10 +344,16 @@
 						<div class="col-2-3 centred">
 							<div class="grid grid-pad">
 								<div class="col-1-2">
-									<img src="http://placehold.it/300x300">
+									<h5>
+										Sketch
+									</h5>
+									<img src="img/work-nowapp-sketching-worm.png">
 								</div>
 								<div class="col-1-2">
-									<img src="http://placehold.it/300x300">
+									<h5>
+										Final mockup
+									</h5>
+									<img src="img/work-nowapp-sketching-worm-mockup.png">
 								</div>
 							</div>
 						</div>

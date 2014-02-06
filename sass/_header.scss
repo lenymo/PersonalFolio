@@ -14,7 +14,7 @@
 
 .main-menu {
 	background: $color-nav-bg;
-	display: block;
+	display: none;
 	font-size: $nav-font-size;
 	font-weight: normal;
 	height: 100%;
@@ -64,9 +64,9 @@
 //---------------------------------
 //
 // Adds a transition for just phone sizes.
-@include between-breakpoints(0, ($tablet-width / 20)) {
+@include between-breakpoints(0, ($tablet-width - 20)) {
 	.main-menu {
-		@include transition(left, 0.1s, ease-in-out);
+		@include transition(all, 0.1s, ease-in-out);
 	}
 }
 

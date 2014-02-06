@@ -1,3 +1,8 @@
+//
+//---------------------------------
+//	INTRO
+//---------------------------------
+//
 #nowapp-intro {
 	background: $color-espn;
 	padding-bottom: 0;
@@ -17,8 +22,21 @@
 		}
 	}
 }
+#nowapp-intro .logo-espn {
+	display: inline-block;
+	height: 65px;
+	margin: 0 0 10px 0;
+	text-indent: -20000px;
+	width: 250px;
+	@include retinise('logo-espn', 'png', 250px, 65px);
+}
 
 
+//
+//---------------------------------
+//	BRANDING
+//---------------------------------
+//
 #nowapp-brand .container {
 	padding-bottom: 0;
 }
@@ -56,7 +74,44 @@
 	}
 }
 
-@include between-breakpoints(0, $tablet-width) {
+
+//
+//---------------------------------
+//	CARDS
+//---------------------------------
+//
+#nowapp-cards {
+	background: #f5f5f5 url('../img/bg-cards.png') no-repeat center top;
+	padding-top: 95%;
+	@include background-size(100%, auto);
+}
+
+
+//
+//---------------------------------
+//	SKETCHING
+//---------------------------------
+//
+#nowapp-sketching {
+	background: 
+		url('../img/bg-sketching-top.png') center top repeat-x,
+		url('../img/bg-sketching-bottom.png') center bottom repeat-x,
+		url('../img/bg-dots.png') repeat;
+}
+
+
+//
+//---------------------------------
+//	RESPONSIVE
+//---------------------------------
+//
+@include between-breakpoints(0, ($tablet-width - 1)) {
+	#nowapp-intro .logo-espn {
+		height: 52px;
+		width: 200px;
+		@include retinise('logo-espn', 'png', 200px, 52px);
+	}
+
 	#nowapp-brand .now-app-silhouettes img {
 		max-width: 60%;
 	}
@@ -69,7 +124,7 @@
 	}
 }
 
-@include between-breakpoints($phone-landscape-width, $tablet-width) {
+@include between-breakpoints($phone-landscape-width, ($tablet-width - 1)) {
 	#nowapp-brand .now-app-silhouettes {
 		.afl, .ale, .nrl, .sru {
 			width: 50%;
@@ -77,6 +132,7 @@
 	}
 }
 
+// Tablet.
 @include breakpoint(tablet) {
 	#nowapp-brand .grid {
 		.afl, .ale, .nrl, .sru {
@@ -90,6 +146,26 @@
 
 	#nowapp-brand .nowapp-app-icons [class*='col-'] {
 		margin-top: -4em;
+	}
+}
+@include between-breakpoints($tablet-width, 875px) {
+	#nowapp-brand .grid {
+		.afl, .ale, .nrl, .sru {
+			h3 {
+				font-size: 20px;
+			}
+		}
+	}
+}
+
+// Desktop.
+@include breakpoint(desktop) {
+	#nowapp-brand .grid {
+		.afl, .ale, .nrl, .sru {
+			h3 {
+				font-size: $h3-size;
+			}
+		}
 	}
 }
 

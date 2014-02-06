@@ -143,7 +143,7 @@ $col-1-12: 8.33%;   // 1-12
 //  RESPONSIVE GRID
 //---------------------------------
 //
-@include between-breakpoints(0, $tablet-width) {
+@include between-breakpoints(0, ($tablet-width - 1)) {
   .grid {
     margin-top: 10px;
   }

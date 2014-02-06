@@ -21,12 +21,24 @@
 		font-size: $nav-font-size * 0.75;
 		font-weight: bold;
 		padding: 14px 0 0 0;
-		@include transition(all, 0.2s, ease);
+		//@include transition(all, 0.2s, ease);
 	}
+}
 
-	// Hide menu for tablet size and above.
-	@include breakpoint(tablet) {
+// Hide menu for tablet size and above.
+@include breakpoint(tablet) {
+	.btn-mobile-menu {
 		display: none;
+	}
+}
+
+@include between-breakpoints(0, 400px) {
+	.btn-mobile-menu {
+		left: 5px;
+		top: 5px;
+	}
+	.main-menu {
+		margin-top: 60px;
 	}
 }
 
@@ -83,7 +95,6 @@
 	right: 0;
 	width: 100%;
 	z-index: 2;
-	@include transition(background, 0.1s, ease-in-out);
 }
 
 
