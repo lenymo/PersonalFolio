@@ -48,6 +48,11 @@ body {
 	line-height: 1.4;
 }
 
+a, a:link, a:visited, a:hover, a:active {
+	color: $color-anchors;
+	font-weight: normal;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	color: $color-headings;
 	padding: 0 0 0.5em 0;
@@ -67,8 +72,12 @@ p {
 }
 
 small {
+	color: $color-small;
 	font-size: 75%;
 	font-weight: 100;
+}
+small a, small a:link, small a:visited, small a:hover, small a:active {
+	color: $color-small-anchor;
 }
 
 
@@ -91,6 +100,7 @@ small {
 	h5 {
 		color: $color-h5;
 		font-size: $h5-size;
+		margin: 1em 0 0 0;
 		text-transform: uppercase;
 	}
 	.lead {

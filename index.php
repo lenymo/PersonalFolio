@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>
-			Responsive Menu
+			Glenn McComb
 		</title>
 
 

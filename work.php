@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>
-			Responsive Menu
+			Glenn McComb - Work - ESPN live score apps
 		</title>
 
 
@@ -119,7 +119,7 @@
 							<img src="img/work-nowapp-backstory-webapp.png">
 						</div>
 					</div>
-				</div><!-- /.container -->
+				</div><!-- .container -->
 			</section> <!-- nowapp-backstory -->
 
 
@@ -201,7 +201,92 @@
 
 
 			<!--
+			==============================
+				SECTIONS
+			==============================
+			-->
+			<section class="bg-light" id="nowapp-sections">
+				<div class="container">
+					<div class="grid">
+						<div class="col-1-2 centred">
+							<h1>
+								Sections
+							</h1>
+							<p>
+								In our initial launch there were six sections.
+							</p>
+						</div>
+					</div>
+					<div class="grid grid-pad nowapp-section-icons">
+						<div class="col-1-6">
+							<img src="http://placehold.it/150x150">
+							<h5>
+								Scores
+							</h5>
+						</div>
+						<div class="col-1-6">
+							<img src="http://placehold.it/150x150">
+							<h5>
+								Standings
+							</h5>
+						</div>
+						<div class="col-1-6">
+							<img src="http://placehold.it/150x150">
+							<h5>
+								News
+							</h5>
+						</div>
+						<div class="col-1-6">
+							<img src="http://placehold.it/150x150">
+							<h5>
+								Twitter
+							</h5>
+						</div>
+						<div class="col-1-6">
+							<img src="http://placehold.it/150x150">
+							<h5>
+								Tipping
+							</h5>
+						</div>
+						<div class="col-1-6">
+							<img src="http://placehold.it/150x150">
+							<h5>
+								Settings
+							</h5>
+						</div>
+					</div>
 
+					<div class="grid">
+						<div class="col-1-2 col-offset-1-12">
+							<video controls>
+								<source src="video/nowapp.webm">
+								<source src="video/nowapp.mp4">
+							</video>
+						</div>
+						<div class="col-1-3 col-offset-1-12 text-left">
+							<h2>
+								Video demo
+							</h2>
+							<p>
+								To help communicate the proposed functionality of the app, I put together a Flash-based walkthrough of swiping on the scores page and accessing the Menu.
+							</p>
+							<p>
+								This was shared with our dev team, internal stake-holders and the third party developers we worked with.
+							</p>
+
+							<small>
+								If the html5 video doesn't work, <a href="http://vimeo.com/85989022" title="Watch the app video demo on Vimeo">check out the video on Vimeo</a>.
+							</small>
+						</div>
+					</div>
+				</div><!-- .container -->
+			</section> <!-- #nowapp-sections -->
+
+
+			<!--
+			==============================
+				CARDS
+			==============================
 			-->
 			<section class="bg-light" id="nowapp-cards">
 				<div class="container">
@@ -212,7 +297,7 @@
 							</h1>
 
 							<p>
-								There is a growing movement in the design community towards the 'cards' metaphor which Paul Adams describes in this influential article. The weight of numbers continues to build as Google, Twitter, Pinterest, Spotify and Facebook integrate cards into their core UI.
+								There is a growing movement in the design community towards the 'cards' metaphor which Paul Adams describes in <a href="http://insideintercom.io/why-cards-are-the-future-of-the-web/" title="Why cards are the future of the web, by Paul Adams." target="_blank">this influential article</a>. The weight of numbers continues to build as Google, Twitter, Pinterest, Spotify and Facebook integrate cards into their core UI.
 							</p>
 						</div>
 					</div>
@@ -246,7 +331,7 @@
 							</p>
 						</div>
 					</div>
-				</div>
+				</div><!-- .container -->
 			</section><!-- #nowapp-cards -->
 
 
@@ -264,7 +349,7 @@
 							</h1>
 
 							<p>
-								Sketching is a crucial part of my work flow. I use the Behance Dot Grid Book. Sketching helps me quickly iterate UI / UX concept without the distractions of PS.
+								Sketching is a crucial part of my work flow. I use the <a href="http://www.creativesoutfitter.com/product/34/dot-grid-book" title="Check out the Dot Grid Book." target="_blank">Behance Dot Grid Book</a>. Sketching helps me quickly iterate UI / UX concept without the distractions of PS.
 							</p>
 							<p>
 								In the Scores sketch, I tried stacking teams and scores above one another rather than centre-aligning them on the same row. This proved to increase ease of reading. 
@@ -274,14 +359,14 @@
 							</p>
 						</div>
 
-						<div class="col-1-4 col-offset-1-12">
+						<div class="col-1-3">
 							<h5>
 								Scores
 							</h5>
 							<img src="img/work-nowapp-sketching-scores.png">
 						</div>
 					</div>
-				</div>
+				</div><!-- .container -->
 
 				<div class="container">
 					<div class="grid">
@@ -314,7 +399,7 @@
 							<img src="img/work-nowapp-sketching-stats.png">
 						</div>
 					</div>
-				</div><!-- /.container -->
+				</div><!-- .container -->
 
 
 				<div class="container">
@@ -327,12 +412,6 @@
 							<p>
 								The score worm is the key UI element that describes the flow of play in AFL, NRL and Super Rugby. It visually communicates which team is winning and by how much throughout a match. 
 							</p>
-
-							<!--
-							<p>
-								It's a great way to get a sense of the flow of momentum in a match and has become a must-have feature. 
-							</p>
-							-->
 
 							<p>
 								I was keen to push the concept as far as possible while maintaining simplicity. In the final design, the quarter indicators are covered by the worm itself but they are implied by the neighbouring labels.
@@ -358,8 +437,8 @@
 							</div>
 						</div>
 					</div>
-				</div><!-- /.container -->
-			</section> <!-- nowapp-sketching -->
+				</div><!-- .container -->
+			</section> <!-- #nowapp-sketching -->
 		</div> <!-- .wrap -->
 
 

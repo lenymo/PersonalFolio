@@ -12,7 +12,7 @@ a {
 
 hr {
 	border-top: 1px solid $color-hr;
-	margin: 30px auto;
+	margin: 50px auto;
 	text-align: center;
 	width: 30%;
 }
@@ -73,7 +73,7 @@ nav ul {
 //
 .bg-left-fade {
 	background: url(../img/bg-left-fade.png) no-repeat bottom left;
-	@include background-size(1200px, 444px);
+	@include background-size(100%, auto);
 }
 
 
