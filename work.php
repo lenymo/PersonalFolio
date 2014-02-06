@@ -275,7 +275,7 @@
 							</p>
 
 							<small>
-								If the html5 video doesn't work, <a href="http://vimeo.com/85989022" title="Watch the app video demo on Vimeo">check out the video on Vimeo</a>.
+								If the HTML5 video doesn't work, <a href="http://vimeo.com/85989022" title="Watch the app video demo on Vimeo">check out the video on Vimeo</a>.
 							</small>
 						</div>
 					</div>
