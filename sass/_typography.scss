@@ -10,7 +10,7 @@ $h2-size: 48px;
 $h3-size: 32px;
 $h4-size: 26px;
 $h5-size: 21px;
-$h6-size: 15px;
+$h6-size: 18px;
 
 // The variable for increasing font-size in the "hero" area.
 $hero-size: 1.25;
@@ -102,6 +102,10 @@ small a, small a:link, small a:visited, small a:hover, small a:active {
 		font-size: $h5-size;
 		margin: 1em 0 0 0;
 		text-transform: uppercase;
+	}
+	h6 {
+		color: $color-h5;
+		font-size: $h6-size;
 	}
 	.lead {
 		font-size: $h2-size * $font-size-phone;

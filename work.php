@@ -219,51 +219,45 @@
 					</div>
 					<div class="grid grid-pad nowapp-section-icons">
 						<div class="col-1-6">
-							<img src="http://placehold.it/150x150">
-							<h5>
+							<img src="img/work-nowapp-sections-scores.png">
+							<h6>
 								Scores
-							</h5>
+							</h6>
 						</div>
 						<div class="col-1-6">
-							<img src="http://placehold.it/150x150">
-							<h5>
+							<img src="img/work-nowapp-sections-standings.png">
+							<h6>
 								Standings
-							</h5>
+							</h6>
 						</div>
 						<div class="col-1-6">
-							<img src="http://placehold.it/150x150">
-							<h5>
+							<img src="img/work-nowapp-sections-news.png">
+							<h6>
 								News
-							</h5>
+							</h6>
 						</div>
 						<div class="col-1-6">
-							<img src="http://placehold.it/150x150">
-							<h5>
+							<img src="img/work-nowapp-sections-twitter.png">
+							<h6>
 								Twitter
-							</h5>
+							</h6>
 						</div>
 						<div class="col-1-6">
-							<img src="http://placehold.it/150x150">
-							<h5>
+							<img src="img/work-nowapp-sections-tipping.png">
+							<h6>
 								Tipping
-							</h5>
+							</h6>
 						</div>
 						<div class="col-1-6">
-							<img src="http://placehold.it/150x150">
-							<h5>
+							<img src="img/work-nowapp-sections-settings.png">
+							<h6>
 								Settings
-							</h5>
+							</h6>
 						</div>
 					</div>
 
 					<div class="grid">
-						<div class="col-1-2 col-offset-1-12">
-							<video controls>
-								<source src="video/nowapp.webm">
-								<source src="video/nowapp.mp4">
-							</video>
-						</div>
-						<div class="col-1-3 col-offset-1-12 text-left">
+						<div class="col-5-12 col-offset-1-12 text-left">
 							<h2>
 								Video demo
 							</h2>
@@ -274,9 +268,21 @@
 								This was shared with our dev team, internal stake-holders and the third party developers we worked with.
 							</p>
 
+							<!--
 							<small>
-								If the HTML5 video doesn't work, <a href="http://vimeo.com/85989022" title="Watch the app video demo on Vimeo">check out the video on Vimeo</a>.
+								If the HTML5 video doesn't work, <a href="http://vimeo.com/85989022" title="Watch the app video demo on Vimeo" target="_blank">check out the video on Vimeo</a>.
 							</small>
+							-->
+						</div>
+
+						<div class="col-1-3 col-offset-1-12">
+							<video controls>
+								<source src="video/nowapp.webm" type="video/webm">
+								<source src="video/nowapp.mp4" type="video/mp4;">
+								<small>
+									If the HTML5 video doesn't work, <a href="http://vimeo.com/85989022" title="Watch the app video demo on Vimeo" target="_blank">check out the video on Vimeo</a>.
+								</small>
+							</video>
 						</div>
 					</div>
 				</div><!-- .container -->

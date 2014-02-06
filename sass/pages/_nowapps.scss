@@ -37,7 +37,7 @@
 //	BRANDING
 //---------------------------------
 //
-#nowapp-brand .container {
+#nowapp-brand .container, #nowapp-brand {
 	padding-bottom: 0;
 }
 
@@ -82,6 +82,12 @@
 //
 #nowapp-sections .nowapp-section-icons {
 	padding-bottom: 50px;
+}
+#nowapp-sections .nowapp-section-icons [class*='col-'] {
+	padding-bottom: 25px;
+}
+#nowapp-sections .nowapp-section-icons img {
+	max-width: 50%;
 }
 
 
