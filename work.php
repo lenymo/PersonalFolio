@@ -1,59 +1,35 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<?
+			// PHP includes.
+			include("php/global.inc.php");
+
+			// Call include files.
+			printCSS();
+			printJavascript();
+			printMetaTags();
+
+			// Defines which nav the current page falls under.
+			$currentNav = "work";
+		?>
+
 		<title>
 			Glenn McComb - Work - ESPN live score apps
 		</title>
-
-
-		<?
-			// PHP includes
-			include("php/nav.inc.php");
-		?>
-
-
-		<!-- CSS -->
-		<link rel="stylesheet" href="css/style.css">
-
-
-		<!-- JavaScript -->
-		<script src="js/jquery-1.10.2.js"></script>
-		<script src="js/html5shiv.js"></script>
-		<script src="js/javascript.js"></script>
-
-		<!-- Meta Tags -->
-		<meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1.0">
 
 	</head>
 
 
 
 	<body class="body-bg-dark">
-		<header class="site-header">
-			<a href="javascript:void(0);" class="btn-mobile-menu">
-				<i class="icon icon-menu"></i>
-				<span>Menu</span>
-			</a>
-
-			<div class="logo">
-				Glenn McComb
-			</div>
-
-
-			<?
-				// Navigation called by PHP
-				$currentNav = "work";
-				printNav($currentNav);
-			?>
-		</header>
-
-
-		<a href="javascript:void(0);" class="mobile-container-cover">
-		</a>
+		<?
+			// Site Header, called by PHP. Pass this function the name of the current page.
+			printSiteHeader($currentNav);
+		?>
 
 
 		<div class="wrap">
-
 
 			<!--
 			==============================
@@ -262,7 +238,7 @@
 								Video demo
 							</h2>
 							<p>
-								To help communicate the proposed functionality of the app, I put together a Flash-based walkthrough of swiping on the scores page and accessing the Menu.
+								To help communicate the proposed functionality of the app, I put together a Flash-based walkthrough of the scores and menu screens.
 							</p>
 							<p>
 								This was shared with our dev team, internal stake-holders and the third party developers we worked with.
@@ -276,9 +252,9 @@
 						</div>
 
 						<div class="col-1-3 col-offset-1-12">
-							<video controls>
+							<video controls poster="video/nowapp.png">
 								<source src="video/nowapp.webm" type="video/webm">
-								<source src="video/nowapp.mp4" type="video/mp4;">
+								<source src="video/nowapp.mp4" type="video/mp4">
 								<small>
 									If the HTML5 video doesn't work, <a href="http://vimeo.com/85989022" title="Watch the app video demo on Vimeo" target="_blank">check out the video on Vimeo</a>.
 								</small>
@@ -299,7 +275,7 @@
 					<div class="grid">
 						<div class="col-1-2 centred">
 							<h1>
-								Cards in design
+								Designing with cards
 							</h1>
 
 							<p>
@@ -349,7 +325,7 @@
 			<section class="bg-light" id="nowapp-sketching">
 				<div class="container">
 					<div class="grid">
-						<div class="col-1-2 col-offset-1-12 text-left">
+						<div class="col-5-12 col-offset-1-12 text-left">
 							<h1>
 								Sketching
 							</h1>
@@ -365,7 +341,7 @@
 							</p>
 						</div>
 
-						<div class="col-1-3">
+						<div class="col-1-3 col-offset-1-12">
 							<h5>
 								Scores
 							</h5>
@@ -392,13 +368,13 @@
 					</div>
 
 					<div class="grid no-padding">
-						<div class="col-1-3 col-offset-1-6">
+						<div class="col-1-3 col-offset-1-12">
 							<h5>
 								News
 							</h5>
 							<img src="img/work-nowapp-sketching-news.png">
 						</div>
-						<div class="col-1-3">
+						<div class="col-1-3 col-offset-1-6">
 							<h5>
 								Stats
 							</h5>
@@ -426,21 +402,17 @@
 					</div>
 
 					<div class="grid no-padding">
-						<div class="col-2-3 centred">
-							<div class="grid grid-pad">
-								<div class="col-1-2">
-									<h5>
-										Sketch
-									</h5>
-									<img src="img/work-nowapp-sketching-worm.png">
-								</div>
-								<div class="col-1-2">
-									<h5>
-										Final mockup
-									</h5>
-									<img src="img/work-nowapp-sketching-worm-mockup.png">
-								</div>
-							</div>
+						<div class="col-1-3 col-offset-1-12">
+							<h5>
+								Sketch
+							</h5>
+							<img src="img/work-nowapp-sketching-worm.png">
+						</div>
+						<div class="col-1-3 col-offset-1-6">
+							<h5>
+								Final mockup
+							</h5>
+							<img src="img/work-nowapp-sketching-worm-mockup.png">
 						</div>
 					</div>
 				</div><!-- .container -->

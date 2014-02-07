@@ -1,62 +1,35 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>
-			Glenn McComb
-		</title>
-
-
 		<?
-			// PHP includes
-			include("php/nav.inc.php");
+			// PHP includes.
+			include("php/global.inc.php");
+
+			// Call include files.
+			printCSS();
+			printJavascript();
+			printMetaTags();
+
+			// Defines which nav the current page falls under.
+			$currentNav = "home";
 		?>
 
-
-		<!-- CSS -->
-		<link rel="stylesheet" href="css/style.css">
-
-
-		<!-- JavaScript -->
-		<script src="js/jquery-1.10.2.js"></script>
-		<script src="js/html5shiv.js"></script>
-		<script src="js/javascript.js"></script>
-
-		<!-- Meta Tags -->
-		<meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1.0">
+		<title>
+			Glenn McComb - Work - ESPN live score apps
+		</title>
 
 	</head>
 
 
 
 	<body class="body-bg-dark">
-		<header class="site-header">
-			<a href="javascript:void(0);" class="btn-mobile-menu">
-				<i class="icon icon-menu"></i>
-				<span>Menu</span>
-			</a>
-
-			<div class="logo">
-				Glenn McComb
-			</div>
-
-
-			<?
-				// Navigation called by PHP
-				$currentNav = "home";
-				printNav($currentNav);
-			?>
-		</header>
-
-
-
-
-		<!-- This <a> covers content when the mobile menu is un-hidden. -->
-		<a href="javascript:void(0);" class="mobile-container-cover">
-		</a>
+		<?
+			// Site Header, called by PHP. Pass this function the name of the current page.
+			printSiteHeader($currentNav);
+		?>
 
 
 		<div class="wrap">
-
 
 			<section class="bg-dark" id="homepage">
 				<div class="container">

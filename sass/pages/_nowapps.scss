@@ -125,7 +125,7 @@
 	#nowapp-intro .logo-espn {
 		height: 52px;
 		width: 200px;
-		@include retinise('logo-espn', 'png', 200px, 52px);
+		@include retinise('logo-espn-small', 'png', 200px, 52px);
 	}
 
 	#nowapp-brand .now-app-silhouettes img {

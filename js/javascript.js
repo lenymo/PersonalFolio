@@ -100,11 +100,13 @@ $(document).ready(function(){
 
     	var elemBottomWithPadding = elemBottom + parseFloat(elemPaddingTop) + parseFloat(elemPaddingBottom);
 
+    	/*
     	console.log (elem);
 			console.log ('Scroll position: ' + docViewTop);
 			console.log ('Element top: ' + elemTop);
 			console.log ('Element bottom (+ padding): ' + elemBottom + ' (' + elemBottomWithPadding + ')');
 			console.log ('...');
+			*/
 
     	if (elemTop < docViewTop && elemBottomWithPadding > docViewTop) {
   			// If the current <section> has class="bg-dark", change it and replace it with class="bg-light".
