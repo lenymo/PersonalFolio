@@ -28,14 +28,6 @@ $nav-font-size-desktop: 18px;
 
 //
 //---------------------------------
-//	BUTTONS
-//---------------------------------
-//
-$btn-font-size: 26px;
-
-
-//
-//---------------------------------
 //	RESPONSIVE
 //---------------------------------
 //
@@ -46,6 +38,16 @@ $body-font-size-tablet: 24px;
 $font-size-phone: 0.6;
 $font-size-phone-landscape: 0.7;
 $font-size-tablet: 0.8;
+
+
+//
+//---------------------------------
+//	BUTTONS
+//---------------------------------
+//
+$btn-font-size: 26px;
+$btn-font-size-phone: $btn-font-size * $font-size-phone;
+
 
 //
 //---------------------------------

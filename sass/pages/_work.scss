@@ -11,12 +11,10 @@
 	@include background-size(100%, auto);
 
 	.container {
-		padding-top: 200px;
 		padding-bottom: 0;
 	}
 
 	.logo-espn {
-		margin: 75px 0 0 0;
 		height: 52px;
 		width: 200px;
 		@include retinise('logo-espn-small', 'png', 200px, 52px);
@@ -68,9 +66,67 @@
 	bottom: 0;
 }
 
+//
+//---------------------------------
+//	RESPONSIVE
+//---------------------------------
+//
+// Phone.
+@include breakpoint(phone) {
+	#work-intro {
+		.container {
+			padding-top: 125px;
+		}
 
+		.logo-espn {
+			margin: 0 auto;
+		}
 
+		.text-left {
+			text-align: center;
+		}
+	}
+	#work-intro h1 {
 
+	}
+
+	#work-intro .btn {
+		margin-bottom: $phone-container-padding;
+	}
+}
+
+@include breakpoint(tablet) {
+	#work-intro {
+		.container {
+			padding-top: 125px;
+		}
+
+		.logo-espn {
+			margin: 0;
+		}
+
+		.text-left {
+			text-align: left;
+		}
+	}
+}
+
+// Tablet-landscape.
+@include breakpoint (tablet-landscape) {
+	#work-intro {
+		.container {
+			padding-top: 200px;
+		}
+
+		.logo-espn {
+			margin: 100px 0 0 0;
+		}
+
+		.text-left {
+			text-align: left;
+		}
+	}
+}
 
 
 

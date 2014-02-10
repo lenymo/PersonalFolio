@@ -3,10 +3,9 @@
 //	CORE
 //---------------------------------
 //
-a.btn {
+.btn {
 	background: #d0d3d5;
 	display: inline-block;
-	font-size: $btn-font-size;
 	padding: 15px 25px;
 	@include rounded(8px);
 }
@@ -24,8 +23,22 @@ a.btn {
 	}
 }
 
+//
+//---------------------------------
+//	RESPONSIVE
+//---------------------------------
+//
+@include breakpoint(phone) {
+	.btn {
+		font-size: $btn-font-size-phone;
+	}
+}
 
-
+@include breakpoint(tablet) {
+	.btn {
+		font-size: $btn-font-size;
+	}
+}
 
 
 
