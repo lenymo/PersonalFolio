@@ -28,6 +28,14 @@ $nav-font-size-desktop: 18px;
 
 //
 //---------------------------------
+//	BUTTONS
+//---------------------------------
+//
+$btn-font-size: 26px;
+
+
+//
+//---------------------------------
 //	RESPONSIVE
 //---------------------------------
 //
@@ -39,7 +47,11 @@ $font-size-phone: 0.6;
 $font-size-phone-landscape: 0.7;
 $font-size-tablet: 0.8;
 
-
+//
+//---------------------------------
+//	CORE CSS
+//---------------------------------
+//
 body {
 	color: $color-body;
 	font-family: helvetica, verdana, sans-serif;
@@ -48,9 +60,14 @@ body {
 	line-height: 1.4;
 }
 
-a, a:link, a:visited, a:hover, a:active {
-	color: $color-anchors;
+a, a:link, a:visited, a:hover, a:active, a:focus {
+	color: $color-anchor;
 	font-weight: normal;
+	text-decoration: underline;
+}
+a:hover, a:focus {
+	border-color: $color-anchor;
+	color: $color-anchor-hover;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -75,12 +92,18 @@ small {
 	color: $color-small;
 	font-size: 75%;
 	font-weight: 100;
+	line-height: 1.2em;
 }
 small a, small a:link, small a:visited, small a:hover, small a:active {
 	color: $color-small-anchor;
 }
 
-
+//
+//---------------------------------
+//	RESPONSIVE CSS
+//---------------------------------
+//
+// Phone.
 @include breakpoint(phone) {
 	body {
 		font-size: $body-font-size-phone;
@@ -116,6 +139,7 @@ small a, small a:link, small a:visited, small a:hover, small a:active {
 	}
 }
 
+// Phone-landscape.
 @include breakpoint(phone-landscape) {
 	body {
 		font-size: $body-font-size-phone-landscape;
@@ -131,6 +155,7 @@ small a, small a:link, small a:visited, small a:hover, small a:active {
 	}
 }
 
+// Tablet.
 @include breakpoint(tablet) {
 	body {
 		font-size: $body-font-size-tablet;
@@ -152,6 +177,7 @@ small a, small a:link, small a:visited, small a:hover, small a:active {
 	}
 }
 
+// Tablet-landscape.
 @include breakpoint(tablet-landscape) {
 	h1 {
 		font-size: $h1-size;

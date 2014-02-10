@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<?
-			// PHP includes.
+			// PHP global includes.
 			include("php/global.inc.php");
 
 			// Call include files.
@@ -15,7 +15,7 @@
 		?>
 
 		<title>
-			Glenn McComb - Work - ESPN live score apps
+			Glenn McComb - Web designer and front-end developer
 		</title>
 
 	</head>

@@ -1,5 +1,10 @@
 $(document).ready(function(){
 	
+	//
+	//---------------------------------
+	//	MOBILE MENU
+	//---------------------------------
+	//
 	// Handles the showing and hiding of the mobile menu.
 	function toggleMobileMenu () {
 		if ($('body').hasClass('show-mobile-menu')) {
@@ -124,9 +129,32 @@ $(document).ready(function(){
   			}
     	}
     });
-	}
+	} // sectionBackgroundCheck()
 
 
+	//
+	//---------------------------------
+	//	Dribbble
+	//---------------------------------
+	//
+	$(function() {
+		var username = 'lenymo';
+		$.getJSON('http://api.dribbble.com/players/' + username + '/shots/?callback=?', function(json) {
+        console.log(json.shots);
+        for (var i = 0; i < 9; i++) { // Maximum Number of shots here
+            var shotTitle = json.shots[i].title;
+            var shotLikes = json.shots[i].likes_count;
+
+            // This handles if there is 1 like, in which case the "s" is removed.
+            var shotLikesPlural = " likes";
+            if (shotLikes == 1) {
+            	shotLikesPlural = " like";
+            }
+
+            $('.dribbble .grid').append("<div class='col-1-3'><a href='" + json.shots[i].url + "' target='_blank' title='" + shotTitle + "'><figure><figcaption>" + shotTitle + "<small>" + shotLikes + shotLikesPlural +  "</small></figcaption><img src='" + json.shots[i].image_url + "' alt='" + shotTitle + "'></figure></a>");
+        };
+    });
+	});
 });
 
 

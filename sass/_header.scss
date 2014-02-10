@@ -31,6 +31,8 @@
 }
 
 .main-menu li	a {
+	border: none;
+	color: $color-nav-text-fallback;
 	color: $color-nav-text;
 	display: inline-block;
 	padding: 15px 20px;
@@ -60,18 +62,6 @@
 
 //
 //---------------------------------
-//	PHONE
-//---------------------------------
-//
-// Adds a transition for just phone sizes.
-@include between-breakpoints(0, ($tablet-width - 20)) {
-	.main-menu {
-		@include transition(all, 0.1s, ease-in-out);
-	}
-}
-
-//
-//---------------------------------
 //	TABLET
 //---------------------------------
 //
@@ -93,7 +83,6 @@
 		text-align: center;
 		top: 0;
 		width: $tablet-menu-width;
-		//@include box-shadow-inset(-10px, 0, 10px, rgba(0,0,0,0.2));
 		
 		li a {
 			padding: 20px;
@@ -190,33 +179,35 @@
 @include breakpoint(tablet-landscape) {
 	// Sticky header. This handles the sticky header changing appearance once the user scrolls down.
 	.site-header.user-has-scrolled {
-		background: rgba(255,255,255,0.96);
+		background: $color-nav-sticky-bg-fallback;
+		background: $color-nav-sticky-bg;
 		height: 66px;
 		position: fixed;
-		@include box-shadow(2px, 0, 10px, rgba(0, 0, 0, 0.04));
+		@include box-shadow(2px, 0, 20px, rgba(0, 0, 0, 0.1));
 
 		.main-menu {
 			margin-top: 5px;
 
 			li a {
-				padding: 10px 10px;
+				padding: 12px 10px;
 			}
 		}
 	}
 
 	// Handles header CSS for when page content is dark / light.
 	.body-bg-dark .user-has-scrolled {
-		background: rgba(0, 0, 0, 0.7);
+		background: $color-nav-sticky-ondark-bg-fallback;
+		background: $color-nav-sticky-ondark-bg;
 	}
 
 	.body-bg-dark {
 		.main-menu li a {
-			color: #ccc;
-			color: rgba(255,255,255, 0.5);
+			color: $color-nav-sticky-ondark-text-fallback;
+			color: $color-nav-sticky-ondark-text;
 		}
 		.main-menu li.current a {
-			color: #fff;
-			color: rgba(255,255,255, 0.9);
+			color: $color-nav-sticky-ondark-current-text-fallback;
+			color: $color-nav-sticky-ondark-current-text;
 		}
 	}
 

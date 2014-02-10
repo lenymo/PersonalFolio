@@ -4,8 +4,9 @@
 //---------------------------------
 //
 #nowapp-intro {
-	background: $color-espn;
+	background: $color-espn url(../img/bg-espn-mcg.jpg) no-repeat top center;
 	padding-bottom: 0;
+	@include background-size(100%, auto);
 	
 	.container {
 		padding-bottom: 0;
@@ -22,7 +23,7 @@
 		}
 	}
 }
-#nowapp-intro .logo-espn {
+.logo-espn {
 	display: block;
 	height: 65px;
 	margin: 0 auto 10px auto;
@@ -105,6 +106,16 @@
 
 //
 //---------------------------------
+//	SWIPING
+//---------------------------------
+//
+#nowapp-swiping {
+	background: url('../img/bg-swiping-top.png') center top repeat-x;
+}
+
+
+//
+//---------------------------------
 //	SKETCHING
 //---------------------------------
 //
@@ -121,8 +132,9 @@
 //	RESPONSIVE
 //---------------------------------
 //
+// Phone only.
 @include between-breakpoints(0, ($tablet-width - 1)) {
-	#nowapp-intro .logo-espn {
+	.logo-espn {
 		height: 52px;
 		width: 200px;
 		@include retinise('logo-espn-small', 'png', 200px, 52px);
@@ -218,6 +230,10 @@
 
 	#nowapp-cards {
 		background-position: center top;
+	}
+
+	#nowapp-swiping .nowapp-swiping-iterations p:first-of-type {
+		padding-top: 75px;
 	}
 }
 

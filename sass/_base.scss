@@ -57,6 +57,13 @@ nav ul {
 .text-right {
 	text-align: right;
 }
+.vertically-centred {
+	position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
 
 // This helper class is added to elements which need to be hidden on phone-sizes.
 @include between-breakpoints(0, ($tablet-width - 1)) {

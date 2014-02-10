@@ -1,13 +1,30 @@
-$color-body: #666;
-$color-anchors: #444;
-$color-headings: #444;
+//
+//---------------------------------
+//	CORE
+//---------------------------------
+//
+$color-body: #666b70;
+$color-anchor: #44474a;
+$color-anchor-hover: #222426;
+$color-anchor-underline: #ccd4dd;
+
+// Headings.
+$color-headings: #44474a;
 $color-h5: #828990;
 $color-h6: #828990;
-$color-small: #aaa;
+$color-small: #aab2b9;
 $color-small-anchor: darken($color-small, 10%);
-$color-hr: #eee;
+$color-hr: #dde4e9;
 
-$color-p-lead: #888;
+$color-p-lead: #888f95;
+
+
+//
+//---------------------------------
+//	BUTTONS
+//---------------------------------
+//
+
 
 
 //
@@ -15,16 +32,29 @@ $color-p-lead: #888;
 //	NAV
 //---------------------------------
 //
-// Phone and Tablet.
-$nav-inactive-opacity: 0.4;
+// Phone and tablet.
 $color-nav-bg: #212f3d;
+$nav-inactive-opacity: 0.4;
 $color-nav-text: rgba(255,255,255,$nav-inactive-opacity);
+$color-nav-text-fallback: #7a828b;
 $color-nav-current-bg: #284c71;
 $color-nav-current-text: #fff;
 
 // Desktop.
-$color-nav-text-desktop: #888;
-$color-nav-current-text-desktop: #444;
+$color-nav-text-desktop: #7a828b;
+$color-nav-current-text-desktop: #284c71;
+
+// Sticky header
+$color-nav-sticky-bg: rgba(255,255,255,0.96);
+$color-nav-sticky-bg-fallback: #fff;
+
+// Sticky header on-dark.
+$color-nav-sticky-ondark-bg: rgba(34,47,61,0.9);		// #212f3d
+$color-nav-sticky-ondark-bg-fallback: #212f3d;
+$color-nav-sticky-ondark-text: rgba(255,255,255, 0.5);
+$color-nav-sticky-ondark-text-fallback: #ccc;
+$color-nav-sticky-ondark-current-text: rgba(255,255,255, 0.9);
+$color-nav-sticky-ondark-current-text-fallback: #fff;
 
 
 //
@@ -32,7 +62,7 @@ $color-nav-current-text-desktop: #444;
 //	ESPN NOW APPS
 //---------------------------------
 //
-$color-espn: #d6342e;
+$color-espn: #bc291f;
 $color-nowapp-afl: #07529b;
 $color-nowapp-ale: #c7361c;
 $color-nowapp-nrl: #017d31;
@@ -45,16 +75,20 @@ $color-nowapp-sru: #1e80ae;
 //---------------------------------
 //
 $color-ondark-heading: rgba(255,255,255,0.9);
+$color-ondark-heading-fallback: #eee;
 $color-ondark-body: rgba(255,255,255,0.5);
-$color-ondark-hr: #444;
+$color-ondark-body-fallback: #888f95;
+$color-ondark-hr: #44474a;
 .bg-dark {
-	background: #222;		// Delete this.
+	background: #222426;		// Delete this.
 
-	h1, h2, h3 {
-		color: $color-ondark-heading;
+	h1, h2, h3, h4 {
+		color: $color-ondark-heading-fallback;
+		//color: $color-ondark-heading;
 	}
 
 	p, h1 small, h2 small, h3 small {
+		color: $color-ondark-body-fallback;
 		color: $color-ondark-body;
 	}
 

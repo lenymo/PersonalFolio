@@ -1,5 +1,10 @@
-// Hamburger menu.
-.btn-mobile-menu {
+//
+//---------------------------------
+//	Hamburger Menu
+//---------------------------------
+//
+a.btn-mobile-menu {
+	border: none;
 	display: block;
 	height: 48px;
 	left: $phone-menu-spacing;
@@ -27,7 +32,7 @@
 
 // Hide menu for tablet size and above.
 @include breakpoint(tablet) {
-	.btn-mobile-menu {
+	a.btn-mobile-menu {
 		display: none;
 	}
 }
@@ -42,12 +47,11 @@
 	}
 }
 
-
 // The .show-mobile-menu class is added to <body> when .btn-mobile-menu is clicked.
 .show-mobile-menu .site-header {
 	width: auto;
 }
-.show-mobile-menu .btn-mobile-menu { 
+.show-mobile-menu a.btn-mobile-menu { 
 	width: 200px;
 	@include opacity(0.75);
 
@@ -67,8 +71,6 @@
 }
 
 
-
-
 .wrap {
 	height: 100%;
 	left: 0;
@@ -78,22 +80,26 @@
 }
 
 
-
+//
+//---------------------------------
+//	MOBILE COVER
+//---------------------------------
+//
 // This is the opaque cover which when clicked hides the menu.
-.mobile-container-cover {
+a.mobile-container-cover {
 	background: rgba(0,0,0,0);
-	display: block;
+	display: none;
+	height: 100%;
+	left: 0;
 	position: fixed;
-	right: -25%;
 	top: 0;
-	@include transition(background, 0.1s, ease-in-out);
+	width: 100%;
+	//@include transition(all, 0.1s, ease-in-out);
 }
 
-.show-mobile-menu .mobile-container-cover {
+.show-mobile-menu a.mobile-container-cover {
 	background: rgba(0,0,0,0.75);
-	height: 100%;
-	right: 0;
-	width: 100%;
+	display: block;
 	z-index: 2;
 }
 
