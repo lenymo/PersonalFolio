@@ -39,7 +39,7 @@
 }
 
 @mixin retinise ($file, $type, $width, $height) {
-	background-image: url('../img/build/' + $file + '.' + $type);
+	background-image: url('../img/' + $file + '.' + $type);
 
 	@media 	(-webkit-min-device-pixel-ratio: 1.5),
 					(min--moz-device-pixel-ratio: 1.5),

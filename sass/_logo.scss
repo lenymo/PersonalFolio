@@ -1,6 +1,6 @@
 //
 //---------------------------------
-//	LOGO
+//	LOGO - HEADER
 //---------------------------------
 //
 .site-header .logo {
@@ -73,6 +73,18 @@
 	.body-bg-dark .site-header.user-has-scrolled .logo {
 		@include retinise('logo-mobile-ondark', 'png', 170px, 50px);
 	}
+}
+
+//
+//---------------------------------
+//	LOGO - LARGE
+//---------------------------------
+//
+.logo-large {
+	height: 165px;
+	text-indent: -20000px;
+	width: 495px;
+	@include retinise('logo-large', 'png', 495px, 165px);
 }
 
 

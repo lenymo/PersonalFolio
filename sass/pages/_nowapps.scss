@@ -4,7 +4,7 @@
 //---------------------------------
 //
 #nowapp-intro {
-	background: $color-espn url(../img/bg-espn-mcg.jpg) no-repeat top center;
+	background: $color-espn url('../img/bg-espn-mcg.jpg') no-repeat top center;
 	padding-bottom: 0;
 	@include background-size(100%, auto);
 	

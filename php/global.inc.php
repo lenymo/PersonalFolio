@@ -1,4 +1,7 @@
 <?
+	// Declares the path of images. This is fed into the src of all image tags.
+	$imagePath = "img/";
+
 	// PHP includes
 	include("php/site-header.inc.php");
 	include("php/nav.inc.php");

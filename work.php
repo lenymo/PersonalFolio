@@ -54,11 +54,11 @@
 
 						<div class="col-5-12 hidden-phone">
 							<a href="nowapp.php" title="View the full case study">
-								<img src="img/work-intro-nowapp.png">
+								<img src="<? print $imagePath ?>work-intro-nowapp.png">
 							</a>
 						</div>
 					</div>
-				</div>
+				</div><!-- .container -->
 			</section><!-- #work-intro -->
 
 

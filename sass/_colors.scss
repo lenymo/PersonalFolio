@@ -84,7 +84,7 @@ $color-ondark-hr: #44474a;
 
 	h1, h2, h3, h4 {
 		color: $color-ondark-heading-fallback;
-		//color: $color-ondark-heading;
+		color: $color-ondark-heading;
 	}
 
 	p, h1 small, h2 small, h3 small {
@@ -97,7 +97,25 @@ $color-ondark-hr: #44474a;
 	}
 }
 
+//
+//---------------------------------
+//	ON-LIGHT
+//---------------------------------
+//
+// This is used in case an overide is needed in a section with the bg-dark class.
+.bg-light {
+	h1, h2, h3, h4 {
+		color: $color-headings;
+	}
 
+	p, h1 small, h2 small, h3 small {
+		color: $color-body;
+	}
+
+	hr {
+		border-top: 1px solid $color-hr;
+	}
+}
 
 
 

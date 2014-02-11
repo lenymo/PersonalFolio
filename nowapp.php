@@ -53,15 +53,15 @@
 
 					<div class="grid grid-pad">
 						<div class="col-1-4 col-offset-1-12 hidden-phone">
-							<img src="img/work-nowapp-intro-iphone-left.png">
+							<img src="<? print $imagePath ?>work-nowapp-intro-iphone-left.png">
 						</div>
 
 						<div class="col-1-3">
-							<img src="img/work-nowapp-intro-iphone-middle.png">
+							<img src="<? print $imagePath ?>work-nowapp-intro-iphone-middle.png">
 						</div>
 
 						<div class="col-1-4 hidden-phone">
-							<img src="img/work-nowapp-intro-iphone-right.png">
+							<img src="<? print $imagePath ?>work-nowapp-intro-iphone-right.png">
 						</div>
 					</div>
 				</div>
@@ -92,7 +92,7 @@
 						</div>
 
 						<div class="col-1-4 col-offset-1-12 text-right">
-							<img src="img/work-nowapp-backstory-webapp.png">
+							<img src="<? print $imagePath ?>work-nowapp-backstory-webapp.png">
 						</div>
 					</div>
 				</div><!-- .container -->
@@ -131,7 +131,7 @@
 							Football Now
 						</h3>
 
-						<img src="img/work-nowapp-branding-player-ale.png">
+						<img src="<? print $imagePath ?>work-nowapp-branding-player-ale.png">
 					</div>
 
 					<div class="col-1-4 nrl">
@@ -139,7 +139,7 @@
 							<small>NRL</small>
 							League Now
 						</h3>
-						<img src="img/work-nowapp-branding-player-nrl.png">
+						<img src="<? print $imagePath ?>work-nowapp-branding-player-nrl.png">
 					</div>
 
 					<div class="col-1-4 afl">
@@ -147,7 +147,7 @@
 							<small>AFL</small>
 							Footy Now
 						</h3>
-						<img src="img/work-nowapp-branding-player-afl.png">
+						<img src="<? print $imagePath ?>work-nowapp-branding-player-afl.png">
 					</div>
 
 					<div class="col-1-4 sru">
@@ -155,22 +155,22 @@
 							<small>Super Rugby</small>
 							Rugby Now
 						</h3>
-						<img src="img/work-nowapp-branding-player-sru.png">
+						<img src="<? print $imagePath ?>work-nowapp-branding-player-sru.png">
 					</div>
 				</div>
 
 				<div class="grid no-padding nowapp-app-icons">
 					<div class="col-1-4">
-						<img src="img/work-nowapp-branding-icon-ale.png">
+						<img src="<? print $imagePath ?>work-nowapp-branding-icon-ale.png">
 					</div>
 					<div class="col-1-4">
-						<img src="img/work-nowapp-branding-icon-nrl.png">
+						<img src="<? print $imagePath ?>work-nowapp-branding-icon-nrl.png">
 					</div>
 					<div class="col-1-4">
-						<img src="img/work-nowapp-branding-icon-afl.png">
+						<img src="<? print $imagePath ?>work-nowapp-branding-icon-afl.png">
 					</div>
 					<div class="col-1-4">
-						<img src="img/work-nowapp-branding-icon-sru.png">
+						<img src="<? print $imagePath ?>work-nowapp-branding-icon-sru.png">
 					</div>
 				</div>
 			</section> <!-- #nowapp-brand -->
@@ -195,37 +195,37 @@
 					</div>
 					<div class="grid grid-pad nowapp-section-icons">
 						<div class="col-1-6">
-							<img src="img/work-nowapp-sections-scores.png">
+							<img src="<? print $imagePath ?>work-nowapp-sections-scores.png">
 							<h6>
 								Scores
 							</h6>
 						</div>
 						<div class="col-1-6">
-							<img src="img/work-nowapp-sections-standings.png">
+							<img src="<? print $imagePath ?>work-nowapp-sections-standings.png">
 							<h6>
 								Standings
 							</h6>
 						</div>
 						<div class="col-1-6">
-							<img src="img/work-nowapp-sections-news.png">
+							<img src="<? print $imagePath ?>work-nowapp-sections-news.png">
 							<h6>
 								News
 							</h6>
 						</div>
 						<div class="col-1-6">
-							<img src="img/work-nowapp-sections-twitter.png">
+							<img src="<? print $imagePath ?>work-nowapp-sections-twitter.png">
 							<h6>
 								Twitter
 							</h6>
 						</div>
 						<div class="col-1-6">
-							<img src="img/work-nowapp-sections-tipping.png">
+							<img src="<? print $imagePath ?>work-nowapp-sections-tipping.png">
 							<h6>
 								Tipping
 							</h6>
 						</div>
 						<div class="col-1-6">
-							<img src="img/work-nowapp-sections-settings.png">
+							<img src="<? print $imagePath ?>work-nowapp-sections-settings.png">
 							<h6>
 								Settings
 							</h6>
@@ -296,21 +296,21 @@
 							<h5>
 								Tweets
 							</h5>
-							<img src="img/work-nowapp-cards-twitter.png">
+							<img src="<? print $imagePath ?>work-nowapp-cards-twitter.png">
 						</div>
 
 						<div class="col-1-3">
 							<h5>
 								Matches
 							</h5>
-							<img src="img/work-nowapp-cards-scores.png">
+							<img src="<? print $imagePath ?>work-nowapp-cards-scores.png">
 						</div>
 
 						<div class="col-1-3">
 							<h5>
 								Articles
 							</h5>
-							<img src="img/work-nowapp-cards-news.png">
+							<img src="<? print $imagePath ?>work-nowapp-cards-news.png">
 						</div>
 					</div>
 					<div class="grid">
@@ -333,7 +333,7 @@
 				<div class="container">
 					<div class="grid">
 						<div class="col-1-4 centred">
-							<img src="img/work-nowapp-swiping-gesture.jpg">
+							<img src="<? print $imagePath ?>work-nowapp-swiping-gesture.jpg">
 						</div>
 					</div>
 					<div class="grid">
@@ -352,7 +352,7 @@
 							<h5>
 								Old round nav
 							</h5>
-							<img src="img/work-nowapp-swiping-oldApp.jpg" alt="The old navigation with buttons">
+							<img src="<? print $imagePath ?>work-nowapp-swiping-oldApp.jpg" alt="The old navigation with buttons">
 						</div>
 					</div>
 
@@ -372,7 +372,7 @@
 							<h5>
 								First draft
 							</h5>
-							<img src="img/work-nowapp-swiping-noAffordance.jpg">
+							<img src="<? print $imagePath ?>work-nowapp-swiping-noAffordance.jpg">
 						</div>
 					</div>
 
@@ -391,7 +391,7 @@
 							<h5>
 								Second draft
 							</h5>
-							<img src="img/work-nowapp-swiping-slimTitles.jpg">
+							<img src="<? print $imagePath ?>work-nowapp-swiping-slimTitles.jpg">
 						</div>
 					</div>
 
@@ -415,7 +415,7 @@
 							<h5>
 								Final draft
 							</h5>
-							<img src="img/work-nowapp-swiping-final.jpg">
+							<img src="<? print $imagePath ?>work-nowapp-swiping-final.jpg">
 						</div>
 					</div>
 
@@ -460,7 +460,7 @@
 							<h5>
 								Scores
 							</h5>
-							<img src="img/work-nowapp-sketching-scores.png">
+							<img src="<? print $imagePath ?>work-nowapp-sketching-scores.png">
 						</div>
 					</div>
 				</div><!-- .container -->
@@ -487,13 +487,13 @@
 							<h5>
 								News
 							</h5>
-							<img src="img/work-nowapp-sketching-news.png">
+							<img src="<? print $imagePath ?>work-nowapp-sketching-news.png">
 						</div>
 						<div class="col-1-3 col-offset-1-6">
 							<h5>
 								Stats
 							</h5>
-							<img src="img/work-nowapp-sketching-stats.png">
+							<img src="<? print $imagePath ?>work-nowapp-sketching-stats.png">
 						</div>
 					</div>
 				</div><!-- .container -->
@@ -527,7 +527,7 @@
 							<h5>
 								Final mockup
 							</h5>
-							<img src="img/work-nowapp-sketching-worm-mockup.png">
+							<img src="<? print $imagePath ?>work-nowapp-sketching-worm-mockup.png">
 						</div>
 					</div>
 				</div><!-- .container -->

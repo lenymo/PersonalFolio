@@ -1,0 +1,122 @@
+//
+//---------------------------------
+//	GENERAL
+//---------------------------------
+//
+@include between-breakpoints(0, $tablet-width - 1) {
+	.body-about .site-header .logo {
+		margin-top: 70px;
+	}
+}
+
+//
+//---------------------------------
+//	INTRO
+//---------------------------------
+//
+#about-intro {
+	background: #fff url('../img/bg-about.jpg') no-repeat top center;
+	padding-bottom: 0;
+	@include background-size(100%, auto);
+
+	.container, .grid-pad {
+		padding-bottom: 0;
+	}
+
+	// This affects my personal mark logo.
+	img {
+		max-width: 70%;
+	}
+}
+
+#about-details {
+	padding-top: 0;
+
+	.container {
+		padding-top: 0;
+	}
+}
+
+//
+//---------------------------------
+//	RESPONSIVE
+//---------------------------------
+//
+// Phone.
+@include breakpoint (phone) {
+	#about-intro {
+		padding-bottom: 100px;
+		@include background-size(150%, auto);
+	}
+
+	#about-details {
+		.container, .container p {
+			text-align: center;
+		}
+
+		.container h1, .container .lead {
+			padding-bottom: 0.1em;
+		}
+
+		.grid-pad {
+			margin-top: 0;
+		}
+
+		.about-details-selfie img {
+			margin-top: -40%;
+			max-width: 70%;
+		}
+	}
+}
+
+// Tablet.
+@include breakpoint (tablet) {
+	#about-intro {
+		padding-bottom: 0;
+		@include background-size(100%, auto);
+
+		.container {
+			text-align: left;
+		}
+	}
+
+	#about-details {
+		.container, .container p {
+			text-align: left;
+		}
+		.about-details-selfie {
+			position: relative;
+
+			img {
+				margin-top: 0;
+				max-width: 90%;
+				position: absolute;
+				top: -100px;
+			}
+		}
+	}
+}
+
+// Tablet-landscape.
+@include breakpoint (tablet-landscape) {
+	#about-intro {
+		@include background-size(100%, auto);
+	}
+
+	#about-details {
+		.about-details-selfie {
+			img {
+				top: -140px;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+

@@ -46,7 +46,7 @@ function printNav($currentNav) {
 					</li>
 
 					<li<? print $navAbout; ?>>
-						<a href="javascript:void(0);">
+						<a href="about.php">
 							<i class="icon icon-about"></i>
 							<span>About</span>
 						</a>
