@@ -3,20 +3,29 @@
 //	CORE
 //---------------------------------
 //
-$color-body: #666b70;
-$color-anchor: #44474a;
-$color-anchor-hover: #222426;
-$color-anchor-underline: #ccd4dd;
+$color-gray-d: #dde4e9;
+$color-gray-c: #ccd4dd;
+$color-gray-a: #aab2b9;
+$color-gray-8: #888f95;
+$color-gray-6: #666b70;
+$color-gray-4: #44474a;
+$color-gray-2: #222426;
+
+$color-body: $color-gray-6;
+$color-anchor: $color-gray-4;
+$color-anchor-hover: $color-gray-2;
+$color-anchor-underline: $color-gray-c;
 
 // Headings.
-$color-headings: #44474a;
-$color-h5: #828990;
-$color-h6: #828990;
-$color-small: #aab2b9;
+$color-headings: $color-gray-4;
+$color-h5: $color-gray-8;
+$color-h6: $color-gray-8;
+$color-small: $color-gray-a;
 $color-small-anchor: darken($color-small, 10%);
-$color-hr: #dde4e9;
 
-$color-p-lead: #888f95;
+$color-hr: $color-gray-d;
+
+$color-p-lead: $color-gray-8;
 
 
 //
@@ -56,6 +65,14 @@ $color-nav-sticky-ondark-text-fallback: #ccc;
 $color-nav-sticky-ondark-current-text: rgba(255,255,255, 0.9);
 $color-nav-sticky-ondark-current-text-fallback: #fff;
 
+// Tabs.
+$color-nav-tabs-text: $color-gray-8;
+$color-nav-tabs-current-text: $color-gray-4;
+
+// Footer
+$color-nav-footer: rgba(255,255,255, 0.5);
+$color-nav-footer-fallback: #ccc;
+
 
 //
 //---------------------------------
@@ -71,6 +88,15 @@ $color-nowapp-sru: #1e80ae;
 
 //
 //---------------------------------
+//	TABLES
+//---------------------------------
+//
+$color-table-header: #828990;
+$color-tabler-border: #edf2f5;
+
+
+//
+//---------------------------------
 //	ON-DARK
 //---------------------------------
 //
@@ -79,8 +105,13 @@ $color-ondark-heading-fallback: #eee;
 $color-ondark-body: rgba(255,255,255,0.5);
 $color-ondark-body-fallback: #888f95;
 $color-ondark-hr: #44474a;
+$color-ondark-anchor: rgba(255,255,255,0.9);
+$color-ondark-anchor-fallback: #eee;
+
 .bg-dark {
 	background: #222426;		// Delete this.
+	color: $color-ondark-body-fallback;
+	color: $color-ondark-body;
 
 	h1, h2, h3, h4 {
 		color: $color-ondark-heading-fallback;
@@ -92,31 +123,15 @@ $color-ondark-hr: #44474a;
 		color: $color-ondark-body;
 	}
 
+	a, a:link, a:visited, a:hover, a:active, a:focus {
+		color: $color-ondark-anchor-fallback;
+		color: $color-ondark-anchor;
+	}
+
 	hr {
 		border-top: 1px solid $color-ondark-hr;
 	}
 }
-
-//
-//---------------------------------
-//	ON-LIGHT
-//---------------------------------
-//
-// This is used in case an overide is needed in a section with the bg-dark class.
-.bg-light {
-	h1, h2, h3, h4 {
-		color: $color-headings;
-	}
-
-	p, h1 small, h2 small, h3 small {
-		color: $color-body;
-	}
-
-	hr {
-		border-top: 1px solid $color-hr;
-	}
-}
-
 
 
 

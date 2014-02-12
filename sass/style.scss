@@ -7,18 +7,20 @@
 // Partials
 @import "reset";
 @import "grids";
+@import "typography";
 @import "base";
 @import "layout";
 @import "icons";
-@import "typography";
 @import "buttons";
 
 // Sections
 @import "logo";
 @import "header";
 @import "mobile-menu";
+@import "footer";
 
 // Specialty Pages
+@import "pages/modules";
 @import "pages/home";
 @import "pages/work";
 @import "pages/nowapps";

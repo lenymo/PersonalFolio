@@ -7,7 +7,6 @@
 
 			// Call include files.
 			printCSS();
-			printJavascript();
 			printMetaTags();
 
 			// Defines which nav the current page falls under.
@@ -71,23 +70,57 @@
 								Digital Designer
 							</h1>
 							<p class="lead">
-								UI, UX, HTML, CSS, JS 
+								Melbourne, Australia
 							</p>
 							<p>
-								I am a dedicated and energetic digital design professional who specialises in web and mobile design and front-end development.
+								I am a digital design professional who specialises in web and mobile design and front-end development.
 							</p>
 						</div>
 					</div>
+
+					<div class="grid">
+						<div class="col-2-3 centred text-center">
+							<a href="twitter.com/lenymo" class="icon-social icon-social-twitter" title="Follow me on Twitter" target="_blank">
+								Twitter
+							</a>
+							<a href="http://www.linkedin.com/in/glennmccomb" class="icon-social icon-social-linkedin" title="Connect with my on LinkedIn" target="_blank">
+								LinkedIn
+							</a>
+							<a href="http://dribbble.com/lenymo" class="icon-social icon-social-dribbble" title="Follow me on Dribbble" target="_blank">
+								Dribbble
+							</a>
+							<a href="http://instagram.com/lenymo" class="icon-social icon-social-instagram" title="Follow me on Instagram" target="_blank">
+								Instagram
+							</a>
+							<a href="http://flickr.com/lenymo" class="icon-social icon-social-flickr" title="Check out my photos of Flickr" target="_blank">
+								Flickr
+							</a>
+							<a href="http://lenymo.tumblr.com" class="icon-social icon-social-tumblr" title="Follow me on Tumblr" target="_blank">
+								Tumblr
+							</a>
+							<a href="http://last.fm/user/elgyn2" class="icon-social icon-social-lastfm" title="Add me on Last.fm" target="_blank">
+								Last.fm
+							</a>
+						</div>
+					</div>
+
+					<hr />
+
+					<div class="grid grid-pad">
+						<p class="lead text-center">
+							I am a digital design professional who specialises in web and mobile design and front-end development.
+						</p>
+					<div>
 				</div><!-- .container -->
 			</section><!-- #about-details -->
 
 
-			<section class="bg-dark">
+			<section class="bg-light">
 				<!-- DRIBBBLE -->
 				<div class="container dribbble">
-					<h1 id="testOutput">
+					<h4>
 						On Dribbble
-					</h1>
+					</h4>
 					<div class="grid grid-pad">
 						<!-- Below is an example of the dribbble HTML. The jQuery is difficult to read so here's the tabulated HTML -->
 						<!--
@@ -105,10 +138,90 @@
 						-->
 					</div>
 				</div>
+
+				<div class="container">
+					<div class="grid grid-pad">
+						<div class="col-1-2 instagram">
+							
+						</div><!-- .instagram -->
+
+						<div class="col-1-2 text-left lastfm">
+							<h4>
+								Music I listen to
+							</h4>
+							<nav class="tabs">
+								<ul>
+									<li class="current">
+										<a href="javascript:void(0);" class="overall">
+											Overall
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);" class="last-12-months">
+											Last year
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);" class="last-3-months">
+											Last 3 months
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);" class="last-7-days">
+											Last week
+										</a>
+									</li>
+								</ul>
+							</nav>
+							<table>
+								<thead>
+									<tr>
+										<th class="rank">
+											#
+										</th>
+										<th class="artist">
+											Artist
+										</th>
+										<th class="plays">
+											Plays
+										</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<!-- jQuery spits out top last.fm artists here. -->
+									<!--
+									<tr>
+										<td class="rank">
+											1
+										</td>
+										<td class="artist">
+											Oceansize
+										</td>
+										<td>
+											2,708
+										</td>
+									</tr>
+									-->
+								</tbody>
+							</table>
+							<small><a href="http://last.fm/user/elgyn2">My full last.fm charts</a></small>
+						</div>
+					</div><!-- .grid -->
+				</div><!-- .container -->
 			</section>
+
+			<?
+				// Outputs the footer from PHP.
+				printFooter();
+			?>
 		</div> <!-- .wrap -->
 
 
+		<?
+			// Outputs all javascript.
+			printJavascript();
+		?>
 	</body>
 </html>
 

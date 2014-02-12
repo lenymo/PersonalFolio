@@ -1,3 +1,8 @@
+//
+//---------------------------------
+//	NAV
+//---------------------------------
+//
 .icon {
 	height: 32px;
 	width: 32px;
@@ -27,3 +32,48 @@
 .icon.icon-contact {
 	@include retinise('icon-contact', 'png', 32px, 32px);
 }
+
+//
+//---------------------------------
+//	SOCIAL
+//---------------------------------
+//
+.icon-social {
+	display: block;
+	height: 64px;
+	text-indent: -20000px;
+	width: 64px;
+}
+.icon-social-twitter {
+	@include retinise('icon-social-twitter', 'png', 64px, 64px);
+}
+.icon-social-linkedin {
+	@include retinise('icon-social-linkedin', 'png', 64px, 64px);
+}
+.icon-social-dribbble {
+	@include retinise('icon-social-dribbble', 'png', 64px, 64px);
+}
+.icon-social-instagram {
+	@include retinise('icon-social-instagram', 'png', 64px, 64px);
+}
+.icon-social-flickr {
+	@include retinise('icon-social-flickr', 'png', 64px, 64px);
+}
+.icon-social-tumblr {
+	@include retinise('icon-social-tumblr', 'png', 64px, 64px);
+}
+.icon-social-lastfm {
+	@include retinise('icon-social-lastfm', 'png', 64px, 64px);
+}
+
+
+
+
+
+
+
+
+
+
+
+

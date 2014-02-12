@@ -7,7 +7,6 @@
 
 			// Call include files.
 			printCSS();
-			printJavascript();
 			printMetaTags();
 
 			// Defines which nav the current page falls under.
@@ -97,6 +96,9 @@
 				<!-- DRIBBBLE -->
 				<div class="container dribbble">
 					<div class="grid grid-pad">
+						<h5>
+							Dribbble
+						</h5>
 						<!-- Below is an example of the dribbble HTML. The jQuery is difficult to read so here's the tabulated HTML -->
 						<!--
 						<div class="col-1-3">
@@ -164,9 +166,19 @@
 				</div>
 			</section>
 			
+
+			<?
+				// Outputs the footer from PHP.
+				printFooter();
+			?>
 		</div> <!-- .wrap -->
 
 
+
+		<?
+			// Outputs all javascript.
+			printJavascript();
+		?>
 	</body>
 </html>
 

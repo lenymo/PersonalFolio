@@ -31,43 +31,6 @@
 
 //
 //---------------------------------
-//	DRIBBBLE
-//---------------------------------
-//
-.dribbble a {
-	display: block;
-	margin-bottom: 20px;
-}
-.dribbble img {
-	display: block;
-}
-.dribbble a figure {
-	overflow: hidden;
-	position: relative;
-}
-.dribbble a figcaption {
-	background: rgba(0,0,0,0.75);
-	bottom: -100px;
-	color: #eee;
-	color: rgba(255,255,255,0.8);
-	font-size: 18px;
-	padding: 15px;
-	position: absolute;
-	text-align: left;
-	width: 100%;
-	@include transition(all, 0.2s, ease-in-out);
-}
-.dribbble a figcaption small {
-	color: #aaa;
-	color: rgba(255,255,255,0.6);
-	display: block;
-}
-.dribbble a:hover figcaption {
-	bottom: 0;
-}
-
-//
-//---------------------------------
 //	RESPONSIVE
 //---------------------------------
 //

@@ -1,0 +1,94 @@
+//
+//---------------------------------
+//	GENERAL
+//---------------------------------
+//
+#footer {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	@include box-shadow-inset(0, 10px, 40px, rgba(0,0,0,0.5));
+
+	nav ul {
+		font-size: $nav-font-size-footer;
+
+		li {
+			display: inline-block;
+
+			a, a:link, a:visited, a:hover, a:active, a:focus {
+				color: darken($color-nav-footer-fallback, 40%);
+				color: darken($color-nav-footer, 40%);
+				padding: 5px 8px;
+			}
+		}
+
+		li:first-of-type {
+			a:first-of-type {
+				padding-left: 0;
+			}
+		}
+	}
+}
+#footer small {
+	color: darken($color-nav-footer-fallback, 50%);
+	color: darken($color-nav-footer, 50%);
+	font-size: 14px;
+}
+
+//
+//---------------------------------
+//	RESPONSIVE
+//---------------------------------
+//
+@include breakpoint(phone) {
+	#footer {
+		text-align: center;
+		
+		nav {
+			border-top: 1px solid rgba(255,255,255,0.05);
+			margin-top: 20px;
+			padding-top: 25px;
+		}
+
+		.icon-social {
+			display: inline-block;
+			margin: 0 10px 20px 0;
+			@include opacity(0.5);
+		}
+	}
+}
+// Tablet only
+@include between-breakpoints($tablet-width, ($tablet-landscape-width - 1)) {
+	#footer .col-1-2 {
+		width: 100%;
+	}
+	#footer nav {
+		border-top: none;
+		margin-top: 0;
+	}
+}
+@include breakpoint(tablet-landscape) {
+	#footer {
+
+		nav {
+			border-top: none;
+			margin-top: 10px;
+			padding-top: 0;
+		}
+		.icon-social {
+			float: right;
+			margin: 0 0 0 10px;
+		}
+		.icon-social:hover {
+			@include opacity(0.9);	
+		}
+		.container {
+			text-align: left;
+		}
+	}
+}
+
+
+
+
+
+

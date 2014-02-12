@@ -7,7 +7,6 @@
 
 			// Call include files.
 			printCSS();
-			printJavascript();
 			printMetaTags();
 
 			// Defines which nav the current page falls under.
@@ -127,9 +126,20 @@
 				</div>
 			</section>
 
+
+			<?
+				// Outputs the footer from PHP.
+				printFooter();
+			?>
 		</div> <!-- .wrap -->
 
 
+
+
+		<?
+			// Outputs all javascript.
+			printJavascript();
+		?>
 	</body>
 </html>
 

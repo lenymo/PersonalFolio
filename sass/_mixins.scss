@@ -1,3 +1,8 @@
+//
+//---------------------------------
+//	MIXINS (A-Z)
+//---------------------------------
+//
 @mixin background-size($width, $height) {
 	-webkit-background-size: $width $height;
 	-moz-background-size: $width $height;
@@ -58,6 +63,11 @@
 	-moz-border-radius: $radius;
 	border-radius: $radius;
 }
+@mixin rounded-explicit($top-left, $top-right, $bottom-right, $bottom-left) {
+	-webkit-border-radius: $top-left $top-right $bottom-right $bottom-left;
+	-moz-border-radius: $top-left $top-right $bottom-right $bottom-left;
+	border-radius: $top-left $top-right $bottom-right $bottom-left;
+}
 
 @mixin transition($property, $duration, $timing) {
 	-webkit-transition: $property $duration $timing;
@@ -65,3 +75,12 @@
 	-o-transition: $property $duration $timing;
 	transition: $property $duration $timing;
 }
+
+
+
+
+
+
+
+
+

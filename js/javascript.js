@@ -139,22 +139,128 @@ $(document).ready(function(){
 	//
 	$(function() {
 		var username = 'lenymo';
+
 		$.getJSON('http://api.dribbble.com/players/' + username + '/shots/?callback=?', function(json) {
-        console.log(json.shots);
-        for (var i = 0; i < 9; i++) { // Maximum Number of shots here
-            var shotTitle = json.shots[i].title;
-            var shotLikes = json.shots[i].likes_count;
+      //console.log(json.shots);
+      for (var i = 0; i < 9; i++) { // Maximum Number of shots here
+          var shotTitle = json.shots[i].title;
+          var shotLikes = json.shots[i].likes_count;
 
-            // This handles if there is 1 like, in which case the "s" is removed.
-            var shotLikesPlural = " likes";
-            if (shotLikes == 1) {
-            	shotLikesPlural = " like";
-            }
+          // This handles if there is 1 like, in which case the "s" is removed.
+          var shotLikesPlural = " likes";
+          if (shotLikes == 1) {
+          	shotLikesPlural = ' like';
+          }
 
-            $('.dribbble .grid').append("<div class='col-1-3'><a href='" + json.shots[i].url + "' target='_blank' title='" + shotTitle + "'><figure><figcaption>" + shotTitle + "<small>" + shotLikes + shotLikesPlural +  "</small></figcaption><img src='" + json.shots[i].image_url + "' alt='" + shotTitle + "'></figure></a>");
-        };
+          // Outputs each shot as HTML.
+          $('.dribbble .grid').append("<div class='col-1-3'><a href='" + json.shots[i].url + "' target='_blank' title='" + shotTitle + "'><figure><figcaption>" + shotTitle + "<small>" + shotLikes + shotLikesPlural +  "</small></figcaption><img src='" + json.shots[i].image_url + "' alt='" + shotTitle + "'></figure></a>");
+      };
     });
-	});
+	}); // end of dribbble.
+
+
+	//
+	//---------------------------------
+	//	Instagram
+	//---------------------------------
+	//
+	instagramPhotos();
+
+	function instagramPhotos(){
+		var accessToken = "677237.d4f927a.0fa87949730f4ea5917ad69b14e782d2";
+		var accessParameters = {accessToken:accessToken};
+		var username = "lenymo";
+		var userID = "677237";
+		var clientID = "d4f927ada0964befac79d20b2e8f3b33";
+		var numberOfPhotos = 10;
+
+		$.getJSON("https://api.instagram.com/v1/users/" + userID + "/media/recent/?client_id=" + clientID, accessParameters, function(json) {
+			for (var i = 0; i < numberOfPhotos; i++) {
+				var photoURL = json.data[i].link;
+				
+				console.log(photoURL);
+
+				//$('.instagram').append("<tr><td class='rank'>" + artistRank + "</td><td class='artist'>" + artistName + "</td><td class='plays'>" + artistPlays + "</td></tr");
+			}
+		});
+	}
+
+
+	//
+	//---------------------------------
+	//	Last.fm
+	//---------------------------------
+	//
+	// Accepted formats for period:
+	// overall | 7day | 1month | 3month | 6month | 12month
+	var timePeriod = "overall";
+	topArtists(timePeriod);
+	lastfmNav();
+
+	// Grabs top artists and outputs them as a table row.
+	function topArtists(timePeriod) {
+		var username = 'elgyn2'; // My username.
+		var apikey = '8a01aea061e32344de520401cc2e2028'; // My API key.
+		var topX = 10; // Defines number of artists to grab (ie. top 10).
+
+		//console.log(timePeriod);
+
+		// Outputs each artist as HTML.
+		$.getJSON('http://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user=' + username + '&api_key=' + apikey + '&format=json&period=' + timePeriod, function(json) {
+			for (var i = 0; i < topX; i++) {
+				var artistRank = json.topartists.artist[i]['@attr'].rank;
+				var artistName = json.topartists.artist[i].name;
+				var artistPlays = json.topartists.artist[i].playcount;
+				artistPlays = addCommas(artistPlays);
+
+				$('.lastfm tbody').append("<tr><td class='rank'>" + artistRank + "</td><td class='artist'>" + artistName + "</td><td class='plays'>" + artistPlays + "</td></tr");
+			}
+		});
+	}; // end of topArtists()
+
+	function lastfmNav() {
+		$(".lastfm .tabs a").click(function() {
+			var tabClass = $(this).attr("class");
+			var timePeriod = "";
+
+			$(".lastfm .tabs li").removeClass("current");
+			$(this).parent().addClass("current");
+
+			// Removes existing table data.
+			$(".lastfm tbody tr").remove();
+
+			if (tabClass == "overall") {
+				timePeriod = "overall";
+			} else if (tabClass == "last-12-months") {
+				timePeriod = "12month";
+			} else if (tabClass == "last-3-months") {
+				timePeriod = "3month";
+			} else if (tabClass == "last-7-days") {
+				timePeriod = "7day";
+			}
+
+			topArtists(timePeriod);
+		});
+	}
+
+
+	//
+	//---------------------------------
+	//	Add Commas functon
+	//---------------------------------
+	//
+	// Not sure how this works but it adds commas like so: 23,023,022.
+	function addCommas(nStr) {
+	  nStr += '';
+	  x = nStr.split('.');
+	  x1 = x[0];
+	  x2 = x.length > 1 ? '.' + x[1] : '';
+	  var rgx = /(\d+)(\d{3})/;
+	  while (rgx.test(x1)) {
+	    x1 = x1.replace(rgx, '$1' + ',' + '$2');
+	  }
+	  return x1 + x2;
+	} // end of addCommas()
 });
 
 

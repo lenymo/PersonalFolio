@@ -7,7 +7,6 @@
 
 			// Call include files.
 			printCSS();
-			printJavascript();
 			printMetaTags();
 
 			// Defines which nav the current page falls under.
@@ -532,9 +531,20 @@
 					</div>
 				</div><!-- .container -->
 			</section> <!-- #nowapp-sketching -->
+
+			
+			<?
+				// Outputs the footer from PHP.
+				printFooter();
+			?>
 		</div> <!-- .wrap -->
 
 
+
+		<?
+			// Outputs all javascript.
+			printJavascript();
+		?>
 	</body>
 </html>
 

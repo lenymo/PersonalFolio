@@ -75,18 +75,6 @@
 	}
 }
 
-//
-//---------------------------------
-//	LOGO - LARGE
-//---------------------------------
-//
-.logo-large {
-	height: 165px;
-	text-indent: -20000px;
-	width: 495px;
-	@include retinise('logo-large', 'png', 495px, 165px);
-}
-
 
 
 
