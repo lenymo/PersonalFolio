@@ -1,22 +1,26 @@
 //
 //---------------------------------
-//	DRIBBBLE
+//	FIGURE
 //---------------------------------
 //
-.dribbble a {
+// This is used for both Dribbble and Instagram.
+a.figure {
 	display: block;
 	margin-bottom: 20px;
 }
-.dribbble img {
+.no-padding a.figure {
+	margin-bottom: 0;
+}
+a.figure img {
 	display: block;
 }
-.dribbble a figure {
+a.figure figure {
 	overflow: hidden;
 	position: relative;
 }
-.dribbble a figcaption {
+a.figure figcaption {
 	background: rgba(0,0,0,0.75);
-	bottom: -100px;
+	bottom: -100%;
 	color: #eee;
 	color: rgba(255,255,255,0.8);
 	font-size: 18px;
@@ -24,15 +28,36 @@
 	position: absolute;
 	text-align: left;
 	width: 100%;
-	@include transition(all, 0.2s, ease-in-out);
+	@include transition(all, 0.1s, ease-in-out);
 }
-.dribbble a figcaption small {
+a.figure figcaption small {
 	color: #aaa;
 	color: rgba(255,255,255,0.6);
 	display: block;
 }
-.dribbble a:hover figcaption {
+a.figure:hover figcaption {
 	bottom: 0;
+}
+
+@include between-breakpoints(0, $tablet-width - 1) {
+	// This stretches the figures for phones so they are edge-to-edge.
+	.no-padding a.figure img {
+		width: 100%;
+	}
+}
+
+
+//
+//---------------------------------
+//	DRIBBBLE & INSTAGRAM
+//---------------------------------
+//
+@include between-breakpoints($tablet-width, $tablet-landscape-width - 1) {
+	.dribbble, .instagram {
+		.col-1-3 {
+			width: 50%;
+		}
+	}
 }
 
 
@@ -57,6 +82,12 @@
 }
 .lastfm table {
 	font-size: 18px;
+}
+.lastfm table a {
+	text-decoration: none;
+}
+.lastfm table .loader {
+	height: 512px;
 }
 @include breakpoint(phone) {
 	.lastfm {

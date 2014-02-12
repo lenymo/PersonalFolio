@@ -140,6 +140,9 @@ table thead tr th {
 table tbody tr td {
 	border-bottom: 1px solid $color-tabler-border;
 }
+table tbody tr:last-of-type td {
+	border-bottom: 2px solid $color-tabler-border;	
+}
 
 
 //

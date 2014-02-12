@@ -115,40 +115,47 @@
 			</section><!-- #about-details -->
 
 
-			<section class="bg-light">
+			<section class="bg-light dribbble">
 				<!-- DRIBBBLE -->
-				<div class="container dribbble">
-					<h4>
-						On Dribbble
-					</h4>
-					<div class="grid grid-pad">
-						<!-- Below is an example of the dribbble HTML. The jQuery is difficult to read so here's the tabulated HTML -->
-						<!--
-						<div class="col-1-3">
-							<a href="http://dribbble.com/shots/1399095-Hand-lettering-experiment" target="_blank">
-								<figure>
-									<figcaption>
-										Hand lettering experiment
-										<small>4 likes</small>
-									</figcaption>
-									<img src="http://d13yacurqjgara.cloudfront.net/users/27164/screenshots/1399095/dribbble_glennmccomb.png">
-								</figure>
-							</a>
-						</div>
-						-->
+				<h2>
+					On Dribbble
+				</h2>
+				<div class="grid no-padding">
+					<!-- Below is an example of the dribbble HTML. The jQuery is difficult to read so here's the tabulated HTML -->
+					<!--
+					<div class="col-1-3">
+						<a href="http://dribbble.com/shots/1399095-Hand-lettering-experiment" class="figure-anchor" target="_blank">
+							<figure>
+								<figcaption>
+									Hand lettering experiment
+									<small>4 likes</small>
+								</figcaption>
+								<img src="http://d13yacurqjgara.cloudfront.net/users/27164/screenshots/1399095/dribbble_glennmccomb.png">
+							</figure>
+						</a>
 					</div>
+					-->
 				</div>
+			</section>
 
+				
+			<section class="bg-light instagram">
+				<h2>
+					Instagram
+				</h2>
+				<div class="grid no-padding">
+					<!-- jQuery spits out Instagram photos here -->
+				</div><!-- .instagram -->
+
+			</section>
+
+			<section class="bg-light lastfm">
 				<div class="container">
-					<div class="grid grid-pad">
-						<div class="col-1-2 instagram">
-							
-						</div><!-- .instagram -->
-
-						<div class="col-1-2 text-left lastfm">
-							<h4>
-								Music I listen to
-							</h4>
+					<h2>
+						Music I listen to
+					</h2>
+					<div class="grid">
+						<div class="col-5-6 centred text-left">
 							<nav class="tabs">
 								<ul>
 									<li class="current">

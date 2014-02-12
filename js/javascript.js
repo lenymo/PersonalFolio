@@ -153,7 +153,7 @@ $(document).ready(function(){
           }
 
           // Outputs each shot as HTML.
-          $('.dribbble .grid').append("<div class='col-1-3'><a href='" + json.shots[i].url + "' target='_blank' title='" + shotTitle + "'><figure><figcaption>" + shotTitle + "<small>" + shotLikes + shotLikesPlural +  "</small></figcaption><img src='" + json.shots[i].image_url + "' alt='" + shotTitle + "'></figure></a>");
+          $('.dribbble .grid').append("<div class='col-1-3'><a href='" + json.shots[i].url + "' target='_blank' title='" + shotTitle + "' class='figure'><figure><figcaption>" + shotTitle + "<small>" + shotLikes + shotLikesPlural +  "</small></figcaption><img src='" + json.shots[i].image_url + "' alt='" + shotTitle + "'></figure></a>");
       };
     });
 	}); // end of dribbble.
@@ -166,23 +166,33 @@ $(document).ready(function(){
 	//
 	instagramPhotos();
 
-	function instagramPhotos(){
+	function instagramPhotos() {
 		var accessToken = "677237.d4f927a.0fa87949730f4ea5917ad69b14e782d2";
-		var accessParameters = {accessToken:accessToken};
-		var username = "lenymo";
 		var userID = "677237";
-		var clientID = "d4f927ada0964befac79d20b2e8f3b33";
-		var numberOfPhotos = 10;
+		var numberOfPhotos = 12;
 
-		$.getJSON("https://api.instagram.com/v1/users/" + userID + "/media/recent/?client_id=" + clientID, accessParameters, function(json) {
-			for (var i = 0; i < numberOfPhotos; i++) {
-				var photoURL = json.data[i].link;
-				
-				console.log(photoURL);
+		$.ajax({
+    	type: "GET",
+        dataType: "jsonp",
+        cache: false,
+        url: "https://api.instagram.com/v1/users/" + userID + "/media/recent/?access_token=" + accessToken,
+        success: function(data) {
+					for (var i = 0; i < numberOfPhotos; i++) {
+						var photoLink = data.data[i].link;
+						var photoURL = data.data[i].images.standard_resolution.url;
+						var photoTitle = data.data[i].caption.text;
+						var photoLikes = data.data[i].likes.count;
 
-				//$('.instagram').append("<tr><td class='rank'>" + artistRank + "</td><td class='artist'>" + artistName + "</td><td class='plays'>" + artistPlays + "</td></tr");
-			}
-		});
+						var photoLikesPlural = ' likes';
+						if (photoLikes == 1) {
+	          	photoLikesPlural = ' like';
+	          }
+
+						$('.instagram .grid').append("<div class='col-1-3'><a href='" + photoLink + "' target='_blank' title='" + photoTitle + "' class='figure'><figure><figcaption>" + photoTitle + "<small>" + photoLikes + photoLikesPlural +  "</small></figcaption><img src='" + photoURL + "' alt='" + photoTitle + "'></figure></a>");
+        		//$(".instagram").append("<div class='instagram-placeholder'><a target='_blank' href='" + data.data[i].link +"'><img class='instagram-image' src='" + data.data[i].images.low_resolution.url +"' /></a></div>");
+      		}
+        }
+    });
 	}
 
 
@@ -207,13 +217,17 @@ $(document).ready(function(){
 
 		// Outputs each artist as HTML.
 		$.getJSON('http://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user=' + username + '&api_key=' + apikey + '&format=json&period=' + timePeriod, function(json) {
+			// Removes existing table data.
+			$(".lastfm tbody tr").remove();
+
 			for (var i = 0; i < topX; i++) {
 				var artistRank = json.topartists.artist[i]['@attr'].rank;
 				var artistName = json.topartists.artist[i].name;
+				var artistURL = json.topartists.artist[i].url;
 				var artistPlays = json.topartists.artist[i].playcount;
 				artistPlays = addCommas(artistPlays);
 
-				$('.lastfm tbody').append("<tr><td class='rank'>" + artistRank + "</td><td class='artist'>" + artistName + "</td><td class='plays'>" + artistPlays + "</td></tr");
+				$('.lastfm tbody').append("<tr><td class='rank'>" + artistRank + "</td><td class='artist'><a href='" + artistURL + "' title='View " + artistName + " on Last.fm' target='_blank'>" + artistName + "</a></td><td class='plays'>" + artistPlays + "</td></tr");
 			}
 		});
 	}; // end of topArtists()
@@ -225,9 +239,6 @@ $(document).ready(function(){
 
 			$(".lastfm .tabs li").removeClass("current");
 			$(this).parent().addClass("current");
-
-			// Removes existing table data.
-			$(".lastfm tbody tr").remove();
 
 			if (tabClass == "overall") {
 				timePeriod = "overall";
