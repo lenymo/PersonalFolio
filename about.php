@@ -104,6 +104,8 @@
 						</div>
 					</div>
 
+
+					<!--
 					<hr />
 
 					<div class="grid grid-pad">
@@ -111,6 +113,7 @@
 							I am a digital design professional who specialises in web and mobile design and front-end development.
 						</p>
 					<div>
+					-->
 				</div><!-- .container -->
 			</section><!-- #about-details -->
 
@@ -151,11 +154,24 @@
 
 			<section class="bg-light lastfm">
 				<div class="container">
-					<h2>
-						Music I listen to
-					</h2>
+					<div class="grid">
+						<div class="col-1-2 centred">
+							<h2>
+								Music
+							</h2>
+							<p>
+								I listen to music all the time, particularly prog rock, prog metal, post-rock and lately ambient music (which is great to work to).
+							</p>
+							<p>
+								I'm perfectly happy if there are no vocals, and some of my favourite bands are instrumental.
+							</p>
+						</div>
+					</div>
 					<div class="grid">
 						<div class="col-5-6 centred text-left">
+							<h3>
+								My favourite artists <small>Scrobbled on last.fm since May 2005</small>
+							</h3>
 							<nav class="tabs">
 								<ul>
 									<li class="current">

@@ -120,6 +120,30 @@ nav.tabs ul {
 
 //
 //---------------------------------
+//	INPUTS
+//---------------------------------
+//
+input, textarea {
+	background: $color-input-bg;
+	border: none;
+	color: $color-body;
+	font-family: $font-stack;
+	font-size: $body-font-size;
+	font-weight: normal;
+	outline: none;
+	padding: 15px;
+	@include rounded(8px);
+}
+
+.bg-dark input, .bg-dark textarea {
+	background: rgba(255,255,255,0.2);
+	border: 2px solid #fff;
+	color: #fff;
+}
+
+
+//
+//---------------------------------
 //	TABLES
 //---------------------------------
 //

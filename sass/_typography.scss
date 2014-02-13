@@ -3,6 +3,8 @@
 //	GENERAL
 //---------------------------------
 //
+$font-stack: helvetica, arial, verdana, sans-serif;
+
 $body-font-size: 26px;
 
 $h1-size: 60px;
@@ -59,7 +61,7 @@ $btn-font-size-phone: $btn-font-size * $font-size-phone;
 //
 body {
 	color: $color-body;
-	font-family: helvetica, verdana, sans-serif;
+	font-family: $font-stack;
 	font-size: $body-font-size;
 	font-weight: 100;
 	line-height: 1.4;

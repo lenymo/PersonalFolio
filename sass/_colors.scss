@@ -30,9 +30,10 @@ $color-p-lead: $color-gray-8;
 
 //
 //---------------------------------
-//	BUTTONS
+//	FORMS
 //---------------------------------
 //
+$color-input-bg: #fff;
 
 
 
@@ -76,14 +77,17 @@ $color-nav-footer-fallback: #ccc;
 
 //
 //---------------------------------
-//	ESPN NOW APPS
+//	SECTION-SPECIFIC
 //---------------------------------
 //
+// ESPN / Now Apps.
 $color-espn: #bc291f;
 $color-nowapp-afl: #07529b;
 $color-nowapp-ale: #c7361c;
 $color-nowapp-nrl: #017d31;
 $color-nowapp-sru: #1e80ae;
+// Contact
+$color-contact-bg: #31762e;
 
 
 //

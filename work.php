@@ -21,7 +21,7 @@
 
 
 
-	<body class="body-bg-dark">
+	<body class="body-bg-dark body-work">
 		<?
 			// Site Header, called by PHP. Pass this function the name of the current page.
 			printSiteHeader($currentNav);
@@ -60,7 +60,7 @@
 				</div><!-- .container -->
 			</section><!-- #work-intro -->
 
-
+			<!--
 			<section class="bg-dark">
 				<div class="container">
 					<h1 id="testOutput">
@@ -91,10 +91,12 @@
 						</div>
 					</div>
 				</div>
+				-->
 
 
-				<!-- DRIBBBLE -->
-				<div class="container dribbble">
+			<!-- DRIBBBLE -->
+			<section class="bg-light dribbble">
+				<div class="container">
 					<div class="grid grid-pad">
 						<h5>
 							Dribbble
@@ -115,8 +117,10 @@
 						-->
 					</div>
 				</div>
+			</section><!-- dribbble -->
 
 
+				<!--
 				<div class="container">
 					<div class="grid grid-pad">
 						<div class="col-1-3">
@@ -165,6 +169,7 @@
 					</p>
 				</div>
 			</section>
+			-->
 			
 
 			<?

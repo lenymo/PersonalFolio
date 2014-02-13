@@ -80,7 +80,6 @@ $(document).ready(function(){
 	//	FUNCTIONS
 	//---------------------------------
 	//
-	//
 	//---------------------------------
 	//	Section Background Check
 	//---------------------------------
@@ -161,6 +160,20 @@ $(document).ready(function(){
 
 	//
 	//---------------------------------
+	//	Contact Input
+	//---------------------------------
+	//
+	contactInput();
+
+	function contactInput() {
+		$("#contact-intro input").click(function() {
+			$(this).select();
+		});
+	} // end of contactInput();
+
+
+	//
+	//---------------------------------
 	//	Instagram
 	//---------------------------------
 	//
@@ -169,7 +182,7 @@ $(document).ready(function(){
 	function instagramPhotos() {
 		var accessToken = "677237.d4f927a.0fa87949730f4ea5917ad69b14e782d2";
 		var userID = "677237";
-		var numberOfPhotos = 12;
+		var numberOfPhotos = 6;
 
 		$.ajax({
     	type: "GET",
@@ -193,7 +206,7 @@ $(document).ready(function(){
       		}
         }
     });
-	}
+	} // end of instagramPhotos()
 
 
 	//
@@ -251,7 +264,7 @@ $(document).ready(function(){
 			}
 
 			topArtists(timePeriod);
-		});
+		}); // end of lastfmNav()
 	}
 
 
