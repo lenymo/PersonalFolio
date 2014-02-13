@@ -44,6 +44,7 @@
 								Contact me
 							</h1>
 							<input type="email" value="lenymo@gmail.com" />
+							<small><a href="javascript:void(0);">Click to select text</a></small>
 						</div>
 					</div>
 				</div><!-- .container -->

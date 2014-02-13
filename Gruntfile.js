@@ -2,10 +2,20 @@ module.exports = function(grunt) {
 	grunt.initConfig ({
 		pkg: grunt.file.readJSON('package.json'),
 
+		watch: {
+			options: {
+				livereload: true,
+			},
+			css: {
+				files: ['sass/*.scss', 'sass/pages/*.scss'],
+				tasks: ['sass']
+			},
+		},
+
 		sass: {
 			dist: {
 				options: {
-					style: 'expanded'
+					style: 'compressed'		// Options: expanded, compressed
 				},
 				files: {
 					'css/style.css' : 'sass/style.scss'	//'destination' : 'source'
@@ -21,16 +31,6 @@ module.exports = function(grunt) {
 					src: ['**/*.{png,jpg,gif}'],
 					dest: 'img/'
 				}]
-			}
-		},
-
-		watch: {
-			options: {
-				livereload: true,
-			},
-			css: {
-				files: ['sass/*.scss', 'sass/pages/*.scss'],
-				tasks: ['sass']
 			}
 		}
 		

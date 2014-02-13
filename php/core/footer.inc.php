@@ -19,7 +19,7 @@ function printFooter() {
 							<a href="http://www.linkedin.com/in/glennmccomb" class="icon-social icon-social-linkedin" title="Connect with my on LinkedIn" target="_blank">
 								LinkedIn
 							</a>
-							<a href="twitter.com/lenymo" class="icon-social icon-social-twitter" title="Follow me on Twitter" target="_blank">
+							<a href="http://twitter.com/lenymo" class="icon-social icon-social-twitter" title="Follow me on Twitter" target="_blank">
 								Twitter
 							</a>
 						</div>

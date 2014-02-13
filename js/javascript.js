@@ -167,7 +167,12 @@ $(document).ready(function(){
 
 	function contactInput() {
 		$("#contact-intro input").click(function() {
+			// Selects the text of the input.
 			$(this).select();
+		});
+
+		$("#contact-intro small").click(function(){
+			$("#contact-intro input").select();
 		});
 	} // end of contactInput();
 

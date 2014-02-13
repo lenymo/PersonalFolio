@@ -106,6 +106,43 @@
 	}
 }
 
+// iPad portrait.
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+	#about-intro {
+		background-position: center;
+
+		.container {
+			padding-top: 200px;
+		}
+	}
+	#about-details {
+		h1 {
+			font-size: 36px;
+		}
+
+		.lead {
+			font-size: 30px;
+		}
+	}
+
+	#about-details .icon-social {
+		margin: 0 20px 20px 0;
+	}
+}
+
+// iPad landscape.
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {
+	#about-intro {
+		background-position: center;
+	}
+	#about-intro .container {
+		padding-top: 50px;
+	}
+	#about-details .about-details-selfie img {
+		top: -120px;
+	}
+}
+
 // Tablet-landscape.
 @include breakpoint (tablet-landscape) {
 	#about-intro {

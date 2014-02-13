@@ -69,29 +69,40 @@ a.figure:hover figcaption {
 .lastfm h3 small {
 	display: block;
 }
-.lastfm .rank {
-	text-align: center;
-	width: 10%;
+
+.lastfm {
+	.rank {
+		text-align: center;
+		width: 10%;
+	}
+
+	.artist {
+		font-weight: bold;
+	}
+
+	.plays {
+		text-align: right;
+		width: 14%;
+	}
 }
-.lastfm .artist {
-	font-weight: bold;
-}
-.lastfm .plays {
-	text-align: right;
-	width: 14%;
-}
+
 .lastfm table thead tr th, .lastfm small {
 	font-size: 14px;
 }
-.lastfm table {
-	font-size: 18px;
+
+.lastfm {
+	table {
+		font-size: 18px;
+		a {
+			text-decoration: none;
+		}
+
+		.loader {
+			height: 512px;
+		}
+	}
 }
-.lastfm table a {
-	text-decoration: none;
-}
-.lastfm table .loader {
-	height: 512px;
-}
+
 @include breakpoint(phone) {
 	.lastfm {
 		.last-12-months, .last-7-days {
@@ -99,6 +110,7 @@ a.figure:hover figcaption {
 		}
 	}
 }
+
 @include breakpoint(phone-landscape) {
 	.lastfm {
 		.last-7-days {
@@ -106,6 +118,7 @@ a.figure:hover figcaption {
 		}
 	}
 }
+
 @include breakpoint(tablet-landscape) {
 	.lastfm .last-12-months {
 		display: block;

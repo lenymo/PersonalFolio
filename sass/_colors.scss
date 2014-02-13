@@ -44,10 +44,10 @@ $color-input-bg: #fff;
 //
 // Phone and tablet.
 $color-nav-bg: #212f3d;
-$nav-inactive-opacity: 0.4;
+$nav-inactive-opacity: 0.3;
 $color-nav-text: rgba(255,255,255,$nav-inactive-opacity);
 $color-nav-text-fallback: #7a828b;
-$color-nav-current-bg: #284c71;
+$color-nav-current-bg: #212f3d;			//#284c71;
 $color-nav-current-text: #fff;
 
 // Desktop.
