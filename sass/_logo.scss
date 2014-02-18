@@ -61,7 +61,9 @@
 		margin: ($tablet-landscape-container-padding + 5) 0 0 $tablet-landscape-container-padding;
 		position: static;
 		width: 80px;
+		@include opacity(0.5);
 		@include retinise('logo-gm', 'png', 80px, 50px);
+		@include transition(opacity, 0.2s, ease-in-out);
 
 		.body-bg-dark & {
 			@include retinise('logo-gm-ondark', 'png', 80px, 50px);
@@ -85,18 +87,24 @@
 	}
 } // .site-header .logo
 
+
 // Handles the sticky nav bar.
 @include breakpoint(tablet-landscape) {
 	.site-header.user-has-scrolled .logo {
 		height: 50px;
 		margin-top: 8px;
 		width: 80px;
+		@include opacity(0.7);
 		@include retinise('logo-gm', 'png', 80px, 50px);
 	}
 
 	.body-bg-dark .site-header.user-has-scrolled .logo {
 		@include retinise('logo-gm-ondark', 'png', 80px, 50px);
 	}
+
+	.site-header .logo:hover {
+			@include opacity(1);
+		}
 }
 
 

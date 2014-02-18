@@ -31,22 +31,22 @@ function printLastfm() {
 							<nav class="tabs">
 								<ul>
 									<li class="current">
-										<a href="javascript:void(0);" class="overall">
+										<a href="javascript:void(0);" class="overall" title="My top tracks since May 2005.">
 											Overall
 										</a>
 									</li>
 									<li>
-										<a href="javascript:void(0);" class="last-12-months">
+										<a href="javascript:void(0);" class="last-12-months" title="My top tracks for the last year.">
 											Last year
 										</a>
 									</li>
 									<li>
-										<a href="javascript:void(0);" class="last-3-months">
+										<a href="javascript:void(0);" class="last-3-months" title="My top tracks for the last 3 months.">
 											Last 3 months
 										</a>
 									</li>
 									<li>
-										<a href="javascript:void(0);" class="last-7-days">
+										<a href="javascript:void(0);" class="last-7-days" title="My top tracks for the last 7 days.">
 											Last week
 										</a>
 									</li>
@@ -84,7 +84,7 @@ function printLastfm() {
 									-->
 								</tbody>
 							</table>
-							<small><a href="http://last.fm/user/elgyn2">My full last.fm charts</a></small>
+							<small><a href="http://last.fm/user/elgyn2" title="View my last.fm charts" target="_blank">My full last.fm charts</a></small>
 						</div>
 					</div><!-- .grid -->
 				</div><!-- .container -->

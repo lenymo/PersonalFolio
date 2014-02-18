@@ -52,6 +52,9 @@ a.figure:hover figcaption {
 //	DRIBBBLE & INSTAGRAM
 //---------------------------------
 //
+.instagram {
+	padding-bottom: 0;
+}
 @include between-breakpoints($tablet-width, $tablet-landscape-width - 1) {
 	.dribbble, .instagram {
 		.col-1-3 {

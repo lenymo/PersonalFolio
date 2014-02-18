@@ -25,14 +25,14 @@ function printNav($currentNav) {
 			<nav class="main-menu">
 				<ul>
 					<li<? print $navHome; ?>>
-						<a href="index.php" title="Go home.">
+						<a href="index.php" title="Go home">
 							<i class="icon icon-home"></i>
 							<span>Home</span>
 						</a>
 					</li>
 
 					<li<? print $navWork; ?>>
-						<a href="work.php" title="Check out my work.">
+						<a href="work.php" title="Check out my work">
 							<i class="icon icon-work"></i>
 							<span>Work</span>
 						</a>
@@ -48,14 +48,14 @@ function printNav($currentNav) {
 					-->
 
 					<li<? print $navAbout; ?>>
-						<a href="about.php" title="Learn more about me.">
+						<a href="about.php" title="Learn more about me">
 							<i class="icon icon-about"></i>
 							<span>About</span>
 						</a>
 					</li>
 
 					<li<? print $navContact; ?>>
-						<a href="contact.php" title="Contact me.">
+						<a href="contact.php" title="Contact me">
 							<i class="icon icon-contact"></i>
 							<span>Contact</span>
 						</a>

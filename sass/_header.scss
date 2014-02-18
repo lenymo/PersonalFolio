@@ -113,6 +113,7 @@
 		height: auto;
 		position: absolute;
 		width: $tablet-landscape-header-width;
+		@include transition(all, 0.2s, ease-in-out);
 	}
 
 	.main-menu {
@@ -124,7 +125,6 @@
 		padding: 0;
 		position: static;
 		width: auto;
-		//@include transition(all, 0.2s, ease-in-out);
 	}
 
 	.main-menu li {
@@ -136,7 +136,12 @@
 	.main-menu li	a {
 		background: none;
 		color: $color-nav-text-desktop;
-		padding: 15px 10px;
+		padding: 15px;
+		@include transition(color, 0.2s, ease-in-out);
+
+		&:hover {
+			color: $color-nav-current-text-desktop;
+		}
 
 		.icon {
 			display: none;
@@ -144,17 +149,14 @@
 
 		span {
 			float: left;
-			margin: 2px 0 0 8px;
+			margin: 2px 0 0 0;
 		}
 	}
 
 	.main-menu li.current a {
 		background: none;
 		color: $color-nav-current-text-desktop;
-		
-		span {
-			font-weight: bold;		
-		}
+		font-weight: bold;
 	}
 }
 
@@ -187,11 +189,20 @@
 		@include box-shadow(2px, 0, 20px, rgba(0, 0, 0, 0.1));
 
 		.main-menu {
-			margin-top: 5px;
+			margin-top: 0;
 
 			li a {
-				padding: 12px 10px;
+				border-top: 4px solid transparent;
+				padding: 18px 10px;
+
+				span {
+					margin: 0;
+				}
 			}
+
+			li.current a {
+					border-top: 4px solid $color-nav-current-text-desktop;
+				}
 		}
 	}
 
@@ -199,13 +210,22 @@
 	.body-bg-dark .user-has-scrolled {
 		background: $color-nav-sticky-ondark-bg-fallback;
 		background: $color-nav-sticky-ondark-bg;
+
+		.main-menu li.current a {
+			border-top: 4px solid $color-nav-sticky-ondark-current-text;
+		}
 	}
 
 	.body-bg-dark {
 		.main-menu li a {
 			color: $color-nav-sticky-ondark-text-fallback;
 			color: $color-nav-sticky-ondark-text;
+		
+			&:hover {
+				color: $color-nav-sticky-ondark-hover-text;
+			}
 		}
+
 		.main-menu li.current a {
 			color: $color-nav-sticky-ondark-current-text-fallback;
 			color: $color-nav-sticky-ondark-current-text;

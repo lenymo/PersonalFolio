@@ -8,7 +8,7 @@ function printInstagram() {
 
 ?>
 
-		<section class="bg-light instagram">
+		<section class="bg-dark instagram">
 				<h2>
 					Instagram
 				</h2>

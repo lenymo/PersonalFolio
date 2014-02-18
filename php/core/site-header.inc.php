@@ -9,9 +9,9 @@ function printSiteHeader($currentNav) {
 			?>
 
 			<!-- My personal mark. -->
-			<div class="logo">
+			<a href="index.php" class="logo" title="Go home">
 				Glenn McComb
-			</div>
+			</a>
 
 
 			<?
