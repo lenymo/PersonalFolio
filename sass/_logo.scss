@@ -4,6 +4,18 @@
 //---------------------------------
 //
 .site-header .logo {
+	
+	display: inline-block;
+	height: 50px;
+	margin-top: ($phone-menu-spacing * 4);
+	text-indent: -20000px;
+	width: 80px;
+	@include retinise('logo-gm', 'png', 80px, 50px);
+	
+	.body-bg-dark & {
+		@include retinise('logo-gm-ondark', 'png', 80px, 50px);		
+	}
+	
 	display: inline-block;
 	height: 50px;
 	margin-top: ($phone-menu-spacing * 4);
@@ -45,6 +57,17 @@
 	// Tablet-landscape.
 	@include breakpoint(tablet-landscape) {
 		float: left;
+		height: 50px;
+		margin: ($tablet-landscape-container-padding + 5) 0 0 $tablet-landscape-container-padding;
+		position: static;
+		width: 80px;
+		@include retinise('logo-gm', 'png', 80px, 50px);
+
+		.body-bg-dark & {
+			@include retinise('logo-gm-ondark', 'png', 80px, 50px);
+		}
+		/*
+		float: left;
 		height: 70px;
 		margin: ($tablet-landscape-container-padding + 10) 0 0 $tablet-landscape-container-padding;
 		position: static;
@@ -54,12 +77,13 @@
 		.body-bg-dark & {
 			@include retinise('logo-desktop-ondark', 'png', 234px, 70px);			
 		}
+		*/
 	}
 
 	@include breakpoint(desktop) {
 		margin-left: $desktop-container-padding 0 0 $desktop-container-padding;
 	}
-}
+} // .site-header .logo
 
 // Handles the sticky nav bar.
 @include breakpoint(tablet-landscape) {

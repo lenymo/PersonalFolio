@@ -3,10 +3,6 @@
 //	HOME PAGE
 //---------------------------------
 //
-.body-home .site-header .logo {
-	display: none;
-}
-
 #homepage {
 	background: #1d2935 url('../img/bg-homepage.jpg') no-repeat center -150px;
 	background-attachment: fixed;
@@ -38,13 +34,12 @@
 
 #homepage .container {
 	height: 100%;
-	//padding-top: 10%;
 	position: relative;
 	width: 100%;
 }
 
 #homepage .logo-img {
-	//margin-top: 8%;
+	margin-top: 8%;
 	max-width: 50%;
 }
 
@@ -79,10 +74,6 @@
 
 // Between tablet and tablet-landscape.
 @include between-breakpoints($tablet-width, $tablet-landscape-width - 1) {
-	.body-home .site-header .logo {
-		display: block;
-	}
-
 	#homepage {
 		background-position: 70px -100px;
 
