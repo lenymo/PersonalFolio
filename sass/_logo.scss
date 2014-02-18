@@ -65,13 +65,13 @@
 @include breakpoint(tablet-landscape) {
 	.site-header.user-has-scrolled .logo {
 		height: 50px;
-		margin-top: 12px;
-		width: 170px;
-		@include retinise('logo-mobile', 'png', 170px, 50px);
+		margin-top: 8px;
+		width: 80px;
+		@include retinise('logo-gm', 'png', 80px, 50px);
 	}
 
 	.body-bg-dark .site-header.user-has-scrolled .logo {
-		@include retinise('logo-mobile-ondark', 'png', 170px, 50px);
+		@include retinise('logo-gm-ondark', 'png', 80px, 50px);
 	}
 }
 

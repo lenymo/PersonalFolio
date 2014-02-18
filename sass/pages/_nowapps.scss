@@ -156,6 +156,7 @@
 	}
 }
 
+// Phone-landscape only.
 @include between-breakpoints($phone-landscape-width, ($tablet-width - 1)) {
 	#nowapp-brand .now-app-silhouettes {
 		.afl, .ale, .nrl, .sru {

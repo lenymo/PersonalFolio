@@ -26,10 +26,36 @@ include("php/core/javascript.inc.php");
 
 //
 //---------------------------------
-//	PAGE INCLUDES
+//	MODULES
 //---------------------------------
 //
-include("php/pages/work-intro.inc.php");
+include("php/modules/dribbble.inc.php");
+include("php/modules/instagram.inc.php");
+include("php/modules/lastfm.inc.php");
+
+//
+//---------------------------------
+//	SECTIONS
+//---------------------------------
+//
+// Work.
+include("php/sections/work-intro.inc.php");
+
+// Now Apps.
+include("php/sections/nowapp-intro.inc.php");
+include("php/sections/nowapp-backstory.inc.php");
+include("php/sections/nowapp-brand.inc.php");
+include("php/sections/nowapp-sections.inc.php");
+include("php/sections/nowapp-cards.inc.php");
+include("php/sections/nowapp-swiping.inc.php");
+include("php/sections/nowapp-sketching.inc.php");
+
+// About.
+include("php/sections/about-intro.inc.php");
+include("php/sections/about-details.inc.php");
+
+
+
 
 
 

@@ -59,9 +59,10 @@ section:nth-of-type(1) {
 
 // Pad the top of the first <section>'s container.
 section:nth-of-type(1) .container {
-	padding-top: $phone-container-padding * 2;
+	padding-top: $phone-container-padding;
 }
 
+// Tablet.
 @include breakpoint(tablet) {
 	.container {
 		padding: ($tablet-container-padding / 2) 0;
@@ -71,6 +72,7 @@ section:nth-of-type(1) .container {
 	}
 }
 
+// Tablet-landscape.
 @include breakpoint(tablet-landscape) {
 	.container {
 		padding: ($tablet-landscape-container-padding / 4) 0;
@@ -81,6 +83,7 @@ section:nth-of-type(1) .container {
 	}
 }
 
+// Desktop.
 @include breakpoint(desktop) {
 	.container {
 		padding: ($desktop-container-padding / 4) 0;

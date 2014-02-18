@@ -6,7 +6,7 @@
 #work-intro {
 	background: $color-espn url('../img/bg-espn-mcg.jpg') no-repeat top center;
 	background-attachment: fixed;
-	height: 100%;
+	height: auto;
 	padding-bottom: 0;
 	position: relative;
 	width: 100%;
@@ -14,7 +14,7 @@
 
 	.container {
 		padding-bottom: 0;
-		padding-top: 125px;
+		//padding-top: 50px;
 	}
 
 	.logo-espn-img {
@@ -25,6 +25,7 @@
 
 	h1 {
 		margin-top: .25em;
+		padding-bottom: 0;
 	}
 
 	.work-intro-nowapp img {
@@ -46,7 +47,7 @@
 //	RESPONSIVE
 //---------------------------------
 //
-// Phone.
+// Phone-only.
 @include between-breakpoints(0, $phone-landscape-width - 1) {
 	#work-intro {
 		h1 {
@@ -59,13 +60,19 @@
 		}
 	}
 }
+
+// Phone.
 @include breakpoint(phone) {
+	.body-work .site-header .logo {
+		display: none;
+	}
+
 	#work-intro {
 		.logo-espn {
 			margin: 0 auto;
 		}
 
-		.text-left {
+		.text-left, p {
 			text-align: center;
 		}
 
@@ -79,17 +86,24 @@
 	}
 }
 
+// Tablet.
 @include breakpoint(tablet) {
+	.body-work .site-header .logo {
+		display: block;
+	}
+
 	#work-intro {
+		height: 100%;
+
 		.container {
-			padding-top: 125px;
+			//padding-top: 125px;
 		}
 
 		.logo-espn {
 			margin: 0;
 		}
 
-		.text-left {
+		.text-left, p {
 			text-align: left;
 		}
 	}
@@ -111,7 +125,7 @@
 	}
 }
 
-// Target specifically iPad at portrait orientation.
+// iPad portrait.
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
 	#work-intro {
 		@include background-size(125%, auto);
@@ -146,11 +160,11 @@
 @include breakpoint (tablet-landscape) {
 	#work-intro {
 		.container {
-			padding-top: 200px;
+			//padding-top: 200px;
 		}
 
 		.logo-espn-img {
-			margin: 100px 0 0 0;
+			margin: 60px 0 0 0;
 		}
 
 		.text-left {

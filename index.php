@@ -34,16 +34,23 @@
 				<div class="container">
 					<div class="grid">
 						<div class="col-2-3 centred">
+							<img src="img/logo-large-2x.png" class="logo-img" alt="Glenn McComb">
 							<h1>
 								Designer & front-end dev
 							</h1>
+							<!--
 							<p class="lead">
 								Melbourne, Australia
 							</p>
+							-->
 
 							<a href="work.php" title="See my work" class="btn">
 								See my work
 							</a>
+
+							<small>
+								... or <a href="about.php" title="Learn more about me">learn more about me</a>.
+							</small>
 						</div>
 					</div>
 

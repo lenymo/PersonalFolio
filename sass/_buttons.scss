@@ -28,12 +28,21 @@ a.btn {
 //	RESPONSIVE
 //---------------------------------
 //
+// Phone.
 @include breakpoint(phone) {
 	.btn {
 		font-size: $btn-font-size-phone;
 	}
 }
 
+// Phone-landscape.
+@include breakpoint(phone-landscape) {
+	.btn {
+		font-size: $btn-font-size-phone-landscape;
+	}
+}
+
+// Tablet.
 @include breakpoint(tablet) {
 	.btn {
 		font-size: $btn-font-size;

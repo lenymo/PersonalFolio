@@ -1,36 +1,68 @@
+//
+//---------------------------------
+//	HOME PAGE
+//---------------------------------
+//
+.body-home .site-header .logo {
+	display: none;
+}
+
 #homepage {
-	//background: #25476a url(../img/bg-homepage.jpg) no-repeat center -150px;
 	background: #1d2935 url('../img/bg-homepage.jpg') no-repeat center -150px;
 	background-attachment: fixed;
 	height: 100%;
 	@include background-size(100%, auto);
+
+	h1 {
+		padding-bottom: 0.1em;
+	}
+
+	p {
+		text-align: center;
+	}
+
+	.btn {
+		margin: 15px 0 0 0;
+	}
+
+	small {
+		display: block;
+		margin-top: 25px;
+
+		a {
+			font-weight: 100;
+			text-decoration: none;
+		}
+	}
 }
 
 #homepage .container {
 	height: 100%;
+	//padding-top: 10%;
 	position: relative;
 	width: 100%;
 }
 
-#homepage .container h1 {
-	margin-top: 15%;
-}
-
-#homepage .container p {
-	text-align: center;
+#homepage .logo-img {
+	//margin-top: 8%;
+	max-width: 50%;
 }
 
 @include between-breakpoints(0, $tablet-width) {
 	#homepage {
 		background-position: center top;
-	}
 
-	#homepage h1 {
-		font-size: $h2-size * $font-size-phone;
-	}
+		.logo-img {
+			max-width: 80%;
+		}
 
-	#homepage .lead {
-		font-size: $body-font-size-phone;
+		h1 {
+			font-size: $h2-size * $font-size-phone;
+		}
+
+		.lead {
+			font-size: $body-font-size-phone;
+		}
 	}
 }
 
@@ -47,16 +79,20 @@
 
 // Between tablet and tablet-landscape.
 @include between-breakpoints($tablet-width, $tablet-landscape-width - 1) {
+	.body-home .site-header .logo {
+		display: block;
+	}
+
 	#homepage {
 		background-position: 70px -100px;
-	}
 
-	#homepage h1 {
-		font-size: $h2-size * $font-size-tablet;
-	}
+		h1 {
+			font-size: $h2-size * $font-size-tablet;
+		}
 
-	#homepage .lead {
-		font-size: $body-font-size-tablet;
+		.lead {
+			font-size: $body-font-size-tablet;
+		}
 	}
 }
 
@@ -66,9 +102,13 @@
 		background-position: -125px top;
 		@include background-size(150%, auto);
 
-		.container h1 {
+		.logo-img {
+			margin-top: 300px;
+		}
+
+		h1 {
 			font-size: 32px;
-			margin-top: 500px;
+			//margin-top: 500px;
 		}
 	}
 }
@@ -76,12 +116,14 @@
 // iPad landscape.
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {
 	#homepage {
-		//background-position: -115px top;
-		//@include background-size(150%, auto);
 
-		.container h1 {
+		.logo-img {
+			margin-top: 125px;
+		}
+
+		h1 {
 			font-size: 32px;
-			margin-top: 250px;
+			//margin-top: 250px;
 		}
 	}
 }
