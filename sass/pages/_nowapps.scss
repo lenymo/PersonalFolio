@@ -17,21 +17,18 @@
 			margin-bottom: 0;
 		}
 
-		img {
+		.nowapp-intro-iphones img {
 			display: block;
 			margin-bottom: -20px;
 		}
 	}
 }
-.logo-espn {
-	display: block;
-	height: 65px;
-	margin: 0 auto 10px auto;
-	text-indent: -20000px;
-	width: 250px;
-	@include retinise('logo-espn', 'png', 250px, 65px);
-}
 
+.logo-espn-img {
+	display: inline-block;
+	margin: 0 auto;
+	max-width: 50%;
+}
 
 //
 //---------------------------------
@@ -46,12 +43,15 @@
 	.afl {
 		background: $color-nowapp-afl;
 	}
+
 	.ale {
 		background: $color-nowapp-ale;
 	}
+
 	.nrl {
 		background: $color-nowapp-nrl;
 	}
+	
 	.sru {
 		background: $color-nowapp-sru;
 	}
@@ -81,16 +81,19 @@
 //	SECTIONS
 //---------------------------------
 //
-#nowapp-sections .nowapp-section-icons {
-	padding-bottom: 50px;
-}
-#nowapp-sections .nowapp-section-icons [class*='col-'] {
-	padding-bottom: 25px;
-}
-#nowapp-sections .nowapp-section-icons img {
-	max-width: 50%;
-}
+#nowapp-sections {
+	.nowapp-section-icons {
+		padding-bottom: 50px;
 
+		[class*='col-'] {
+			padding-bottom: 25px;
+		}
+
+		img {
+			max-width: 50%;
+		}
+	}
+}
 
 //
 //---------------------------------
@@ -134,15 +137,20 @@
 //
 // Phone only.
 @include between-breakpoints(0, ($tablet-width - 1)) {
-	.logo-espn {
-		height: 52px;
-		width: 200px;
-		@include retinise('logo-espn-small', 'png', 200px, 52px);
+	#nowapp-intro {
+		h1 {
+			font-size: 24px;
+		}
+
+		.lead {
+			font-size: 21px;
+		}
 	}
 
 	#nowapp-brand .now-app-silhouettes img {
 		max-width: 60%;
 	}
+
 	#nowapp-brand .nowapp-app-icons {
 		padding: 12% 12% 0 12%;
 		
@@ -158,6 +166,15 @@
 
 // Phone-landscape only.
 @include between-breakpoints($phone-landscape-width, ($tablet-width - 1)) {
+	#nowapp-intro {
+		h1 {
+			font-size: 36px;
+		}
+		.lead {
+			font-size: 30px;
+		}
+	}
+
 	#nowapp-brand .now-app-silhouettes {
 		.afl, .ale, .nrl, .sru {
 			width: 50%;
@@ -171,6 +188,12 @@
 
 // Tablet.
 @include breakpoint(tablet) {
+	#nowapp-intro {
+		.logo-espn-img {
+			max-width: 30%;
+		}
+	}
+
 	#nowapp-brand .grid {
 		.afl, .ale, .nrl, .sru {
 			padding: 50px 0 75px 0;
@@ -180,6 +203,7 @@
 			}
 		}
 	}
+
 	#nowapp-brand .nowapp-app-icons [class*='col-'] {
 		margin-top: -4em;
 	}
@@ -223,6 +247,12 @@
 
 // Tablet landscape.
 @include breakpoint(tablet-landscape) {
+	#nowapp-intro {
+		.logo-espn-img {
+			max-width: 25%;
+		}
+	}
+
 	#nowapp-brand .grid {
 		.afl, .ale, .nrl, .sru {
 			padding: 100px 0;

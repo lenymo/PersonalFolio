@@ -3,7 +3,7 @@
 //	INTRO
 //---------------------------------
 //
-#work-intro {
+#work-nowapp {
 	background: $color-espn url('../img/bg-espn-mcg.jpg') no-repeat top center;
 	background-attachment: fixed;
 	height: auto;
@@ -28,7 +28,7 @@
 		padding-bottom: 0;
 	}
 
-	.work-intro-nowapp img {
+	.work-nowapp-iphone img {
 		display: block;
 	}
 }
@@ -49,7 +49,7 @@
 //
 // Phone-only.
 @include between-breakpoints(0, $phone-landscape-width - 1) {
-	#work-intro {
+	#work-nowapp {
 		h1 {
 			font-size: 24px;
 		}
@@ -67,7 +67,7 @@
 		display: none;
 	}
 
-	#work-intro {
+	#work-nowapp {
 		.logo-espn {
 			margin: 0 auto;
 		}
@@ -76,12 +76,12 @@
 			text-align: center;
 		}
 
-		.work-intro-nowapp img {
+		.work-nowapp-iphone img {
 			padding-left: 17%;
 		}
 	}
 
-	#work-intro .btn {
+	#work-nowapp .btn {
 		margin-bottom: 8%;
 	}
 }
@@ -92,7 +92,7 @@
 		display: block;
 	}
 
-	#work-intro {
+	#work-nowapp {
 		height: 100%;
 
 		.container {
@@ -108,12 +108,12 @@
 		}
 	}
 
-	#work-intro .btn {
+	#work-nowapp .btn {
 		margin-bottom: 0;
 	}
 
-	#work-intro {
-		.work-intro-nowapp {
+	#work-nowapp {
+		.work-nowapp-iphone {
 			bottom: 0;
 			position: absolute;
 			right: 0;
@@ -127,43 +127,43 @@
 
 // iPad portrait.
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
-	#work-intro {
+	#work-nowapp {
 		@include background-size(125%, auto);
 	}
 
-	#work-intro .container {
+	#work-nowapp .container {
 		padding-top: 75px;
 	}
 
-	#work-intro {
-		.work-intro-title {
+	#work-nowapp {
+		.work-nowapp-title {
 			margin-left: 0;
 			text-align: center;
 			width: 100%;
+
+			p {
+				padding: 0 12.5% 0.5em;
+				text-align: center;
+			}
 		}
 
-		.work-intro-title p {
-			padding: 0 12.5% 0.5em;
-			text-align: center;
-		}
-
-		.work-intro-nowapp {
+		.work-nowapp-iphone {
 			margin-top: 50px;
 			position: static;
 			width: 100%;
-		}
 
-		.work-intro-nowapp img {
-			margin: 0 auto;
-			padding-left: 12%;
-			width: 80%;
+			img {
+				margin: 0 auto;
+				padding-left: 12%;
+				width: 80%;
+			}
 		}
 	}
 }
 
 // Tablet-landscape.
 @include breakpoint (tablet-landscape) {
-	#work-intro {
+	#work-nowapp {
 		.container {
 			//padding-top: 200px;
 		}
@@ -175,7 +175,7 @@
 		.text-left {
 			text-align: left;
 		}
-		.work-intro-nowapp img {
+		.work-nowapp-iphone img {
 			max-width: 75%;
 		}
 	}

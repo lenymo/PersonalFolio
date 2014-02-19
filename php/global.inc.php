@@ -39,7 +39,7 @@ include("php/modules/lastfm.inc.php");
 //---------------------------------
 //
 // Work.
-include("php/sections/work-intro.inc.php");
+include("php/sections/work-nowapp.inc.php");
 
 // Now Apps.
 include("php/sections/nowapp-intro.inc.php");

@@ -12,9 +12,12 @@ function printNowAppIntro($imagePath) {
 				<div class="container">
 
 					<div class="hero">
+						<!--
 						<div class="logo-espn">
 							ESPN
 						</div>
+						-->
+						<img src="<? print $imagePath ?>logo-espn-2x.png" class="logo-espn-img" alt="ESPN logo">
 						<h1>
 							Live Score Apps
 						</h1>
@@ -23,7 +26,7 @@ function printNowAppIntro($imagePath) {
 						</p>
 					</div>
 
-					<div class="grid grid-pad">
+					<div class="grid grid-pad nowapp-intro-iphones">
 						<div class="col-1-4 col-offset-1-12 hidden-phone">
 							<img src="<? print $imagePath ?>work-nowapp-intro-iphone-right.png" alt="Football Now Scores screen">
 						</div>

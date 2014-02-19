@@ -31,11 +31,11 @@
 
 			<!--
 			==============================
-				WORK INTRO
+				WORK NOW APP
 			==============================
 			-->
 			<?
-				printWorkIntro($imagePath); 
+				printWorkNowApp($imagePath); 
 			?>
 				
 

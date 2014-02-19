@@ -58,6 +58,17 @@
 				</div><!-- /.container -->
 			</section>
 
+
+			<!--
+			==============================
+				WORK NOW APP
+			==============================
+			-->
+			<?
+				printWorkNowApp($imagePath); 
+			?>
+			
+
 			<?
 				// Dribbble.
 			$dribbbleBG = "bg-dark";
