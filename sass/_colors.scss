@@ -81,12 +81,15 @@ $color-nav-footer-fallback: #ccc;
 //	SECTION-SPECIFIC
 //---------------------------------
 //
+// Footer.
+$color-footer-bg: #151718;
 // ESPN / Now Apps.
 $color-espn: #bc291f;
 $color-nowapp-afl: #07529b;
 $color-nowapp-ale: #c7361c;
 $color-nowapp-nrl: #017d31;
 $color-nowapp-sru: #1e80ae;
+
 // Contact
 $color-contact-bg: #31762e;
 
@@ -105,6 +108,7 @@ $color-tabler-border: #edf2f5;
 //	ON-DARK
 //---------------------------------
 //
+$color-dark-bg: $color-gray-2;
 $color-ondark-heading: rgba(255,255,255,0.9);
 $color-ondark-heading-fallback: #eee;
 $color-ondark-body: rgba(255,255,255,0.5);
@@ -114,7 +118,7 @@ $color-ondark-anchor: rgba(255,255,255,0.9);
 $color-ondark-anchor-fallback: #eee;
 
 .bg-dark {
-	background: #222426;		// Delete this.
+	background: $color-dark-bg;
 	color: $color-ondark-body-fallback;
 	color: $color-ondark-body;
 
