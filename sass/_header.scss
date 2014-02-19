@@ -113,7 +113,6 @@
 		height: auto;
 		position: absolute;
 		width: $tablet-landscape-header-width;
-		@include transition(all, 0.2s, ease-in-out);
 	}
 
 	.main-menu {
@@ -157,6 +156,13 @@
 		background: none;
 		color: $color-nav-current-text-desktop;
 		font-weight: bold;
+	}
+}
+
+// Make sure the menu transition doesn't apply when resizing the browser up.
+@include between-breakpoints($tablet-landscape-width + 10, 5000px) {
+	.site-header {
+		@include transition(all, 0.2s, ease-in-out);
 	}
 }
 

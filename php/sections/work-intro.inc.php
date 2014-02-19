@@ -13,7 +13,7 @@ function printWorkIntro($imagePath) {
 
 					<div class="grid">
 						<div class="col-1-2 col-offset-1-12 text-left work-intro-title">
-							<img src="<? print $imagePath ?>logo-espn-2x.png" class="logo-espn-img" alt="ESPN">
+							<img src="<? print $imagePath ?>logo-espn-2x.png" class="logo-espn-img" alt="ESPN logo">
 							<h1>
 								Live Score Apps
 							</h1>
@@ -27,7 +27,7 @@ function printWorkIntro($imagePath) {
 
 						<div class="col-5-12 work-intro-nowapp">
 							<a href="nowapp.php" title="View the full case study">
-								<img src="<? print $imagePath ?>work-intro-nowapp.png">
+								<img src="<? print $imagePath ?>work-intro-nowapp.png" alt="ESPN's Footy Now iPhone app">
 							</a>
 						</div>
 					</div>

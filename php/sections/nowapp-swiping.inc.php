@@ -12,7 +12,7 @@ function printNowAppSwiping($imagePath) {
 				<div class="container">
 					<div class="grid">
 						<div class="col-1-4 centred">
-							<img src="<? print $imagePath ?>work-nowapp-swiping-gesture.jpg">
+							<img src="<? print $imagePath ?>work-nowapp-swiping-gesture.jpg" alt="Swiping gesture">
 						</div>
 					</div>
 					<div class="grid">
@@ -22,7 +22,7 @@ function printNowAppSwiping($imagePath) {
 								Swiping gestures
 							</h1>
 							<p>
-								One of the most common use-cases in the apps was moving between rounds. Previously this was achieved using two buttons in the app's toolbar. Moving from one round to the next was a painful user experience.
+								One of the most common use-cases in the apps is moving between rounds. Previously this was achieved using two buttons in the app's toolbar. Moving from one round to the next was a painful user experience.
 							</p>
 						</div>
 					</div>
@@ -51,7 +51,7 @@ function printNowAppSwiping($imagePath) {
 							<h5>
 								First draft
 							</h5>
-							<img src="<? print $imagePath ?>work-nowapp-swiping-noAffordance.jpg">
+							<img src="<? print $imagePath ?>work-nowapp-swiping-noAffordance.jpg" alt="First draft with no visual affordance suggesting swiping">
 						</div>
 					</div>
 
@@ -63,14 +63,14 @@ function printNowAppSwiping($imagePath) {
 								Keen to preserve screen space but also provide a visual aid for users, we added tappable round titles. 
 							</p>
 							<p>
-								Users could still swipe between rounds and to hint at the swiping gesture, tapping a round title would trigger the sliding animation.
+								Users could still swipe between rounds, and to hint at the swiping gesture, tapping a round title would trigger the sliding animation.
 							</p>
 						</div>
 						<div class="col-5-12 col-offset-1-12">
 							<h5>
 								Second draft
 							</h5>
-							<img src="<? print $imagePath ?>work-nowapp-swiping-slimTitles.jpg">
+							<img src="<? print $imagePath ?>work-nowapp-swiping-slimTitles.jpg" alt="Second draft with small round titles">
 						</div>
 					</div>
 
@@ -94,15 +94,7 @@ function printNowAppSwiping($imagePath) {
 							<h5>
 								Final draft
 							</h5>
-							<img src="<? print $imagePath ?>work-nowapp-swiping-final.jpg">
-						</div>
-					</div>
-
-					<div class="grid">
-						<div class="col-1-2 centred">
-							<p>
-								When I left ESPN in December 2013 this final iteration had yet to be implemented.
-							</p>
+							<img src="<? print $imagePath ?>work-nowapp-swiping-final.jpg" alt="Final draft with larger round numbers and cards appearing to the left and right">
 						</div>
 					</div>
 				</div><!-- .container -->

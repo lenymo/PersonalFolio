@@ -47,15 +47,17 @@
 //	RESPONSIVE
 //---------------------------------
 //
+// Phone only.
+@include between-breakpoints(0, $tablet-width - 1) {
+	#about-intro .container {
+		padding-top: $phone-container-padding * 2;
+	}
+}
 // Phone.
 @include breakpoint (phone) {
 	#about-intro {
 		padding-bottom: 100px;
 		@include background-size(150%, auto);
-
-		.container {
-			padding-top: $phone-container-padding * 2;
-		}
 	}
 
 	#about-details {

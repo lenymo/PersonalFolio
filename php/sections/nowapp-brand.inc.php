@@ -17,7 +17,7 @@ function printNowAppBrand($imagePath) {
 							</h1>
 
 							<p>
-								Each of the four apps are branded with a unique colour which flows through the apps UI and creative assets.
+								Each of the four apps are branded with a unique colour which flows through the app's UI and creative assets.
 							</p>
 
 							<p>
@@ -34,7 +34,7 @@ function printNowAppBrand($imagePath) {
 							Football Now
 						</h3>
 
-						<img src="<? print $imagePath ?>work-nowapp-branding-player-ale.png">
+						<img src="<? print $imagePath ?>work-nowapp-branding-player-ale.png" alt="Football Now silhouette">
 					</div>
 
 					<div class="col-1-4 nrl">
@@ -42,7 +42,7 @@ function printNowAppBrand($imagePath) {
 							<small>NRL</small>
 							League Now
 						</h3>
-						<img src="<? print $imagePath ?>work-nowapp-branding-player-nrl.png">
+						<img src="<? print $imagePath ?>work-nowapp-branding-player-nrl.png" alt="League Now  silhouette">
 					</div>
 
 					<div class="col-1-4 afl">
@@ -50,7 +50,7 @@ function printNowAppBrand($imagePath) {
 							<small>AFL</small>
 							Footy Now
 						</h3>
-						<img src="<? print $imagePath ?>work-nowapp-branding-player-afl.png">
+						<img src="<? print $imagePath ?>work-nowapp-branding-player-afl.png" alt="Footy Now  silhouette">
 					</div>
 
 					<div class="col-1-4 sru">
@@ -58,22 +58,22 @@ function printNowAppBrand($imagePath) {
 							<small>Super Rugby</small>
 							Rugby Now
 						</h3>
-						<img src="<? print $imagePath ?>work-nowapp-branding-player-sru.png">
+						<img src="<? print $imagePath ?>work-nowapp-branding-player-sru.png" alt="Rugby Now  silhouette">
 					</div>
 				</div>
 
 				<div class="grid no-padding nowapp-app-icons">
 					<div class="col-1-4">
-						<img src="<? print $imagePath ?>work-nowapp-branding-icon-ale.png">
+						<img src="<? print $imagePath ?>work-nowapp-branding-icon-ale.png" alt="Football Now app icon">
 					</div>
 					<div class="col-1-4">
-						<img src="<? print $imagePath ?>work-nowapp-branding-icon-nrl.png">
+						<img src="<? print $imagePath ?>work-nowapp-branding-icon-nrl.png" alt="League Now app icon">
 					</div>
 					<div class="col-1-4">
-						<img src="<? print $imagePath ?>work-nowapp-branding-icon-afl.png">
+						<img src="<? print $imagePath ?>work-nowapp-branding-icon-afl.png" alt="Footy Now app icon">
 					</div>
 					<div class="col-1-4">
-						<img src="<? print $imagePath ?>work-nowapp-branding-icon-sru.png">
+						<img src="<? print $imagePath ?>work-nowapp-branding-icon-sru.png" alt="Rugby Now app icon">
 					</div>
 				</div>
 			</section> <!-- #nowapp-brand -->

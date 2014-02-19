@@ -6,8 +6,15 @@
 #homepage {
 	background: #1d2935 url('../img/bg-homepage.jpg') no-repeat center -150px;
 	background-attachment: fixed;
+	border-bottom: 4px solid rgba(0, 0, 0, 0.5);
 	height: 100%;
 	@include background-size(100%, auto);
+
+	.container {
+		height: 100%;
+		position: relative;
+		width: 100%;
+	}
 
 	h1 {
 		padding-bottom: 0.1em;
@@ -15,32 +22,17 @@
 
 	p {
 		text-align: center;
+		padding-bottom: 0;
+	}
+
+	small {
+		display: block;
+		padding-bottom: 0.5em;
 	}
 
 	.btn {
 		margin: 15px 0 0 0;
 	}
-
-	small {
-		display: block;
-		margin-top: 25px;
-
-		a {
-			font-weight: 100;
-			text-decoration: none;
-		}
-	}
-}
-
-#homepage .container {
-	height: 100%;
-	position: relative;
-	width: 100%;
-}
-
-#homepage .logo-img {
-	margin-top: 8%;
-	max-width: 50%;
 }
 
 // Phone only.
@@ -50,14 +42,15 @@
 	}
 
 	#homepage {
-		background-position: center top;
+		background-position: center -100px;
+		@include background-size(150%, auto);
 
-		.logo-img {
-			max-width: 80%;
+		.container {
+			padding-top: 45%;
 		}
 
 		h1 {
-			font-size: $h2-size * $font-size-phone;
+			font-size: 24px;
 		}
 
 		.lead {
@@ -68,19 +61,32 @@
 
 // Phone-landscape only.
 @include between-breakpoints($phone-landscape-width, $tablet-width - 1) {
-	#homepage h1 {
-		font-size: $h2-size * $font-size-tablet;
-	}
+	#homepage {
+		background-position: center -125px;
+		@include background-size(125%, auto);
 
-	#homepage .lead {
-		font-size: $body-font-size-tablet;
+		.container {
+			padding-top: 30%;
+		}
+
+		h1 {
+			font-size: $h2-size * $font-size-tablet;
+		}
+
+		.lead {
+			font-size: $body-font-size-tablet;
+		}
 	}
 }
 
 // Tablet only.
 @include between-breakpoints($tablet-width, $tablet-landscape-width - 1) {
 	#homepage {
-		background-position: 70px -100px;
+		background-position: 70px -150px;
+
+		.container {
+			padding-top: 40%;
+		}
 
 		h1 {
 			font-size: $h2-size * $font-size-tablet;
@@ -95,11 +101,11 @@
 // iPad portrait.
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
 	#homepage {
-		background-position: -125px top;
+		background-position: -125px -125px;
 		@include background-size(150%, auto);
 
-		.logo-img {
-			margin-top: 300px;
+		.container {
+			padding-top: 80%;
 		}
 
 		h1 {
@@ -112,9 +118,10 @@
 // iPad landscape.
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {
 	#homepage {
+		background-position: 70px -200px;
 
-		.logo-img {
-			margin-top: 125px;
+		.container {
+			padding-top: 40%;
 		}
 
 		h1 {
@@ -124,13 +131,32 @@
 	}
 }
 
+// Tablet-landscape.
 @include breakpoint(tablet-landscape) {
-	#homepage h1 {
-		font-size: $h2-size;
-	}
+	#homepage {
+		background-position: center -200px;
 
-	#homepage .lead {
-		font-size: $body-font-size;
+		.container {
+			padding-top: 30%;
+		}
+
+		h1 {
+			font-size: $h2-size;
+		}
+
+		.lead {
+			font-size: $body-font-size;
+		}
+	}
+}
+
+@include breakpoint(desktop) {
+	#homepage {
+		background-position: center -250px;
+
+		.container {
+			padding-top: 30%;
+		}
 	}
 }
 

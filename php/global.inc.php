@@ -49,6 +49,7 @@ include("php/sections/nowapp-sections.inc.php");
 include("php/sections/nowapp-cards.inc.php");
 include("php/sections/nowapp-swiping.inc.php");
 include("php/sections/nowapp-sketching.inc.php");
+include("php/sections/nowapp-notes.inc.php");
 
 // About.
 include("php/sections/about-intro.inc.php");

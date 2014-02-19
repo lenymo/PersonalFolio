@@ -25,15 +25,15 @@ function printNowAppIntro($imagePath) {
 
 					<div class="grid grid-pad">
 						<div class="col-1-4 col-offset-1-12 hidden-phone">
-							<img src="<? print $imagePath ?>work-nowapp-intro-iphone-left.png">
+							<img src="<? print $imagePath ?>work-nowapp-intro-iphone-right.png" alt="Football Now Scores screen">
 						</div>
 
 						<div class="col-1-3">
-							<img src="<? print $imagePath ?>work-nowapp-intro-iphone-middle.png">
+							<img src="<? print $imagePath ?>work-nowapp-intro-iphone-middle.png" alt="Footy Now Match screen">
 						</div>
 
 						<div class="col-1-4 hidden-phone">
-							<img src="<? print $imagePath ?>work-nowapp-intro-iphone-right.png">
+							<img src="<? print $imagePath ?>work-nowapp-intro-iphone-left.png" alt="League Now Standings screen">
 						</div>
 					</div>
 				</div>

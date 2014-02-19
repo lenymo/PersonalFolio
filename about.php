@@ -43,7 +43,8 @@
 				printAboutDetails($imagePath);
 				
 				// Dribbble.
-				printDribbble(); 
+				$dribbbleBG = "bg-light";
+				printDribbble($dribbbleBG);
 				
 				// Instagram.
 				printInstagram(); 
@@ -51,7 +52,7 @@
 				// Last.fm.
 				printLastfm(); 
 			?>
-			
+
 
 
 			<?

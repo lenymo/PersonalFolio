@@ -12,7 +12,7 @@ function printAboutDetails($imagePath) {
 				<div class="container">
 					<div class="grid grid-pad">
 						<div class="col-5-12 about-details-selfie">
-							<img src="<? print $imagePath ?>about-intro-me.png">
+							<img src="<? print $imagePath ?>about-intro-me.png" alt="A photo of me">
 							<br />
 						</div>
 

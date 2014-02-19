@@ -49,14 +49,17 @@
 				// Sections.
 				printNowappSections($imagePath);
 
+				// Sketching.
+				printNowAppSketching($imagePath);
+
 				// Cards.
 				printNowappCards($imagePath);
 
 				// Swiping.
 				printNowappSwiping($imagePath);
 
-				// Sketching.
-				printNowAppSketching($imagePath);
+				// Notes.
+				printNowAppNotes($imagePath);
 			?>
 			
 

@@ -43,6 +43,9 @@
 							<h1>
 								Contact me
 							</h1>
+							<p>
+								My name is Glenn McComb and I'm from Melbourne, Australia.
+							</p>
 							<input type="email" value="lenymo@gmail.com" />
 							<small><a href="javascript:void(0);">Click to select text</a></small>
 						</div>

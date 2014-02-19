@@ -4,11 +4,11 @@
 //	DRIBBBLE
 //---------------------------------
 //
-function printDribbble() {
+function printDribbble($dribbbleBG) {
 
 ?>
 
-			<section class="bg-light dribbble">
+			<section class="<? print $dribbbleBG ?> dribbble">
 				<div class="container">
 					<div class="grid grid-pad">
 						<h5>

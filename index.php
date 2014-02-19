@@ -34,10 +34,15 @@
 				<div class="container">
 					<div class="grid">
 						<div class="col-2-3 centred">
+							<!--
 							<img src="img/logo-large-2x.png" class="logo-img" alt="Glenn McComb">
+							-->
 							<h1>
-								Designer & front-end dev
+								Glenn McComb
 							</h1>
+							<small>
+								UI / UX designer and front-end developer.
+							</small>
 							<!--
 							<p class="lead">
 								Melbourne, Australia
@@ -47,15 +52,17 @@
 							<a href="work.php" title="See my work" class="btn">
 								See my work
 							</a>
-
-							<small>
-								... or <a href="about.php" title="Learn more about me">learn more about me</a>.
-							</small>
 						</div>
 					</div>
 
 				</div><!-- /.container -->
 			</section>
+
+			<?
+				// Dribbble.
+			$dribbbleBG = "bg-dark";
+				printDribbble($dribbbleBG);
+			?>
 
 			<!--
 			<section class="bg-light">

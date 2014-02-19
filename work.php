@@ -45,7 +45,8 @@
 			==============================
 			-->
 			<?
-				printDribbble(); 
+				$dribbbleBG = "bg-light";
+				printDribbble($dribbbleBG);
 			?>
 
 			
