@@ -17,7 +17,7 @@ function printNowAppSketching($imagePath) {
 							</h1>
 
 							<p>
-								Sketching is a crucial part of my work flow. I use the <a href="http://www.theghostlystore.com/collections/behance-action-method/products/behance-dot-grid-book" title="Check out the Dot Grid Book." target="_blank">Behance Dot Grid Book</a>. Sketching helps me quickly iterate UI / UX concepts without the distractions of PhotoShop.
+								Sketching is a crucial part of my work flow. I use the <a href="http://www.theghostlystore.com/collections/behance-action-method/products/behance-dot-grid-book" title="Check out the Dot Grid Book." target="_blank">Behance Dot Grid Book</a>. Sketching helps me quickly iterate UI / UX concepts without the distractions of Photoshop.
 							</p>
 							<p>
 								In the Scores sketch, I stacked teams and scores above one another rather than centre-aligning them on the same row. This made scanning scores faster and easier.

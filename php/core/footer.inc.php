@@ -37,11 +37,13 @@ function printFooter() {
 											Work
 										</a>
 									</li>
+									<!--
 									<li>
 										<a href="skills.php">
 											Skills
 										</a>
 									</li>
+									-->
 									<li>
 										<a href="about.php">
 											About
