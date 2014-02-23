@@ -84,6 +84,8 @@
 // Tablet-landscape.
 @include breakpoint(tablet-landscape) {
 	#contact-intro {
+		background-position: center -75px;
+
 		.container {
 			padding-top: 20%;
 		}
@@ -107,10 +109,20 @@
 }
 
 @include breakpoint(desktop) {
-	#contact-intro .container {
-		padding-top: 15%;
+	#contact-intro {
+		background-position: center -125px;
+
+		.container {
+			padding-top: 15%;
+		}
 	}
+	
 }
+
+
+
+
+
 
 
 

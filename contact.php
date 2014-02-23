@@ -39,12 +39,12 @@
 				<div class="container">
 
 					<div class="grid">
-						<div class="col-1-2 centred">
+						<div class="col-1-3 col-offset-1-6">
 							<h1>
 								Contact me
 							</h1>
 							<p>
-								My name is Glenn McComb and I'm from Melbourne, Australia.
+								<a href="MAILTO:lenymo@gmail.com">Send an email</a>, or copy my address from the input below.
 							</p>
 							<input type="email" value="lenymo@gmail.com" />
 							<small><a href="javascript:void(0);">Click to select text</a></small>

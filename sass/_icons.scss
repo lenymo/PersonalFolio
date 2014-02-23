@@ -17,20 +17,51 @@
 .show-mobile-menu .icon.icon-menu {
 	@include retinise('icon-close', 'png', 32px, 32px);
 }
+.main-menu .icon {
+	height: 24px;
+	width: 24px;
+}
 .icon.icon-home {
-	@include retinise('icon-home', 'png', 32px, 32px);
+	@include retinise('icon-sm-home', 'png', 24px, 24px);
 }
 .icon.icon-work {
-	@include retinise('icon-work', 'png', 32px, 32px);
+	@include retinise('icon-sm-work', 'png', 24px, 24px);
 }
 .icon.icon-skills {
-	@include retinise('icon-skills', 'png', 32px, 32px);
+	@include retinise('icon-sm-skills', 'png', 24px, 24px);
 }
 .icon.icon-about {
-	@include retinise('icon-about', 'png', 32px, 32px);
+	@include retinise('icon-sm-about', 'png', 24px, 24px);
 }
 .icon.icon-contact {
-	@include retinise('icon-contact', 'png', 32px, 32px);
+	@include retinise('icon-sm-contact', 'png', 24px, 24px);
+}
+
+//
+//---------------------------------
+//	TABLET
+//---------------------------------
+//
+@include breakpoint(tablet) {
+	.main-menu .icon {
+		height: 32px;
+		width: 32px;
+	}
+	.icon.icon-home {
+		@include retinise('icon-home', 'png', 32px, 32px);
+	}
+	.icon.icon-work {
+		@include retinise('icon-work', 'png', 32px, 32px);
+	}
+	.icon.icon-skills {
+		@include retinise('icon-skills', 'png', 32px, 32px);
+	}
+	.icon.icon-about {
+		@include retinise('icon-about', 'png', 32px, 32px);
+	}
+	.icon.icon-contact {
+		@include retinise('icon-contact', 'png', 32px, 32px);
+	}
 }
 
 //

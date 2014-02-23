@@ -26,6 +26,10 @@
 	width: $phone-menu-width;
 }
 
+.main-menu ul {
+	margin-top: 8px;
+}
+
 .main-menu li {
 	display: block;
 }
@@ -35,7 +39,7 @@
 	color: $color-nav-text-fallback;
 	color: $color-nav-text;
 	display: inline-block;
-	padding: 15px 20px;
+	padding: 10px 20px;
 	text-decoration: none;
 	width: 100%;
 
@@ -46,7 +50,7 @@
 
 	span {
 		display: inline-block;
-		margin: 5px 0 0 8px;
+		margin: 0 0 0 8px;
 		vertical-align: top;
 	}
 }
@@ -85,6 +89,10 @@
 		top: 0;
 		width: $tablet-menu-width;
 		
+		ul {
+			margin-top: 0;
+		}
+
 		li a {
 			padding: 20px;
 			width: 100%;
