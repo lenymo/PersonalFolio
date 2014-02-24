@@ -113,7 +113,8 @@ $color-ondark-heading: rgba(255,255,255,0.9);
 $color-ondark-heading-fallback: #eee;
 $color-ondark-body: rgba(255,255,255,0.5);
 $color-ondark-body-fallback: #888f95;
-$color-ondark-hr: #44474a;
+$color-ondark-hr: rgba(255,255,255,0.2);
+$color-ondark-hr-backup: #44474a;
 $color-ondark-anchor: rgba(255,255,255,0.9);
 $color-ondark-anchor-fallback: #eee;
 
@@ -138,6 +139,7 @@ $color-ondark-anchor-fallback: #eee;
 	}
 
 	hr {
+		border-top: 1px solid $color-ondark-hr-backup;
 		border-top: 1px solid $color-ondark-hr;
 	}
 }

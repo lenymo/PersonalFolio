@@ -11,8 +11,8 @@
 	width: 100%;
 	@include background-size(150%, auto);
 
-	h1 {
-		padding-bottom: 0.1em;
+	h1, .lead {
+		padding-bottom: 0;
 	}
 
 	p {
@@ -63,9 +63,19 @@
 	}
 }
 
+// Tablet only.
+@include between-breakpoints($tablet-width, ($tablet-landscape-width - 1)) {
+	#contact-intro {
+		h1 {
+			font-size: 38px;
+		}
+	}
+}
+
 // iPad portrait.
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
 	#contact-intro {
+		
 		.container {
 			padding-top: 450px;
 		}

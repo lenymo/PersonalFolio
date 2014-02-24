@@ -43,6 +43,12 @@
 							<h1>
 								Contact me
 							</h1>
+							<!--
+							<p class="lead">
+								Glenn McComb
+							</p>
+						-->
+							<hr class="half-height">
 							<p>
 								<a href="MAILTO:lenymo@gmail.com">Send an email</a>, or copy my address from the input below.
 							</p>
