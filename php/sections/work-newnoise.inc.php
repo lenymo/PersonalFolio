@@ -17,7 +17,7 @@ function printWorkNewNoise($imagePath) {
 								New Noise
 							</h1>
 							<p>
-								Design, front-end development and photography for a Melbourne-based recording studio website.
+								Design, front-end development and photography for a Melbourne-based recording studio.
 							</p>
 							<a href="newnoise.php" class="btn" title="View the full case study">
 								View project
