@@ -40,6 +40,7 @@ include("php/modules/lastfm.inc.php");
 //
 // Work.
 include("php/sections/work-nowapp.inc.php");
+include("php/sections/work-newnoise.inc.php");
 
 // Now Apps.
 include("php/sections/nowapp-intro.inc.php");
@@ -50,6 +51,9 @@ include("php/sections/nowapp-cards.inc.php");
 include("php/sections/nowapp-swiping.inc.php");
 include("php/sections/nowapp-sketching.inc.php");
 include("php/sections/nowapp-notes.inc.php");
+
+// Smaller Projects.
+include("php/sections/newnoise.inc.php");
 
 // About.
 include("php/sections/about-intro.inc.php");

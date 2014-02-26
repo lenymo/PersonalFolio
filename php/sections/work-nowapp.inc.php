@@ -5,7 +5,7 @@ function printWorkNowapp($imagePath) {
 
 			<!--
 			==============================
-				WORK INTRO
+				WORK - NOW APP
 			==============================
 			-->
 			<section class="bg-dark" id="work-nowapp">

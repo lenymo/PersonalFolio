@@ -24,7 +24,7 @@ function printLastfm() {
 						</div>
 					</div>
 					<div class="grid">
-						<div class="col-5-6 centred">
+						<div class="col-1-2 centred">
 							<h3>
 								My favourite artists <small>Scrobbled on last.fm since May 2005</small>
 							</h3>

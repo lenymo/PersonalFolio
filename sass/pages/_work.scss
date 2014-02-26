@@ -1,6 +1,6 @@
 //
 //---------------------------------
-//	INTRO
+//	NOW APP
 //---------------------------------
 //
 #work-nowapp {
@@ -30,6 +30,43 @@
 
 	.work-nowapp-iphone img {
 		display: block;
+	}
+}
+
+//
+//---------------------------------
+//	NEW NOISE
+//---------------------------------
+//
+#work-newnoise {
+	background: $color-newnoise-bg url('../img/bg-work-newnoise.jpg') no-repeat top center;
+	@include background-size(100%, auto);
+
+	h1 {
+		padding-bottom: 0;
+	}
+}
+
+#newnoise {
+	background: 
+		url('../img/bg-newnoise-left.png') no-repeat top left,
+		url('../img/bg-newnoise-right.png') no-repeat top right,
+		#260b07 url('../img/bg-newnoise.jpg') repeat-x top center;
+	
+	.container {
+		padding-top: 15%;
+	}
+
+	.newnoise-screenshot {
+		img {
+			max-width: 100%;
+		}
+	}
+
+	.newnoise-photos img {
+		display: block;
+		margin: 0 auto 25px;
+		max-width: 100%;
 	}
 }
 

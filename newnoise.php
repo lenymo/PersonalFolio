@@ -14,7 +14,7 @@
 		?>
 
 		<title>
-			Glenn McComb - Work
+			Glenn McComb - New Noise
 		</title>
 
 	</head>
@@ -31,31 +31,12 @@
 
 			<!--
 			==============================
-				WORK NOW APP
+				SECTION TITLE
 			==============================
 			-->
 			<?
-				printWorkNowApp($imagePath); 
-			?>
-
-			<!--
-			==============================
-				WORK NEW NOISE
-			==============================
-			-->
-			<?
-				printWorkNewNoise($imagePath); 
-			?>
-				
-
-			<!--
-			==============================
-				DRIBBBLE
-			==============================
-			-->
-			<?
-				$dribbbleBG = "bg-light";
-				printDribbble($dribbbleBG);
+				// PHP Includes go here
+				printNewNoise($imagePath);
 			?>
 
 			

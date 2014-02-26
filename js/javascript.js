@@ -187,7 +187,7 @@ $(document).ready(function(){
 	function instagramPhotos() {
 		var accessToken = "677237.d4f927a.0fa87949730f4ea5917ad69b14e782d2";
 		var userID = "677237";
-		var numberOfPhotos = 6;
+		var numberOfPhotos = 12;
 
 		$.ajax({
     	type: "GET",

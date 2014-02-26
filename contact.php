@@ -39,21 +39,21 @@
 				<div class="container">
 
 					<div class="grid">
-						<div class="col-1-3 col-offset-1-6">
+						<div class="col-5-12 col-offset-1-6">
+							<!--
+							<p>
+								Glenn McComb
+							</p>
+							-->
 							<h1>
 								Contact me
 							</h1>
-							<!--
-							<p class="lead">
-								Glenn McComb
-							</p>
-						-->
 							<hr class="half-height">
 							<p>
-								<a href="MAILTO:lenymo@gmail.com">Send an email</a>, or copy my address from the input below.
+								<a href="MAILTO:lenymo@gmail.com">Send an email</a><span class="hidden-phone">, or copy my address from the input below</span>.
 							</p>
 							<input type="email" value="lenymo@gmail.com" />
-							<small><a href="javascript:void(0);">Click to select text</a></small>
+							<!--<small><a href="javascript:void(0);">Click to select text</a></small>-->
 						</div>
 					</div>
 				</div><!-- .container -->
