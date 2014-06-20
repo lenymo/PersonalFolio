@@ -31,7 +31,7 @@ function printAboutDetails($imagePath) {
 
 					<div class="grid">
 						<div class="col-2-3 centred text-center">
-							<a href="twitter.com/lenymo" class="icon-social icon-social-twitter" title="Follow me on Twitter" target="_blank">
+							<a href="http://twitter.com/lenymo" class="icon-social icon-social-twitter" title="Follow me on Twitter" target="_blank">
 								Twitter
 							</a>
 							<a href="http://www.linkedin.com/in/glennmccomb" class="icon-social icon-social-linkedin" title="Connect with my on LinkedIn" target="_blank">

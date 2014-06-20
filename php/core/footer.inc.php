@@ -28,7 +28,7 @@ function printFooter() {
 							<nav>
 								<ul>
 									<li>
-										<a href="home.php">
+										<a href="index.php">
 											Home
 										</a>
 									</li>
