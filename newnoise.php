@@ -14,7 +14,7 @@
 		?>
 
 		<title>
-			Glenn McComb - New Noise
+			New Noise - Glenn McComb
 		</title>
 
 	</head>

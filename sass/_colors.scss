@@ -3,6 +3,7 @@
 //	CORE
 //---------------------------------
 //
+$color-gray-e: #efeff4;
 $color-gray-d: #dde4e9;
 $color-gray-c: #ccd4dd;
 $color-gray-a: #aab2b9;
@@ -84,6 +85,11 @@ $color-nav-footer-fallback: #ccc;
 // Footer.
 $color-footer-bg: #151718;
 
+// Word - FitBugg.
+$color-fitbugg-royal-blue: #0a70e2;
+$color-fitbugg-deep-blue: #085ab5;
+$color-fitbugg-prototype-bg: #121318;
+
 // Work - Now Apps.
 $color-espn: #bc291f;
 $color-nowapp-afl: #07529b;
@@ -115,8 +121,10 @@ $color-tabler-border: #edf2f5;
 $color-dark-bg: $color-gray-2;
 $color-ondark-heading: rgba(255,255,255,0.9);
 $color-ondark-heading-fallback: #eee;
-$color-ondark-body: rgba(255,255,255,0.5);
+
+$color-ondark-body: rgba(255,255,255,0.6);
 $color-ondark-body-fallback: #888f95;
+
 $color-ondark-hr: rgba(255,255,255,0.2);
 $color-ondark-hr-backup: #44474a;
 $color-ondark-anchor: rgba(255,255,255,0.9);
@@ -127,7 +135,7 @@ $color-ondark-anchor-fallback: #eee;
 	color: $color-ondark-body-fallback;
 	color: $color-ondark-body;
 
-	h1, h2, h3, h4 {
+	h1, h2, h3, h4, h5, h6 {
 		color: $color-ondark-heading-fallback;
 		color: $color-ondark-heading;
 	}

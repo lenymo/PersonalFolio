@@ -14,14 +14,14 @@
 		?>
 
 		<title>
-			Glenn McComb - Work
+			FitBugg iPhone App - Glenn McComb
 		</title>
 
 	</head>
 
 
 
-	<body class="body-bg-dark body-work">
+	<body class="body-bg-dark body-work body-work-fitbugg">
 		<?
 			// Site Header, called by PHP. Pass this function the name of the current page.
 			printSiteHeader($currentNav);
@@ -31,24 +31,21 @@
 
 			<!--
 			==============================
-				SECTIONS
+				SECTION TITLE
 			==============================
 			-->
 			<?
-				printWorkFitbugg($imagePath);
-				printWorkNowApp($imagePath);
-				printWorkNewNoise($imagePath); 
-			?>
-				
+				// PHP Includes go here
+				printFitbuggIntro($imagePath);
+				printFitbuggAbout($imagePath);
+				printFitbuggArchitecture($imagePath);
+				printFitbuggWireframes($imagePath);
+				printFitbuggLogo($imagePath);
+				printFitbuggBrand($imagePath);
+				printFitbuggMockups($imagePath);
+				//printFitbuggPrototype($imagePath);
 
-			<!--
-			==============================
-				DRIBBBLE
-			==============================
-			-->
-			<?
-				$dribbbleBG = "bg-light";
-				printDribbble($dribbbleBG);
+				printWorkNowapp($imagePath)
 			?>
 
 			

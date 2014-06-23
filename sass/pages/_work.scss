@@ -1,5 +1,35 @@
 //
 //---------------------------------
+//	FITBUGG
+//---------------------------------
+//
+#work-fitbugg {
+	background: $color-fitbugg-deep-blue;
+	background: $color-fitbugg-deep-blue url('../img/work-fitbugg-intro-bg.jpg') no-repeat top center;
+	padding-bottom: 0;
+	@include background-size(100%, 100%);
+
+	.container {
+		padding-bottom: 0;
+
+		.lead {
+			line-height: 1.2em;
+			padding: 0 0 0.25em 0;
+		}
+
+		.btn {
+			margin-top: 20px;
+		}
+
+		img {
+			vertical-align: bottom;
+			width: 75%;
+		}
+	}
+}
+
+//
+//---------------------------------
 //	NOW APP
 //---------------------------------
 //

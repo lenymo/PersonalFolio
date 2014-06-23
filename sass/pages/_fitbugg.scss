@@ -1,0 +1,179 @@
+//
+//---------------------------------
+//	INTRO
+//---------------------------------
+//
+.body-work-fitbugg {
+	h1, h2 {
+		// Typekit stuff.
+		// font-family: museo-sans-rounded;
+	}
+}
+
+#fitbugg-intro {
+	background: $color-fitbugg-deep-blue;
+	background: $color-fitbugg-deep-blue url('../img/work-fitbugg-intro-bg.jpg') no-repeat top center;
+	padding-bottom: 0;
+	@include background-size(100%, 100%);
+
+	.container {
+		padding-bottom: 0;
+
+		.lead {
+			line-height: 1.2em;
+		}
+
+		img {
+			vertical-align: bottom;
+			width: 75%;
+		}
+	}
+}
+
+
+//
+//---------------------------------
+//	ABOUT
+//---------------------------------
+//
+#fitbugg-about {
+	background: $color-fitbugg-royal-blue;
+	border-top: 1px solid rgba(255,255,255,0.1);
+	position: relative;
+
+	.fitbugg-about-mockup {
+		img {
+			display: block;
+		}
+	}
+}
+
+
+//
+//---------------------------------
+//	ARCHITECTURE
+//---------------------------------
+//
+#fitbugg-architecture {
+	background: 
+	url('../img/bg-sketching-top.png') center top repeat-x,
+	url('../img/bg-sketching-bottom.png') center bottom repeat-x,
+	url('../img/bg-dots.png') repeat;
+}
+
+
+//
+//---------------------------------
+//	WIREFRAMES
+//---------------------------------
+//
+#fitbugg-wireframes {
+	padding-top: 0;
+}
+
+
+//
+//---------------------------------
+//	LOGO
+//---------------------------------
+//
+#fitbugg-logo {
+	padding-top: 0;
+}
+
+//
+//---------------------------------
+//	MOCKUPS
+//---------------------------------
+//
+#fitbugg-mockups {
+	padding-top: 0;
+}
+
+
+//
+//---------------------------------
+//	BRANDING
+//---------------------------------
+//
+#fitbugg-brand {
+	background: $color-gray-e;
+	background: $color-gray-e url(../img/work-fitbugg-brand-bg.jpg) repeat-x bottom;
+
+	.fitbugg-brand-typography {
+		.no-padding {
+			margin: 0;
+		}
+	}
+
+	.fitbugg-brand-colours {
+		img {
+			max-width: 60%;
+		}
+	}
+}
+
+
+//
+//---------------------------------
+//	PROTOTYPE
+//---------------------------------
+//
+#fitbugg-prototype {
+	background: $color-fitbugg-prototype-bg;
+	background: $color-fitbugg-prototype-bg url(../img/work-fitbugg-prototype-bg.jpg) no-repeat top center;
+	padding-top: 30%;
+	text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+	@include background-size(100%, auto);
+
+	p {
+		color: #888f95;
+		color: rgba(255,255,255,0.8);
+	}
+}
+
+
+//
+//---------------------------------
+//	RESPONSIVE
+//---------------------------------
+//
+@include between-breakpoints(0, $tablet-width - 1) {
+	#fitbugg-about, #fitbugg-about .container {
+		padding-bottom: 0;
+	}
+}
+
+@include between-breakpoints($tablet-width, $tablet-landscape-width - 1) {
+	.fitbugg-about-mockup {
+		width: 35%;
+	}	
+}
+
+@include breakpoint(tablet) {
+	#fitbugg-about {
+		position: relative;
+
+		.fitbugg-about-mockup {
+			bottom: 0;
+			position: absolute;
+			right: 0;
+		}
+	}
+
+	.fitbugg-wireframes-wireframes img {
+		display: block;
+		padding-top: 30%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+

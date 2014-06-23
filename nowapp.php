@@ -14,7 +14,7 @@
 		?>
 
 		<title>
-			Glenn McComb - Work - ESPN live score apps
+			ESPN live score apps - Glenn McComb
 		</title>
 
 	</head>
