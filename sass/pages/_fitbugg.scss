@@ -3,13 +3,6 @@
 //	INTRO
 //---------------------------------
 //
-.body-work-fitbugg {
-	h1, h2 {
-		// Typekit stuff.
-		// font-family: museo-sans-rounded;
-	}
-}
-
 #fitbugg-intro {
 	background: $color-fitbugg-deep-blue;
 	background: $color-fitbugg-deep-blue url('../img/work-fitbugg-intro-bg.jpg') no-repeat top center;
@@ -138,18 +131,27 @@
 //	RESPONSIVE
 //---------------------------------
 //
+// Phone-only.
 @include between-breakpoints(0, $tablet-width - 1) {
 	#fitbugg-about, #fitbugg-about .container {
 		padding-bottom: 0;
 	}
 }
 
+//Tablet-only.
 @include between-breakpoints($tablet-width, $tablet-landscape-width - 1) {
+	#fitbugg-intro, #work-fitbugg {
+		.container img {
+			margin-top: 40px;
+		}
+	}
+
 	.fitbugg-about-mockup {
 		width: 35%;
-	}	
+	}
 }
 
+// Tablet
 @include breakpoint(tablet) {
 	#fitbugg-about {
 		position: relative;

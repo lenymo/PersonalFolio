@@ -12,20 +12,22 @@
 	.container {
 		padding-bottom: 0;
 
-		.lead {
-			line-height: 1.2em;
-			padding: 0 0 0.25em 0;
-		}
-
-		.btn {
-			margin-top: 20px;
-		}
-
 		img {
 			vertical-align: bottom;
 			width: 75%;
 		}
 	}
+}
+
+//
+//---------------------------------
+//	APT
+//---------------------------------
+//
+#work-apt {
+	background: $color-apt-dark-brown;
+	background: $color-apt-dark-brown url('../img/bg-work-apt.jpg') no-repeat top center;
+	@include background-size(100%, auto);
 }
 
 //

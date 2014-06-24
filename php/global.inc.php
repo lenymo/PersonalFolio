@@ -40,6 +40,7 @@ include("php/modules/lastfm.inc.php");
 //
 // Work.
 include("php/sections/work-fitbugg.inc.php");
+include("php/sections/work-apt.inc.php");
 include("php/sections/work-nowapp.inc.php");
 include("php/sections/work-newnoise.inc.php");
 
@@ -52,6 +53,11 @@ include("php/sections/fitbugg-brand.inc.php");
 include("php/sections/fitbugg-wireframes.inc.php");
 include("php/sections/fitbugg-mockups.inc.php");
 include("php/sections/fitbugg-prototype.inc.php");
+
+// APT.
+include("php/sections/apt-intro.inc.php");
+include("php/sections/apt-about.inc.php");
+include("php/sections/apt-contact.inc.php");
 
 // Now Apps.
 include("php/sections/nowapp-intro.inc.php");

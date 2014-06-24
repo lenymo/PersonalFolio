@@ -61,11 +61,12 @@
 
 			<!--
 			==============================
-				WORK NOW APP
+				WORK LINKS
 			==============================
 			-->
 			<?
-				printWorkNowApp($imagePath); 
+				printWorkFitbugg($imagePath); 
+				printWorkNowApp($imagePath);
 			?>
 			
 

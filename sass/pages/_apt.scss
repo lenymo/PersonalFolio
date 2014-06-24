@@ -1,0 +1,64 @@
+//
+//---------------------------------
+//	INTRO
+//---------------------------------
+//
+$apt-h1-bg-color: rgba(0,0,0,0.5);
+$apt-h1-bg-padding: 15px;
+
+#apt-intro {
+	background: $color-apt-maroon;
+	background: $color-apt-maroon url('../img/work-apt-intro-bg.jpg') no-repeat top center;
+	text-shadow: 0 3px 10px rgba(0,0,0,0.5);
+	@include background-size(100%, auto);
+
+	.hero h1 {
+		margin-top: 50%;
+		margin-left: $apt-h1-bg-padding;
+		line-height: 1.15em;
+		padding-bottom: 0.5em;
+
+		
+		span {
+			background: $apt-h1-bg-color;
+			box-shadow: $apt-h1-bg-padding 0 0 $apt-h1-bg-color, -($apt-h1-bg-padding) 0 0 $apt-h1-bg-color;
+		}
+	}
+}
+
+
+//
+//---------------------------------
+//	ABOUT
+//---------------------------------
+//
+#apt-about {
+	background: $color-apt-maroon;
+	background: $color-apt-maroon url('../img/work-apt-about-bg.jpg') no-repeat top center;
+	padding-top: 0;
+	@include background-size(100%, auto);
+}
+
+
+//
+//---------------------------------
+//	CONTACT
+//---------------------------------
+//
+#apt-contact {
+	background: $color-apt-maroon;
+	padding-top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

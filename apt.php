@@ -14,14 +14,14 @@
 		?>
 
 		<title>
-			Glenn McComb - Work
+			Responsive Website - Australasian Piano Technology - Glenn McComb
 		</title>
 
 	</head>
 
 
 
-	<body class="body-bg-dark body-work">
+	<body class="body-bg-dark body-work body-work-apt">
 		<?
 			// Site Header, called by PHP. Pass this function the name of the current page.
 			printSiteHeader($currentNav);
@@ -31,25 +31,17 @@
 
 			<!--
 			==============================
-				SECTIONS
+				SECTION TITLE
 			==============================
 			-->
 			<?
-				printWorkFitbugg($imagePath);
-				printWorkApt($imagePath);
-				printWorkNowApp($imagePath);
-				printWorkNewNoise($imagePath); 
-			?>
-				
+				// PHP Includes go here
+				printAptIntro($imagePath);
+				printAptAbout($imagePath);
+				printAptContact($imagePath);
 
-			<!--
-			==============================
-				DRIBBBLE
-			==============================
-			-->
-			<?
-				$dribbbleBG = "bg-light";
-				printDribbble($dribbbleBG);
+				// Next project
+				printWorkNowapp($imagePath);
 			?>
 
 			

@@ -17,8 +17,8 @@ function printWorkNowapp($imagePath) {
 							<h1>
 								Live Score Apps
 							</h1>
-							<p>
-								A ground-up native rebuild of ESPN Australia's live score apps.
+							<p class="lead">
+								A ground-up native re-design of ESPN Australia's live score apps.
 							</p>
 							<a href="nowapp.php" class="btn" title="View the full case study">
 								View case study

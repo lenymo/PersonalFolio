@@ -45,7 +45,8 @@
 				printFitbuggMockups($imagePath);
 				//printFitbuggPrototype($imagePath);
 
-				printWorkNowapp($imagePath)
+				// Next project
+				printWorkApt($imagePath);
 			?>
 
 			

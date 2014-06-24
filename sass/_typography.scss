@@ -143,7 +143,13 @@ small a, small a:link, small a:visited, small a:hover, small a:active {
 	}
 	.hero h1 {
 		font-size: $h1-size * $font-size-phone;
+		line-height: 1.3em;
 		padding: 0;
+	}
+
+	.hero .lead {
+		line-height: 1.2em;
+		padding: 0 0 0.5em 0;
 	}
 }
 
@@ -213,7 +219,6 @@ small a, small a:link, small a:visited, small a:hover, small a:active {
 	}
 	.hero .lead {
 		font-size: $h2-size * $hero-size;
-		padding: 0;
 	}
 }
 

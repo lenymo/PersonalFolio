@@ -85,19 +85,23 @@ $color-nav-footer-fallback: #ccc;
 // Footer.
 $color-footer-bg: #151718;
 
-// Word - FitBugg.
+// FitBugg.
 $color-fitbugg-royal-blue: #0a70e2;
 $color-fitbugg-deep-blue: #085ab5;
 $color-fitbugg-prototype-bg: #121318;
 
-// Work - Now Apps.
+// Now Apps.
 $color-espn: #bc291f;
 $color-nowapp-afl: #07529b;
 $color-nowapp-ale: #c7361c;
 $color-nowapp-nrl: #017d31;
 $color-nowapp-sru: #1e80ae;
 
-// Work - New Noise.
+// APT.
+$color-apt-maroon: #371912;
+$color-apt-dark-brown: #36342e;
+
+// New Noise.
 $color-newnoise-bg: #132821;
 
 // Contact
@@ -140,7 +144,7 @@ $color-ondark-anchor-fallback: #eee;
 		color: $color-ondark-heading;
 	}
 
-	p, h1 small, h2 small, h3 small {
+	p, small {
 		color: $color-ondark-body-fallback;
 		color: $color-ondark-body;
 	}

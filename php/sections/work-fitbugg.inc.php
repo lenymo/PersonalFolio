@@ -1,4 +1,5 @@
 <?
+
 function printWorkFitbugg($imagePath) {
 
 ?>
@@ -26,7 +27,9 @@ function printWorkFitbugg($imagePath) {
 						</div>
 
 						<div class="col-1-3">
-							<img src="<? print $imagePath ?>work-fitbugg-intro-stickman.png" alt="FitBugg Icon">
+							<a href="fitbugg.php" title="View the FitBugg case study">
+								<img src="<? print $imagePath ?>work-fitbugg-intro-stickman.png" alt="FitBugg Icon">
+							</a>
 						</div>
 					</div><!-- .grid -->
 				</div><!-- .container -->

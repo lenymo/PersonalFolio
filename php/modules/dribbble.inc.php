@@ -11,9 +11,9 @@ function printDribbble($dribbbleBG) {
 			<section class="<? print $dribbbleBG ?> dribbble">
 				<div class="container">
 					<div class="grid grid-pad">
-						<h5>
+						<h2>
 							Dribbble
-						</h5>
+						</h2>
 						<!-- Below is an example of the dribbble HTML. The jQuery is difficult to read so here's the tabulated HTML -->
 						<!--
 						<div class="col-1-3">
