@@ -8,6 +8,7 @@ function printJavascript() {
 		<script src="js/jquery-1.10.2.js"></script>
 		<script src="js/html5shiv.js"></script>
 		<script src="js/javascript.js"></script>
+		<script src="js/app.js"></script>
 
 		<script type="text/javascript">
 		  var _gaq = _gaq || [];

@@ -14,6 +14,9 @@ function printDribbble($dribbbleBG) {
 						<h2>
 							Dribbble
 						</h2>
+						<p>
+							Work I've posted on <a href="http://dribbble.com/lenymo" target="_blank">Dribbble</a>.
+						</p>
 						<!-- Below is an example of the dribbble HTML. The jQuery is difficult to read so here's the tabulated HTML -->
 						<!--
 						<div class="col-1-3">

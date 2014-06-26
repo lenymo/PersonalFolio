@@ -30,41 +30,14 @@
 
 		<div class="wrap">
 
-			<section class="bg-dark" id="homepage">
-				<div class="container">
-					<div class="grid">
-						<div class="col-2-3 centred">
-							<!--
-							<img src="img/logo-large-2x.png" class="logo-img" alt="Glenn McComb">
-							-->
-							<h1>
-								Glenn McComb
-							</h1>
-							<small>
-								UI / UX designer and front-end developer.
-							</small>
-							<!--
-							<p class="lead">
-								Melbourne, Australia
-							</p>
-							-->
-
-							<a href="work.php" title="See my work" class="btn">
-								See my work
-							</a>
-						</div>
-					</div>
-
-				</div><!-- /.container -->
-			</section>
 
 
-			<!--
-			==============================
-				WORK LINKS
-			==============================
-			-->
+			
 			<?
+				// Home page includes.
+				printHomeIntro($imagePath);
+
+				// Work links.
 				printWorkFitbugg($imagePath); 
 				printWorkNowApp($imagePath);
 			?>
@@ -72,8 +45,11 @@
 
 			<?
 				// Dribbble.
-			$dribbbleBG = "bg-dark";
+				$dribbbleBG = "bg-dark";
 				printDribbble($dribbbleBG);
+
+				// Instagram.
+				printInstagram();
 			?>
 
 			<!--

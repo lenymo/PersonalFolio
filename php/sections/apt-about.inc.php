@@ -31,7 +31,7 @@ function printAptAbout($imagePath) {
 						<div class="col-1-3">
 							<img src="<? print $imagePath; ?>work-apt-photo-brent.jpg" alt="Brent Ottley">
 							<small>
-								Brent Ottley
+								School founder Brent Ottley
 							</small>
 						</div>
 					</div><!-- .grid -->

@@ -18,7 +18,7 @@ function printAptIntro($imagePath) {
 								</span></h1>
 								
 								<a href="http://australasianpianotechnology.com.au/" class="btn" target="_blank" title="Visit the Australasian School of Piano Technology's website">
-									View Website
+									Visit Website
 								</a>
 							</div>
 						</div>

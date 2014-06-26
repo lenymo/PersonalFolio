@@ -24,7 +24,7 @@ function printFitbuggLogo($imagePath) {
 					</div><!-- .grid -->
 
 					<div class="grid">
-						<div class="col-1-6 col-offset-1-6">
+						<div class="col-1-4 col-offset-1-12">
 							<img src="<? print $imagePath ?>work-fitbugg-logo-sketch-1.jpg" alt="First draft - dumbbell location pin">
 						</div>
 						<div class="col-1-2 col-offset-1-12 text-left">
@@ -40,9 +40,10 @@ function printFitbuggLogo($imagePath) {
 						</div>
 					</div><!-- .grid -->
 
+					<hr>
 
 					<div class="grid">
-						<div class="col-1-6 col-offset-1-6">
+						<div class="col-1-4 col-offset-1-12">
 							<img src="<? print $imagePath; ?>work-fitbugg-logo-sketch-2.jpg" alt="Second draft - a woman stretching in a location pin">
 						</div>
 						<div class="col-1-2 col-offset-1-12 text-left">
@@ -55,9 +56,10 @@ function printFitbuggLogo($imagePath) {
 						</div>
 					</div><!-- .grid -->
 
+					<hr>
 
 					<div class="grid">
-						<div class="col-1-6 col-offset-1-6">
+						<div class="col-1-4 col-offset-1-12">
 							<img src="<? print $imagePath ?>work-fitbugg-logo-sketch-3.jpg" alt="Final draft - A stick-figure stretching">
 						</div>
 						<div class="col-1-2 col-offset-1-12 text-left">

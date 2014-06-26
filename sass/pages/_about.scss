@@ -29,8 +29,13 @@
 	}
 }
 
+//
+//---------------------------------
+//	DETAILS
+//---------------------------------
+//
 #about-details {
-	padding-top: 0;
+	padding: 0;
 
 	.container {
 		padding-top: 0;
@@ -40,6 +45,15 @@
 		display: inline-block;
 		margin: 0 10px 10px 0;
 	}
+}
+
+//
+//---------------------------------
+//	ABOUT
+//---------------------------------
+//
+.body-about .dribbble {
+	padding-top: 0;
 }
 
 //

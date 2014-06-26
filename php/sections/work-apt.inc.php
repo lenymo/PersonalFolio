@@ -25,7 +25,7 @@ function printWorkApt($imagePath) {
 									Responsive Web Design
 								</p>
 								<a href="apt.php" class="btn" title="View the Australasian School of Piano Technology case study">
-									View case study
+									View project
 								</a>
 							</div>
 						</div>

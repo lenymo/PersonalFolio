@@ -40,11 +40,6 @@
 
 					<div class="grid">
 						<div class="col-5-12 col-offset-1-6">
-							<!--
-							<p>
-								Glenn McComb
-							</p>
-							-->
 							<h1>
 								Contact me
 							</h1>
@@ -53,11 +48,26 @@
 								<a href="MAILTO:lenymo@gmail.com">Send an email</a><span class="hidden-phone">, or copy my address from the input below</span>.
 							</p>
 							<input type="email" value="lenymo@gmail.com" />
-							<!--<small><a href="javascript:void(0);">Click to select text</a></small>-->
 						</div>
 					</div>
-				</div><!-- .container -->
-			</section><!-- #work-intro -->
+				</div>
+			</section><!-- #contact-intro -->
+
+			<!--
+			<section class="bg-dark" id="contact-intro">
+				<div class="container">
+
+					<div class="grid">
+
+						<?
+							// Contact form.
+							//printContactForm($imagePath);
+						?>
+
+					</div>
+				</div>
+			</section>
+			-->
 
 			
 			

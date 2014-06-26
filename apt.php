@@ -14,7 +14,7 @@
 		?>
 
 		<title>
-			Responsive Website - Australasian Piano Technology - Glenn McComb
+			Responsive Web Design - Australasian Piano Technology - Glenn McComb
 		</title>
 
 	</head>

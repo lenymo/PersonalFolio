@@ -37,12 +37,18 @@
 	@include retinise('icon-sm-contact', 'png', 24px, 24px);
 }
 
+.icon.icon-location {
+	height: 24px;
+	width: 24px;
+	@include retinise('icon-sm-location', 'png', 24px, 24px);
+}
+
 //
 //---------------------------------
 //	TABLET
 //---------------------------------
 //
-@include breakpoint(tablet) {
+@include between-breakpoints($tablet-width, $tablet-landscape-width - 1) {
 	.main-menu .icon {
 		height: 32px;
 		width: 32px;

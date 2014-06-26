@@ -54,6 +54,7 @@
 			display: inline-block;
 			margin: 0 10px 20px 0;
 			@include opacity(0.5);
+			@include transition(opacity, 0.2s, ease);
 		}
 	}
 }
@@ -78,9 +79,10 @@
 		.icon-social {
 			float: right;
 			margin: 0 0 0 10px;
+			@include opacity(0.3);
 		}
 		.icon-social:hover {
-			@include opacity(0.9);	
+			@include opacity(1);	
 		}
 		.container {
 			text-align: left;

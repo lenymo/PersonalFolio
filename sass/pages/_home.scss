@@ -7,6 +7,7 @@
 	background: #1d2935 url('../img/bg-homepage.jpg') no-repeat center -150px;
 	background-attachment: fixed;
 	height: 100%;
+	position: relative;
 	@include background-size(100%, auto);
 
 	.container {
@@ -15,23 +16,60 @@
 		width: 100%;
 	}
 
+	h1, p, small, a {
+		z-index: 2;
+		@include opacity(0.99);
+	}
+
+	.flying {
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 0;
+
+		.man {
+			background: url('../img/bg-homepage-flying-man.png') no-repeat;
+			height: 340px;
+			margin: 20% auto 0 auto;
+			width: 20%;
+			@include background-size(100%, auto);
+		}
+	}
+
 	h1 {
 		padding-bottom: 0.1em;
 	}
 
 	p {
 		text-align: center;
-		padding-bottom: 0;
+		padding: 0.5em 0;
 	}
 
 	small {
-		display: block;
-		padding-bottom: 0.5em;
+		color: #fff;
+		padding: 0.5em 0 1em 0;
+		@include opacity(.25);
+
+		.icon {
+			display: inline-block;
+			vertical-align: middle;
+		}
 	}
 
 	.btn {
+		clear: both;
 		margin: 15px 0 0 0;
 	}
+}
+
+//
+//---------------------------------
+//	HOME PAGE
+//---------------------------------
+//
+.body-home .instagram {
+	padding-top: 0;
 }
 
 // Phone only.

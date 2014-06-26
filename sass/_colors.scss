@@ -21,11 +21,15 @@ $color-anchor-underline: $color-gray-c;
 $color-headings: $color-gray-4;
 $color-h5: $color-gray-8;
 $color-h6: $color-gray-8;
+
+// Small.
 $color-small: $color-gray-a;
 $color-small-anchor: darken($color-small, 10%);
 
+// HR.
 $color-hr: $color-gray-d;
 
+// Lead paragraph.
 $color-p-lead: $color-gray-8;
 
 
@@ -122,15 +126,26 @@ $color-tabler-border: #edf2f5;
 //	ON-DARK
 //---------------------------------
 //
+// Background.
 $color-dark-bg: $color-gray-2;
+
+// Headings.
 $color-ondark-heading: rgba(255,255,255,0.9);
 $color-ondark-heading-fallback: #eee;
 
+// Body.
 $color-ondark-body: rgba(255,255,255,0.6);
 $color-ondark-body-fallback: #888f95;
 
+// Small.
+$color-ondark-small: rgba(255,255,255,0.4);
+$color-ondark-small-fallback: #545d66;
+
+// HR.
 $color-ondark-hr: rgba(255,255,255,0.2);
 $color-ondark-hr-backup: #44474a;
+
+// Anchors.
 $color-ondark-anchor: rgba(255,255,255,0.9);
 $color-ondark-anchor-fallback: #eee;
 
@@ -147,6 +162,11 @@ $color-ondark-anchor-fallback: #eee;
 	p, small {
 		color: $color-ondark-body-fallback;
 		color: $color-ondark-body;
+	}
+
+	small {
+		color: $color-ondark-small-fallback;
+		color: $color-ondark-small;
 	}
 
 	a, a:link, a:visited, a:hover, a:active, a:focus {

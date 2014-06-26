@@ -16,8 +16,11 @@ function printFitbuggIntro($imagePath) {
 								<h1>
 									FitBugg
 								</h1>
-								<p class="lead">
-									An iPhone app to help maintain your desired fitness level
+								<p>
+									FitBugg is a location-based fitness app which connects personal trainers with fitness-seeking individuals in their area. 
+								</p>
+								<p>
+									Fitness session organisers create events which fitness-seekers book in to and attend. All of this is managed within the framework of the app.
 								</p>
 							</div>
 

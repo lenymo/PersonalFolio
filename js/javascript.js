@@ -37,6 +37,27 @@ $(document).ready(function(){
 	//
 	// This helps adjust the sizing of the top header when the user scrolls down.
 	$(window).scroll(function() {
+
+
+		// Flying Man
+		var scrollPos = $(window).scrollTop();
+		//console.log(scrollPos);
+
+		// Divides the scroll position by 10. This will be used to 
+		var divideBy = 20;
+		var scrollPosReduced = (scrollPos / divideBy);
+
+		var marginPercent = 20;
+
+		var adjustedMarginPercent = (marginPercent - scrollPosReduced);
+
+		$(".flying .man").css('margin-top', adjustedMarginPercent + '%' );
+		$(".flying .man").css('width', adjustedMarginPercent + '%' );
+
+
+
+
+
 		// Determines the height of the first <section>.
 		var firstSectionHeight = $('section').first().height();
 

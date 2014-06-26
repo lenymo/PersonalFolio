@@ -39,6 +39,7 @@
 	color: $color-nav-text-fallback;
 	color: $color-nav-text;
 	display: inline-block;
+	font-weight: bold;
 	padding: 15px 20px;
 	text-decoration: none;
 	width: 100%;
@@ -58,7 +59,6 @@
 .main-menu li.current a {
 	background: $color-nav-current-bg;
 	color: $color-nav-current-text;
-	font-weight: bold;
 
 	.icon {
 		@include opacity(1);
@@ -128,7 +128,7 @@
 		display: inline-block;
 		float: right;
 		font-size: $nav-font-size-desktop;
-		margin: $tablet-landscape-container-padding $tablet-landscape-container-padding 0 0;
+		margin: ($tablet-landscape-container-padding - 10) $tablet-landscape-container-padding 0 0;
 		padding: 0;
 		position: static;
 		width: auto;
@@ -143,15 +143,24 @@
 	.main-menu li	a {
 		background: none;
 		color: $color-nav-text-desktop;
-		padding: 15px;
+		padding: 15px 25px;
 		@include transition(color, 0.2s, ease-in-out);
+
+		.icon {
+			//display: none;
+			background-position: top center;
+			background-repeat: no-repeat;
+			width: 100%;
+			@include opacity (0.5);
+			@include transition(opacity, 0.2s, ease-in-out);
+		}
 
 		&:hover {
 			color: $color-nav-current-text-desktop;
-		}
 
-		.icon {
-			display: none;
+			.icon {
+				@include opacity (1);
+			}
 		}
 
 		span {
@@ -182,7 +191,7 @@
 //
 @include breakpoint(desktop) {
 	.main-menu {
-		margin: $desktop-container-padding $desktop-container-padding 0 0;
+		margin: ($desktop-container-padding - 10) $desktop-container-padding 0 0;
 	}
 }
 
@@ -211,6 +220,10 @@
 
 				span {
 					margin: 0;
+				}
+
+				.icon {
+					display: none;
 				}
 			}
 

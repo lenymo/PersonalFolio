@@ -38,6 +38,9 @@ include("php/modules/lastfm.inc.php");
 //	SECTIONS
 //---------------------------------
 //
+// Home.
+include("php/sections/home-intro.inc.php");
+
 // Work.
 include("php/sections/work-fitbugg.inc.php");
 include("php/sections/work-apt.inc.php");
@@ -76,6 +79,8 @@ include("php/sections/newnoise.inc.php");
 include("php/sections/about-intro.inc.php");
 include("php/sections/about-details.inc.php");
 
+// Contact.
+include("php/sections/contact-form.inc.php");
 
 
 
