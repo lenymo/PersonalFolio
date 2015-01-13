@@ -39,20 +39,48 @@ $(document).ready(function(){
 	$(window).scroll(function() {
 
 
-		// Flying Man
+		//
+		//---------------------------------
+		//  HOMEPAGE - FLYING MAN
+		//---------------------------------
+		//
 		var scrollPos = $(window).scrollTop();
 		//console.log(scrollPos);
 
-		// Divides the scroll position by 10. This will be used to 
+		// Divides the scroll position by X. This will be used to control the rate of change.
 		var divideBy = 20;
 		var scrollPosReduced = (scrollPos / divideBy);
 
+		// The silhouette of me has a margin-top of 20% when fully scrolled-up.
 		var marginPercent = 20;
 
+		// Lower the margin-top as the scroll position changes.
 		var adjustedMarginPercent = (marginPercent - scrollPosReduced);
 
+		// Adjust margin-top.
 		$(".flying .man").css('margin-top', adjustedMarginPercent + '%' );
+
+		// Adjust size of silhouette.
 		$(".flying .man").css('width', adjustedMarginPercent + '%' );
+
+
+
+		//
+		//---------------------------------
+		//  HOMEPAGE - BG
+		//---------------------------------
+		//
+		// Divides the scroll position by X. This will be used to control the rate of change.
+		var divideBy = 2;
+		var scrollPosReduced = (scrollPos / divideBy);
+
+		// Sets the default background positions of the homepage BG.
+		var homeBGX = "center";
+		var homeBGY = -250;
+		var adjustedHomeBGY = (homeBGY - scrollPosReduced);
+		var homeBGPos = homeBGX + " " + adjustedHomeBGY + "px";
+
+		$("#homepage").css('background-position', homeBGPos);
 
 
 
@@ -161,8 +189,8 @@ $(document).ready(function(){
 		var username = 'lenymo';
 
 		$.getJSON('http://api.dribbble.com/players/' + username + '/shots/?callback=?', function(json) {
-      //console.log(json.shots);
-      for (var i = 0; i < 9; i++) { // Maximum Number of shots here
+      var numberOfShots = 9;
+      for (var i = 0; i < numberOfShots; i++) { // Maximum Number of shots here
           var shotTitle = json.shots[i].title;
           var shotLikes = json.shots[i].likes_count;
 
@@ -224,7 +252,7 @@ $(document).ready(function(){
 
 						var photoLikesPlural = ' likes';
 						if (photoLikes == 1) {
-	          	photoLikesPlural = ' like';
+	          	var photoLikesPlural = ' like';
 	          }
 
 						$('.instagram .grid').append("<div class='col-1-3'><a href='" + photoLink + "' target='_blank' title='" + photoTitle + "' class='figure'><figure><figcaption>" + photoTitle + "<small>" + photoLikes + photoLikesPlural +  "</small></figcaption><img src='" + photoURL + "' alt='" + photoTitle + "'></figure></a>");
@@ -264,7 +292,7 @@ $(document).ready(function(){
 				var artistName = json.topartists.artist[i].name;
 				var artistURL = json.topartists.artist[i].url;
 				var artistPlays = json.topartists.artist[i].playcount;
-				artistPlays = addCommas(artistPlays);
+				var artistPlays = addCommas(artistPlays);
 
 				$('.lastfm tbody').append("<tr><td class='rank'>" + artistRank + "</td><td class='artist'><a href='" + artistURL + "' title='View " + artistName + " on Last.fm' target='_blank'>" + artistName + "</a></td><td class='plays'>" + artistPlays + "</td></tr");
 			}
@@ -280,13 +308,13 @@ $(document).ready(function(){
 			$(this).parent().addClass("current");
 
 			if (tabClass == "overall") {
-				timePeriod = "overall";
+				var timePeriod = "overall";
 			} else if (tabClass == "last-12-months") {
-				timePeriod = "12month";
+				var timePeriod = "12month";
 			} else if (tabClass == "last-3-months") {
-				timePeriod = "3month";
+				var timePeriod = "3month";
 			} else if (tabClass == "last-7-days") {
-				timePeriod = "7day";
+				var timePeriod = "7day";
 			}
 
 			topArtists(timePeriod);

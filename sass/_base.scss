@@ -1,3 +1,9 @@
+//
+//---------------------------------
+//	BASE
+//---------------------------------
+//
+
 html {
 	height: 100%;
 }
@@ -58,6 +64,7 @@ nav.tabs ul {
 		//font-weight: bold;
 		padding: 10px 15px;
 	}
+
 	li.current a {
 		border: 1px solid #eee;
 		border-bottom: none;
@@ -65,11 +72,13 @@ nav.tabs ul {
 		@include rounded-explicit(6px, 6px, 0, 0);
 	}
 }
+
 @include breakpoint(phone) {
 	nav.tabs ul {
 		font-size: 14px;
 	}
 }
+
 @include breakpoint(tablet-landscape) {
 	nav.tabs ul {
 		font-size: 18px;
@@ -93,23 +102,29 @@ nav.tabs ul {
   display: table;
   clear: both;
 }
+
 .pull-left {
 	float: left;
 }
+
 .pull-right {
 	float: right;
 }
+
 .centred {
   float: none;
   margin-left: auto;
   margin-right: auto;
 }
+
 .text-left {
 	text-align: left;
 }
+
 .text-right {
 	text-align: right;
 }
+
 .text-center {
 	text-align: center;
 }
@@ -156,9 +171,11 @@ table {
 	text-align: left;
 	width: 100%;
 }
+
 table th, table td {
 	padding: 8px 5px;
 }
+
 table thead tr th {
 	border-bottom: 2px solid $color-tabler-border;
 	color: $color-table-header;
@@ -166,9 +183,11 @@ table thead tr th {
 	//font-weight: 100;
 	text-transform: uppercase;
 }
+
 table tbody tr td {
 	border-bottom: 1px solid $color-tabler-border;
 }
+
 table tbody tr:last-of-type td {
 	border-bottom: 2px solid $color-tabler-border;	
 }

@@ -23,14 +23,27 @@ function printAboutDetails($imagePath) {
 							<p class="lead">
 								Melbourne, Australia
 							</p>
-							<p>
-								I am a digital design professional who specialises in web and mobile design and front-end development.
-							</p>
 						</div>
 					</div>
 
 					<div class="grid">
 						<div class="col-2-3 centred text-center">
+							<p>
+								I am a digital design professional who specialises in web and mobile design and front-end development.
+							</p>
+							<p>
+								I'm currently available for freelance projects. If you or your business need a website built or you want an app designed I'd love to hear from you. 
+							</p>
+							<p>
+								I design and build great looking, affordable, mobile-friendly websites which you can manage yourself.
+							</p>
+
+							<hr>
+
+							<p>
+								Find me online:
+							</p>
+
 							<a href="http://twitter.com/lenymo" class="icon-social icon-social-twitter" title="Follow me on Twitter" target="_blank">
 								Twitter
 							</a>

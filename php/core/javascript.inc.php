@@ -5,10 +5,10 @@ function printJavascript() {
 ?>
 
 		<!--  Raw JavaScript -->
-		<script src="js/jquery-1.10.2.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script src="js/html5shiv.js"></script>
 		<script src="js/javascript.js"></script>
-		<script src="js/app.js"></script>
+		<!--<script src="js/app.js"></script>-->
 
 		<script type="text/javascript">
 		  var _gaq = _gaq || [];

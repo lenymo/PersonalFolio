@@ -23,7 +23,7 @@ function printHomeIntro($imagePath) {
 								Glenn McComb
 							</h1>
 							<p class="lead">
-								UI / UX designer and front-end developer.
+								I design and build things for the web and mobile
 							</p>
 							<small class="clearfix">
 								<i class="icon icon-location"></i>
