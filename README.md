@@ -5,6 +5,14 @@ This started out as an attempt to build a responsive HTML / CSS / Javascript men
 It's important to note that that 95% of this website was designed and built by me using the technology described below.
 
 
+##Top level features
+
+###Hand-coded responsive framework
+
+I built this from scratch with the help of Chris Coyier's awesome CSS Tricks article [Don't Overthink It Grids](http://css-tricks.com/dont-overthink-it-grids/). I found that I wanted to have "offsets" similar to what you would find in bootstrap 2 so I added those in as well. Building the mobile-first responsive framework myself really helped me to understand the mechanics of it (despite my previous experience using bootstrap).
+
+
+
 
 ##Technology used
 
