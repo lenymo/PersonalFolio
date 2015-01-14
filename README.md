@@ -20,7 +20,7 @@ I experimented with [video], used [section], [header], [nav] and various other s
 ###jQuery
 I've used jQuery a lot over the years but I wanted to try some neat things here. As an example, the navigation bar has a fixed once the user scrolls past the first [section] of each page. On top of that, based on a class on each [section] the nav bar will dynamically change as you scroll up and down (or resize the browser). 
 
-Other uses for jQuery included using the .getJSON / .ajax function to pull in my Dribble shots, Instagram photos, and last.fm top plays from their respective APIs.
+Other uses for jQuery included using the .getJSON / .ajax function to pull in my Dribble shots, Instagram photos, and last.fm top plays from their respective APIs. My custom jQuery is in /js/javascript.js.
 
 ###Grunt
 I used Grunt for a few of things:
