@@ -1,6 +1,6 @@
 #My personal portfolio website
 
-This started out as an attempt to build a responsive HTML / CSS / Javascript menu which would use the same core markup while responding and behaving differently at various different breakpoints. It soon evolved into my portfolio site and I used it as a tool to experiment with Git, Sass, JS, jQuery and JSON. You can see my portfolio at [clinch.com.au](http://clinch.com.au). 
+This started out as an attempt to build a responsive HTML / CSS / Javascript menu which would use the same core markup while responding and behaving differently at various different breakpoints. It soon evolved into my portfolio site and I used it as a tool to experiment with Git, Sass, JS, jQuery and JSON. You can see my portfolio in the wild at [clinch.com.au](http://clinch.com.au). 
 
 It's important to note that that 95% of this website was designed and built by me using the technology described below.
 
