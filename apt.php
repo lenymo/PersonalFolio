@@ -28,12 +28,6 @@
 		?>
 		<div class="wrap">
 			
-
-			<!--
-			==============================
-				SECTION TITLE
-			==============================
-			-->
 			<?
 				// PHP Includes go here
 				printAptIntro($imagePath);
@@ -44,12 +38,11 @@
 				printWorkNowapp($imagePath);
 			?>
 
-			
-
 			<?
 				// Outputs the footer from PHP.
 				printFooter();
 			?>
+
 		</div> <!-- .wrap -->
 
 

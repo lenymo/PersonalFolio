@@ -35,6 +35,7 @@
 			==============================
 			-->
 			<?
+				printWorkNissco($imagePath);
 				printWorkFitbugg($imagePath);
 				printWorkApt($imagePath);
 				printWorkNowApp($imagePath);

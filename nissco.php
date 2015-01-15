@@ -14,14 +14,14 @@
 		?>
 
 		<title>
-			New Noise - Glenn McComb
+			Responsive Web Design - Nissco 1600 Workshop - Glenn McComb
 		</title>
 
 	</head>
 
 
 
-	<body class="body-bg-dark body-work">
+	<body class="body-bg-dark body-work body-nissco">
 		<?
 			// Site Header, called by PHP. Pass this function the name of the current page.
 			printSiteHeader($currentNav);
@@ -30,7 +30,14 @@
 			
 			<?
 				// PHP Includes go here
-				printNewNoise($imagePath);
+				nisscoIntro($imagePath);
+				nisscoStripes($imagePath);
+				nisscoResponsiveMockup($imagePath);
+				nisscoStripes($imagePath);
+				nisscoAbout($imagePath);
+
+				// Next project
+				printWorkFitBugg($imagePath);
 			?>
 
 			<?

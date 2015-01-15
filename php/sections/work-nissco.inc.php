@@ -1,38 +1,38 @@
 <?
 //
 //---------------------------------
-//	WORK - APT
+//	WORK - NISSCO
 //---------------------------------
 //
-function printWorkApt($imagePath) {
+function printWorkNissco($imagePath) {
 
 ?>
 
 			<!--
 			==============================
-				WORK - APT
+				WORK - NISSCO
 			==============================
 			-->
-			<section class="bg-dark" id="work-apt">
+			<section class="bg-dark" id="work-nissco">
 				<div class="container">
 					<div class="grid">
 						<div class="col-2-3 col-offset-1-12 text-left">
 							<div class="hero">
 								<h1>
-									Australasian School of Piano Technology
+									Nissco 1600 Workshop
 								</h1>
 								<p class="lead">
-									Responsive Web Design
+									Responsive web design
 								</p>
-								<a href="apt.php" class="btn" title="View the Australasian School of Piano Technology project">
+								<a href="nissco.php" class="btn" title="View the Nissco 1600 Workshop project">
 									View project
 								</a>
 							</div>
 						</div>
 					</div><!-- .grid -->
 				</div><!-- .container -->
-			</section><!-- #work-apt -->
+			</section><!-- #work-nissco -->
 
 <?
-}		// End of printWorkApt()
+}		// End of printWorkNissco()
 ?>
