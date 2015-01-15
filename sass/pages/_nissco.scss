@@ -1,0 +1,127 @@
+//
+//---------------------------------
+//	INTRO
+//---------------------------------
+//
+.body-nissco {
+	hr {
+		border-top: 5px solid #000;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	}
+}
+
+#nissco-intro {
+	background: $color-gray-2 url('../img/work-nissco-leather-bg.jpg');
+	background: 
+		url('../img/work-nissco-gradient-left.png') repeat-y top left,
+		url('../img/work-nissco-gradient-right.png') repeat-y top right,
+		url('../img/work-nissco-leather-bg.jpg');
+	border-bottom: 1px solid #000;
+
+	.container {
+		padding-bottom: 0;
+	}
+}
+
+.nissco-stripes {
+	background: none;
+	display: none;
+	padding: 0;
+}
+
+
+//
+//---------------------------------
+//	RESPONSIVE MOCKUPS
+//---------------------------------
+//
+#nissco-responsive-mockup {
+	padding: 0;
+
+	img {
+		height: auto;
+		width: 100%;
+		vertical-align: top;
+	}
+}
+
+//
+//---------------------------------
+//	ABOUT
+//---------------------------------
+//
+#nissco-about {
+	background: $color-gray-2 url('../img/work-nissco-leather-bg.jpg');
+	background: 
+		url('../img/work-nissco-gradient-top.png') repeat-x,
+		url('../img/work-nissco-gradient-bottom.png') repeat-x bottom,
+		url('../img/work-nissco-gradient-left.png') repeat-y top left,
+		url('../img/work-nissco-gradient-right.png') repeat-y top right,
+		url('../img/work-nissco-leather-bg.jpg');
+	border-top: 1px solid #000;
+}
+
+
+//
+//---------------------------------
+//	RESPONSIVE
+//---------------------------------
+//
+// Tablet.
+@include breakpoint(tablet) {
+	#nissco-intro {
+		background: $color-gray-2 url('../img/work-nissco-leather-bg.jpg');
+		background: 
+			url('../img/work-nissco-gradient-top.png') repeat-x,
+			url('../img/work-nissco-gradient-bottom.png') repeat-x bottom,
+			url('../img/work-nissco-gradient-left.png') repeat-y top left,
+			url('../img/work-nissco-gradient-right.png') repeat-y top right,
+			url('../img/work-nissco-leather-bg.jpg');
+		padding-bottom: $tablet-container-padding * 4;
+	}
+
+	.nissco-stripes {
+		background-size: cover;
+		display: block;
+		margin-top: - ($tablet-container-padding * 2);
+		z-index: 2;
+
+		img {
+			height: auto;
+			max-width: 100%;
+		}
+	}
+
+	#nissco-responsive-mockup,
+	#nissco-about {
+		margin-top: - ($tablet-container-padding * 3);
+	}
+}
+
+// Tablet-landscape.
+@include breakpoint(tablet-landscape) {
+	#nissco-intro {
+		padding-bottom: $tablet-landscape-container-padding * 4;
+	}
+
+	.nissco-stripes {
+		margin-top: - ($tablet-landscape-container-padding * 2);
+	}
+
+	#nissco-responsive-mockup,
+	#nissco-about {
+		margin-top: - ($tablet-landscape-container-padding * 3);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -19,6 +19,24 @@
 	}
 }
 
+
+//
+//---------------------------------
+//	NISSCO
+//---------------------------------
+//
+#work-nissco {
+	background: $color-gray-2 url('../img/work-nissco-leather-bg.jpg');
+	background: 
+		url('../img/work-nissco-gradient-top.png') repeat-x,
+		url('../img/work-nissco-gradient-bottom.png') repeat-x bottom,
+		url('../img/work-nissco-gradient-left.png') repeat-y top left,
+		url('../img/work-nissco-gradient-right.png') repeat-y top right,
+		url('../img/work-nissco-leather-bg.jpg');
+	border-top: 1px solid #000;
+}
+
+
 //
 //---------------------------------
 //	APT
@@ -29,6 +47,7 @@
 	background: $color-apt-dark-brown url('../img/bg-work-apt.jpg') no-repeat top center;
 	@include background-size(100%, auto);
 }
+
 
 //
 //---------------------------------
@@ -63,6 +82,7 @@
 		display: block;
 	}
 }
+
 
 //
 //---------------------------------
@@ -101,6 +121,7 @@
 	}
 }
 
+
 //
 //---------------------------------
 //	DRIBBBLE
@@ -109,6 +130,7 @@
 .body-work .dribbble {
 	background: $color-gray-c;
 }
+
 
 //
 //---------------------------------
@@ -166,10 +188,6 @@
 
 	#work-nowapp {
 		height: 100%;
-
-		.container {
-			//padding-top: 125px;
-		}
 
 		.logo-espn {
 			margin: 0;
@@ -256,6 +274,8 @@
 		}
 	}
 }
+
+
 
 
 
