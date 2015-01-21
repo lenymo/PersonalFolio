@@ -23,14 +23,11 @@ function printFitbuggIntro($imagePath) {
 									Fitness session organisers create events which fitness-seekers book in to and attend. All of this is managed within the framework of the app.
 								</p>
 							</div>
-
 							
 						</div>
 
 						<div class="col-1-3">
-							<a href="fitbugg.php" title="View the FitBugg case study">
-								<img src="<? print $imagePath ?>work-fitbugg-intro-stickman.png" alt="FitBugg Icon">
-							</a>
+							<img src="<? print $imagePath ?>work-fitbugg-intro-stickman.png" alt="FitBugg Icon">
 						</div>
 					</div><!-- .grid -->
 				</div><!-- .container -->
