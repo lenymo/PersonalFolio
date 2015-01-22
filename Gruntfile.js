@@ -10,6 +10,10 @@ module.exports = function(grunt) {
 				files: ['sass/*.scss', 'sass/pages/*.scss'],
 				tasks: ['sass']
 			},
+			js: {
+				files: ['js/javascript.js'],
+				tasks: ['uglify']
+			}
 		},
 
 		sass: {
@@ -32,7 +36,18 @@ module.exports = function(grunt) {
 					dest: 'img/'
 				}]
 			}
-		}
+		},
+
+		uglify: {
+	    options: {
+	      mangle: false
+	    },
+	    my_target: {
+	      files: {
+	        'js/javascript.min.js': ['js/javascript.js']
+	      }
+	    }
+	  }
 		
 	});
 
@@ -41,4 +56,5 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 }
