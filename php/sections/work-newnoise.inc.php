@@ -13,16 +13,18 @@ function printWorkNewNoise($imagePath) {
 
 					<div class="grid">
 						<div class="col-1-2 col-offset-1-12 text-left">
-							<h1>
-								New Noise
-							</h1>
-							<p>
-								Design, front-end development and photography for a Melbourne-based recording studio.
-							</p>
-							<a href="newnoise.php" class="btn" title="View the full case study">
-								View project
-							</a>
-						</div>
+							<div class="hero">
+								<h1>
+									New Noise
+								</h1>
+								<p>
+									Design, front-end development and photography for a Melbourne-based recording studio.
+								</p>
+								<a href="newnoise.php" class="btn" title="View the full case study">
+									View project
+								</a>
+							</div><!-- .hero -->
+						</div><!-- .col-1-2 -->
 
 						<!--
 						<div class="col-5-12 work-nowapp-iphone">
