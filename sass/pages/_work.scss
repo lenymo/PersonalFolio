@@ -6,15 +6,16 @@
 #work-fitbugg {
 	background: $color-fitbugg-deep-blue;
 	background: $color-fitbugg-deep-blue url('../img/work-fitbugg-intro-bg.jpg') no-repeat top center;
-	padding-bottom: 0;
 	@include background-size(100%, 100%);
 
 	.container {
-		padding-bottom: 0;
-
 		img {
 			vertical-align: bottom;
-			width: 75%;
+			width: 50%;
+		}
+
+		.hero {
+			padding-top: $pad;
 		}
 	}
 }
@@ -180,8 +181,33 @@
 	}
 }
 
+// Phone-landscape +
+@include breakpoint(phone-landscape) {
+	#work-fitbugg .container {
+		img {
+			width: 35%;
+		}
+	}
+}
+
 // Tablet.
 @include breakpoint(tablet) {
+	#work-fitbugg {
+		padding-bottom: 0;
+
+		.container {
+			padding-bottom: 0;
+
+			img {
+				width: 75%;
+			}
+
+			.hero {
+				padding-top: 0
+			}
+		}
+	}
+
 	.body-work .site-header .logo {
 		display: block;
 	}

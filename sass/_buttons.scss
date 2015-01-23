@@ -29,7 +29,7 @@ a.btn {
 //---------------------------------
 //
 // Phone.
-@include breakpoint(phone) {
+@include between-breakpoints(0, $phone-landscape-width - 1) {
 	.btn {
 		font-size: $btn-font-size-phone;
 	}

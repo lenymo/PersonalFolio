@@ -106,50 +106,59 @@ small a, small a:link, small a:visited, small a:hover, small a:active {
 	color: $color-small-anchor;
 }
 
+.hero {
+	h1 {
+		line-height: 1.3em;
+		padding: 0;
+	}
+
+	.lead {
+		line-height: 1.2em;
+		padding: 0 0 0.5em 0;
+	}
+}
+
 //
 //---------------------------------
 //	RESPONSIVE CSS
 //---------------------------------
 //
 // Phone.
-@include breakpoint(phone) {
+@include between-breakpoints(0, $phone-landscape-width - 1) {
 	body {
 		font-size: $body-font-size-phone;
 	}
+
 	h1 {
 		font-size: $h1-size * $font-size-phone;
 	}
+
 	h2 {
 		font-size: $h2-size * $font-size-phone;
 	}
+
 	h3 {
 		font-size: $h3-size * $font-size-phone;
 	}
-	h4 {
 
-	}
 	h5 {
 		color: $color-h5;
 		font-size: $h5-size;
 		margin: 1em 0 0 0;
 		text-transform: uppercase;
 	}
+
 	h6 {
 		color: $color-h5;
 		font-size: $h6-size;
 	}
+
 	.lead {
 		font-size: $h2-size * $font-size-phone;
 	}
+
 	.hero h1 {
 		font-size: $h1-size * $font-size-phone;
-		line-height: 1.3em;
-		padding: 0;
-	}
-
-	.hero .lead {
-		line-height: 1.2em;
-		padding: 0 0 0.5em 0;
 	}
 }
 
