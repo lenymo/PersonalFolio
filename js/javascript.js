@@ -38,7 +38,6 @@ $(document).ready(function(){
 	// This helps adjust the sizing of the top header when the user scrolls down.
 	$(window).scroll(function() {
 
-
 		//
 		//---------------------------------
 		//  HOMEPAGE - FLYING MAN
@@ -52,16 +51,20 @@ $(document).ready(function(){
 		var scrollPosReduced = (scrollPos / divideBy);
 
 		// The silhouette of me has a margin-top of 20% when fully scrolled-up.
-		var marginPercent = 20;
+		var marginPercent = 15;
+
+		var widthPercent = 20;
 
 		// Lower the margin-top as the scroll position changes.
 		var adjustedMarginPercent = (marginPercent - scrollPosReduced);
+
+		var adjustedWidthPercent = (widthPercent - scrollPosReduced);
 
 		// Adjust margin-top.
 		$(".flying .man").css('margin-top', adjustedMarginPercent + '%' );
 
 		// Adjust size of silhouette.
-		$(".flying .man").css('width', adjustedMarginPercent + '%' );
+		$(".flying .man").css('width', adjustedWidthPercent + '%' );
 
 
 
