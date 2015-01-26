@@ -4,15 +4,18 @@ This started out as an attempt to build a responsive HTML / CSS / Javascript men
 
 It's important to note that that 95% of this website was designed and built by me using the technology described below.
 
+
 ##Technology used
 
 ###PHP
 Largely for templating of pages. I looked into more task-specific solution such as Handlebars but I ended up settling on PHP because I had previous experience with writing it.
 
 ###Sass
-I had previously used LESS but wanted to get stuck into SASS and learn more about CSS pre-processors. I wrote all of my own mixins (as against using compass / bourbon, ect) and in particular, I liked using Sass to simplify constantly re-writing media queries. I feel like there's still a more efficient way of doing this but I didn't have the time to fully explore it on this project.
+I had previously used LESS but wanted to get stuck into SASS and learn more about CSS pre-processors. I wrote all of my own mixins (as against using compass / bourbon, etc) and in particular, I liked using Sass to simplify constantly re-writing media queries. I'm sure there's a more efficient way of doing this but I didn't have the time to fully explore it on this project.
 
-I wasn't sure of the best way to organise my .scss files but based on a couple of handy open source libraries I enjoyed breaking them up into as many sections as I could (without taking it to the extreme).
+I organised my Sass files into logical groupings, including an individual file for each project. This helped me find relevant CSS rules and I find it hard to go back to all-in-one CSS files.
+
+I based my Sass on [Chris Coyier's Sass Style Guide](http://css-tricks.com/sass-style-guide/), as well as the recommendations of Dan Cederholm in Sass for Web Designers.
 
 ###HTML5
 I experimented with [video], used [section], [header], [nav] and various other semantic tags. I loaded in Alexander Farkas' [html5shiv](https://github.com/aFarkas/html5shiv) to ensure the tags were functional in older browsers (particularly IE).
@@ -27,6 +30,7 @@ I used Grunt for a few of things:
 
 1. Compiling SASS and integrating with the LiveReload browser plugin (a lifesaver).
 2. Minifying images (imagemin).
+3. Minifying JavaScript (uglify).
 
 ###Git
 This was my first foray into using Git. I read the book "Getting good with Git" by Andrew Burgess, but without other team members working with me, this project was limited in familiarising me with Git's more complex properties like branching and merging.
