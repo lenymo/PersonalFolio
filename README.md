@@ -29,7 +29,7 @@ Other uses for jQuery included using the .getJSON / .ajax function to pull in my
 I used Grunt for a few of things:
 
 1. Compiling SASS and integrating with the LiveReload browser plugin (a lifesaver).
-2. Minifying images (imagemin).
+2. Optimising images (imagemin).
 3. Minifying JavaScript (uglify).
 
 ###Git
