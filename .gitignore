@@ -7,4 +7,6 @@ node_modules/
 .sass-cache/
 css/*.css
 
+blog/
+
 video/
