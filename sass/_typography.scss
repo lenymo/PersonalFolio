@@ -144,7 +144,7 @@ small a, small a:link, small a:visited, small a:hover, small a:active {
 	h5 {
 		color: $color-h5;
 		font-size: $h5-size;
-		margin: 1em 0 0 0;
+		margin: 1em 0 0;
 		text-transform: uppercase;
 	}
 
@@ -167,12 +167,19 @@ small a, small a:link, small a:visited, small a:hover, small a:active {
 	body {
 		font-size: $body-font-size-phone-landscape;
 	}
+
+	h1 {
+		font-size: $h1-size * $font-size-phone-landscape;
+	}
+
 	h2 {
 		font-size: $h2-size * $font-size-phone-landscape;
 	}
+
 	h3 {
 		font-size: $h3-size * $font-size-phone-landscape;
 	}
+
 	.hero h1 {
 		font-size: $h1-size * $font-size-phone-landscape;
 	}

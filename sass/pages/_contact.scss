@@ -103,14 +103,14 @@
 		}
 
 		input {
-			width: 75%%;
+			width: 75%;
 		}
 
 		small {
 			color: #fff;
 			display: block;
-			margin: 20px 0 0 0;
-			@include opacity(0.5);
+			margin: 20px 0 0;
+			@include opacity(.5);
 
 			a {
 				font-weight: 100;

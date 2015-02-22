@@ -1,116 +1,110 @@
 //
 //---------------------------------
-//	NAV
+//  NAV
 //---------------------------------
 //
 .icon {
-	height: 32px;
-	width: 32px;
+  height: 32px;
+  width: 32px;
 }
 
 .icon.icon-menu {
-	@include retinise('icon-menu', 'png', 32px, 32px);
+  @include retinise('icon-menu', 'png', 32px, 32px);
 }
 .body-bg-dark .icon.icon-menu {
-	@include retinise('icon-menu-ondark', 'png', 32px, 32px);
+  @include retinise('icon-menu-ondark', 'png', 32px, 32px);
 }
 .show-mobile-menu .icon.icon-menu {
-	@include retinise('icon-close', 'png', 32px, 32px);
+  @include retinise('icon-close', 'png', 32px, 32px);
 }
 .main-menu .icon {
-	height: 24px;
-	width: 24px;
+  height: 24px;
+  width: 24px;
 }
 .icon.icon-home {
-	@include retinise('icon-sm-home', 'png', 24px, 24px);
+  @include retinise('icon-sm-home', 'png', 24px, 24px);
 }
 .icon.icon-work {
-	@include retinise('icon-sm-work', 'png', 24px, 24px);
+  @include retinise('icon-sm-work', 'png', 24px, 24px);
 }
 .icon.icon-skills {
-	@include retinise('icon-sm-skills', 'png', 24px, 24px);
+  @include retinise('icon-sm-skills', 'png', 24px, 24px);
 }
 .icon.icon-about {
-	@include retinise('icon-sm-about', 'png', 24px, 24px);
+  @include retinise('icon-sm-about', 'png', 24px, 24px);
+}
+.icon.icon-blog {
+  @include retinise('icon-sm-blog-ondark', 'png', 24px, 24px);
 }
 .icon.icon-contact {
-	@include retinise('icon-sm-contact', 'png', 24px, 24px);
+  @include retinise('icon-sm-contact', 'png', 24px, 24px);
 }
 
 .icon.icon-location {
-	height: 24px;
-	width: 24px;
-	@include retinise('icon-sm-location', 'png', 24px, 24px);
+  height: 24px;
+  width: 24px;
+  @include retinise('icon-sm-location', 'png', 24px, 24px);
 }
 
 //
 //---------------------------------
-//	TABLET
+//  TABLET
 //---------------------------------
 //
 @include between-breakpoints($tablet-width, $tablet-landscape-width - 1) {
-	.main-menu .icon {
-		height: 32px;
-		width: 32px;
-	}
-	.icon.icon-home {
-		@include retinise('icon-home', 'png', 32px, 32px);
-	}
-	.icon.icon-work {
-		@include retinise('icon-work', 'png', 32px, 32px);
-	}
-	.icon.icon-skills {
-		@include retinise('icon-skills', 'png', 32px, 32px);
-	}
-	.icon.icon-about {
-		@include retinise('icon-about', 'png', 32px, 32px);
-	}
-	.icon.icon-contact {
-		@include retinise('icon-contact', 'png', 32px, 32px);
-	}
+  .main-menu .icon {
+    height: 32px;
+    width: 32px;
+  }
+  .icon.icon-home {
+    @include retinise('icon-home', 'png', 32px, 32px);
+  }
+  .icon.icon-work {
+    @include retinise('icon-work', 'png', 32px, 32px);
+  }
+  .icon.icon-skills {
+    @include retinise('icon-skills', 'png', 32px, 32px);
+  }
+  .icon.icon-about {
+    @include retinise('icon-about', 'png', 32px, 32px);
+  }
+   .icon.icon-blog {
+    @include retinise('icon-blog-ondark', 'png', 32px, 32px);
+  }
+  .icon.icon-contact {
+    @include retinise('icon-contact', 'png', 32px, 32px);
+  }
 }
 
 //
 //---------------------------------
-//	SOCIAL
+//  SOCIAL
 //---------------------------------
 //
 .icon-social {
-	display: block;
-	height: 64px;
-	text-indent: -20000px;
-	width: 64px;
+  display: block;
+  height: 64px;
+  text-indent: -20000px;
+  width: 64px;
 }
 .icon-social-twitter {
-	@include retinise('icon-social-twitter', 'png', 64px, 64px);
+  @include retinise('icon-social-twitter', 'png', 64px, 64px);
 }
 .icon-social-linkedin {
-	@include retinise('icon-social-linkedin', 'png', 64px, 64px);
+  @include retinise('icon-social-linkedin', 'png', 64px, 64px);
 }
 .icon-social-dribbble {
-	@include retinise('icon-social-dribbble', 'png', 64px, 64px);
+  @include retinise('icon-social-dribbble', 'png', 64px, 64px);
 }
 .icon-social-instagram {
-	@include retinise('icon-social-instagram', 'png', 64px, 64px);
+  @include retinise('icon-social-instagram', 'png', 64px, 64px);
 }
 .icon-social-flickr {
-	@include retinise('icon-social-flickr', 'png', 64px, 64px);
+  @include retinise('icon-social-flickr', 'png', 64px, 64px);
 }
 .icon-social-tumblr {
-	@include retinise('icon-social-tumblr', 'png', 64px, 64px);
+  @include retinise('icon-social-tumblr', 'png', 64px, 64px);
 }
 .icon-social-lastfm {
-	@include retinise('icon-social-lastfm', 'png', 64px, 64px);
+  @include retinise('icon-social-lastfm', 'png', 64px, 64px);
 }
-
-
-
-
-
-
-
-
-
-
-
-
