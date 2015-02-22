@@ -25,7 +25,7 @@ $(document).ready(function(){
 	// Toggles the menu when the "cover" is clicked.
 	$('.mobile-container-cover').click(function() {
 		toggleMobileMenu ();
-	})
+	});
 
 
 
@@ -93,8 +93,8 @@ $(document).ready(function(){
 		var firstSectionHeight = $('section').first().height();
 
 		// Determines if there is padding above or below the <section>.
-		var firstSectionPaddingTop = $('section').first().css('padding-top')
-		var firstSectionPaddingBottom = $('section').first().css('padding-bottom')
+		var firstSectionPaddingTop = $('section').first().css('padding-top');
+		var firstSectionPaddingBottom = $('section').first().css('padding-bottom');
 
 		//console.log ('Padding-top: ' + firstSectionPaddingTop);
     //console.log ('Padding-bottom: ' + firstSectionPaddingBottom);
@@ -124,7 +124,7 @@ $(document).ready(function(){
 	// When a user resizes the window, check the darkness / lightness of the <section> that's currently at the top the viewport.
 	$(window).resize(function() {
 		sectionBackgroundCheck();
-	})
+	});
 
 
 	//
@@ -185,33 +185,6 @@ $(document).ready(function(){
 
 	//
 	//---------------------------------
-	//	Dribbble
-	//---------------------------------
-	//
-	$(function() {
-		var username = 'lenymo';
-
-		$.getJSON('http://api.dribbble.com/players/' + username + '/shots/?callback=?', function(json) {
-      var numberOfShots = 9;
-      for (var i = 0; i < numberOfShots; i++) { // Maximum Number of shots here
-          var shotTitle = json.shots[i].title;
-          var shotLikes = json.shots[i].likes_count;
-
-          // This handles if there is 1 like, in which case the "s" is removed.
-          var shotLikesPlural = " likes";
-          if (shotLikes == 1) {
-          	shotLikesPlural = ' like';
-          }
-
-          // Outputs each shot as HTML.
-          $('.dribbble .grid').append("<div class='col-1-3'><a href='" + json.shots[i].url + "' target='_blank' title='" + shotTitle + "' class='figure'><figure><figcaption>" + shotTitle + "<small>" + shotLikes + shotLikesPlural +  "</small></figcaption><img src='" + json.shots[i].image_url + "' alt='" + shotTitle + "'></figure></a>");
-      };
-    });
-	}); // end of dribbble.
-
-
-	//
-	//---------------------------------
 	//	Contact Input
 	//---------------------------------
 	//
@@ -231,6 +204,33 @@ $(document).ready(function(){
 
 	//
 	//---------------------------------
+	//	Dribbble
+	//---------------------------------
+	//
+	$(function() {
+		var username = 'lenymo';
+		var dribbleUrl = 'http://api.dribbble.com/players/' + username + '/shots/?callback=?';
+
+		$.getJSON(dribbleUrl, function(json) {
+      var numberOfShots = 9;
+      for (var i = 0; i < numberOfShots; i++) { // Maximum Number of shots here
+          var shotTitle = json.shots[i].title;
+          var shotLikes = json.shots[i].likes_count;
+
+          // This handles if there is 1 like, in which case the "s" is removed.
+          var shotLikesPlural = ' likes';
+          if (shotLikes == 1) {
+          	shotLikesPlural = ' like';
+          }
+
+          // Outputs each shot as HTML.
+          $('.dribbble .grid').append("<div class='col-1-3'><a href='" + json.shots[i].url + "' target='_blank' title='" + shotTitle + "' class='figure'><figure><figcaption>" + shotTitle + "<small>" + shotLikes + shotLikesPlural +  "</small></figcaption><img src='" + json.shots[i].image_url + "' alt='" + shotTitle + "'></figure></a>");
+      }
+    });
+	}); // end of dribbble.
+
+	//
+	//---------------------------------
 	//	Instagram
 	//---------------------------------
 	//
@@ -240,13 +240,13 @@ $(document).ready(function(){
 		var accessToken = "677237.d4f927a.0fa87949730f4ea5917ad69b14e782d2";
 		var userID = "677237";
 		var numberOfPhotos = 12;
+		var instagramUrl = "https://api.instagram.com/v1/users/" + userID + "/media/recent/?access_token=" + accessToken;
 
 		$.ajax({
     	type: "GET",
         dataType: "jsonp",
         cache: false,
-        url: "https://api.instagram.com/v1/users/" + userID + "/media/recent/?access_token=" + accessToken,
-        success: function(data) {
+        url: instagramUrl, success: function(data) {
 					for (var i = 0; i < numberOfPhotos; i++) {
 						var photoLink = data.data[i].link;
 						var photoURL = data.data[i].images.standard_resolution.url;
@@ -255,7 +255,7 @@ $(document).ready(function(){
 
 						var photoLikesPlural = ' likes';
 						if (photoLikes == 1) {
-	          	var photoLikesPlural = ' like';
+	          	photoLikesPlural = ' like';
 	          }
 
 						$('.instagram .grid').append("<div class='col-1-3'><a href='" + photoLink + "' target='_blank' title='" + photoTitle + "' class='figure'><figure><figcaption>" + photoTitle + "<small>" + photoLikes + photoLikesPlural +  "</small></figcaption><img src='" + photoURL + "' alt='" + photoTitle + "'></figure></a>");
@@ -295,12 +295,12 @@ $(document).ready(function(){
 				var artistName = json.topartists.artist[i].name;
 				var artistURL = json.topartists.artist[i].url;
 				var artistPlays = json.topartists.artist[i].playcount;
-				var artistPlays = addCommas(artistPlays);
+				artistPlays = addCommas(artistPlays);
 
 				$('.lastfm tbody').append("<tr><td class='rank'>" + artistRank + "</td><td class='artist'><a href='" + artistURL + "' title='View " + artistName + " on Last.fm' target='_blank'>" + artistName + "</a></td><td class='plays'>" + artistPlays + "</td></tr");
 			}
 		});
-	}; // end of topArtists()
+	} // end of topArtists()
 
 	function lastfmNav() {
 		$(".lastfm .tabs a").click(function() {
@@ -311,13 +311,13 @@ $(document).ready(function(){
 			$(this).parent().addClass("current");
 
 			if (tabClass == "overall") {
-				var timePeriod = "overall";
+				timePeriod = "overall";
 			} else if (tabClass == "last-12-months") {
-				var timePeriod = "12month";
+				timePeriod = "12month";
 			} else if (tabClass == "last-3-months") {
-				var timePeriod = "3month";
+				timePeriod = "3month";
 			} else if (tabClass == "last-7-days") {
-				var timePeriod = "7day";
+				timePeriod = "7day";
 			}
 
 			topArtists(timePeriod);
