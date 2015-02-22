@@ -54,6 +54,13 @@ function printNav($currentNav) {
 						</a>
 					</li>
 
+					<li>
+						<a href="blog/" title="Read my blog">
+							<i class="icon icon-blog"></i>
+							<span>Blog</span>
+						</a>
+					</li>
+
 					<li<? print $navContact; ?>>
 						<a href="contact.php" title="Contact me">
 							<i class="icon icon-contact"></i>
