@@ -246,7 +246,8 @@ $(document).ready(function(){
     	type: "GET",
         dataType: "jsonp",
         cache: false,
-        url: instagramUrl, success: function(data) {
+        url: instagramUrl, 
+        success: function(data) {
 					for (var i = 0; i < numberOfPhotos; i++) {
 						var photoLink = data.data[i].link;
 						var photoURL = data.data[i].images.standard_resolution.url;
