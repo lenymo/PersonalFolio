@@ -209,23 +209,43 @@ $(document).ready(function(){
 	//
 	$(function() {
 		var username = 'lenymo';
-		var dribbleUrl = 'http://api.dribbble.com/players/' + username + '/shots/?callback=?';
+		var accessToken = '6da046c2b458052fa97290503aebd4fb6cc04bf489c81e002d54b29e3fba2dc2';
+		var dribbleUrl = 'https://api.dribbble.com/v1/users/' + username + '/shots?access_token=' + accessToken + '&callback=?';
 
 		$.getJSON(dribbleUrl, function(json) {
-      var numberOfShots = 9;
-      for (var i = 0; i < numberOfShots; i++) { // Maximum Number of shots here
-          var shotTitle = json.shots[i].title;
-          var shotLikes = json.shots[i].likes_count;
-
-          // This handles if there is 1 like, in which case the "s" is removed.
-          var shotLikesPlural = ' likes';
-          if (shotLikes == 1) {
+      if (json.data.length > 0) {
+      	$.each(json.data, function(i, val) {
+      		var shotTitle = val.title;
+      		var shotUrl = val.html_url;
+      		
+      		var shotLikes = val.likes_count;
+      		var shotLikesPlural = ' likes';
+      		if (shotLikes == 1) {
           	shotLikesPlural = ' like';
           }
 
-          // Outputs each shot as HTML.
-          $('.dribbble .grid').append("<div class='col-1-3'><a href='" + json.shots[i].url + "' target='_blank' title='" + shotTitle + "' class='figure'><figure><figcaption>" + shotTitle + "<small>" + shotLikes + shotLikesPlural +  "</small></figcaption><img src='" + json.shots[i].image_url + "' alt='" + shotTitle + "'></figure></a>");
-      }
+          var imageUrl = val.images.normal;
+
+      		$('.dribbble .grid').append("<div class='col-1-3'><a href='" + shotUrl + "' target='_blank' title='" + shotTitle + "' class='figure'><figure><figcaption>" + shotTitle + "<small>" + shotLikes + shotLikesPlural +  "</small></figcaption><img src='" + imageUrl + "' alt='" + shotTitle + "'></figure></a>");
+      	});
+      } else {
+	      $('.dribbble .grid').append('<p>No shots.</p>');
+	    }
+	    // Old API method.
+	    var numberOfShots = 9;
+      // for (var i = 0; i < numberOfShots; i++) { // Maximum Number of shots here
+      //     var shotTitle = json.shots[i].title;
+      //     var shotLikes = json.shots[i].likes_count;
+
+      //     // This handles if there is 1 like, in which case the "s" is removed.
+      //     var shotLikesPlural = ' likes';
+      //     if (shotLikes == 1) {
+      //     	shotLikesPlural = ' like';
+      //     }
+
+      //     // Outputs each shot as HTML.
+      //     $('.dribbble .grid').append("<div class='col-1-3'><a href='" + json.shots[i].url + "' target='_blank' title='" + shotTitle + "' class='figure'><figure><figcaption>" + shotTitle + "<small>" + shotLikes + shotLikesPlural +  "</small></figcaption><img src='" + json.shots[i].image_url + "' alt='" + shotTitle + "'></figure></a>");
+      // }
     });
 	}); // end of dribbble.
 
